@@ -1,0 +1,20 @@
+{
+  "name": "benchmark-email-api-public",
+  "version": "1.0",
+  "description": "<p>To consume our RESTful APIs, you need to have a Benchmark Email API token. You can get your API key by going to https://ui.benchmarkemail.com/Integrate#API</p>  <p>Our APIs give you a limit of 500 calls per 2 minutes and 60,000 calls total per day.</p> ",
+  "main": "index.js",
+  "scripts": {
+	"prestart": "npm install",
+	"start": "node index.js"
+  },
+  "keywords": [
+    "swagger"
+  ],
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {
+    "connect": "^3.2.0",
+    "js-yaml": "^3.3.0",
+    "swagger-tools": "0.10.1"
+  }
+}
