@@ -3,7 +3,7 @@
 
 /**
  * Get Plan Information
- * <h4>Get Client's Plan Information</h4> <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Addon</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientAddonResult\" >AddonResult</a></td>       <td>&nbsp;</td>     </tr>     <tr>       <td>EmailPlan</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientEmailPlanResult\" >EmailPlanResult</a></td>       <td>List of errors</td>     </tr>     <tr>     <tr>       <td>EventPlan</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientEventPlanResult\" >EventPlanResult</a></td>       <td>List of errors</td>     </tr>     <tr>       <td>ActiveContacts</td>       <td>string</td>       <td>Active Contacts</td>     </tr>      <tr>       <td>AccountContacts</td>       <td>string</td>       <td>Account Contacts</td>     </tr>      <tr>       <td>TotalContacts</td>       <td>string</td>       <td>Total Contacts</td>     </tr>      <tr>       <td>ContactsPercent</td>       <td>string</td>       <td>Contacts Percent</td>     </tr>      <tr>       <td>IsDedicated</td>       <td>string</td>       <td>1 = Is Dedicated, 0 = Not Dedicated</td>     </tr>      <tr>       <td>IsManual</td>       <td>string</td>       <td>1 = Is Manual, 0 = Not Manual</td>     </tr>      <tr>       <td>CreditAmount</td>       <td>string</td>       <td>Credit Amount</td>     </tr>      <tr>       <td>CanUpgrade</td>       <td>string</td>       <td>Can Upgrade</td>     </tr>      <tr>       <td>CurrencyCode</td>       <td>string</td>       <td>Currency Code</td>     </tr>      <tr>       <td>CurrencyPrefix</td>       <td>string</td>       <td>Currency Prefix</td>     </tr>      <tr>       <td>ClientCountry</td>       <td>string</td>       <td>Client Country</td>     </tr>      <tr>       <td>HasCard</td>       <td>string</td>       <td>Has Card</td>     </tr>   </tbody> </table>
+ * Get Client's Plan Information  Response Body Parameters :                    Parameter        Type        Description                            Addon        <a href=\"http://www.benchmarkemail.com/models.htm#ClientAddonResult\" >AddonResult</a>                            EmailPlan        <a href=\"http://www.benchmarkemail.com/models.htm#ClientEmailPlanResult\" >EmailPlanResult</a>        List of errors                          EventPlan        <a href=\"http://www.benchmarkemail.com/models.htm#ClientEventPlanResult\" >EventPlanResult</a>        List of errors                    ActiveContacts        string        Active Contacts                     AccountContacts        string        Account Contacts                     TotalContacts        string        Total Contacts                     ContactsPercent        string        Contacts Percent                     IsDedicated        string        1 = Is Dedicated, 0 = Not Dedicated                     IsManual        string        1 = Is Manual, 0 = Not Manual                     CreditAmount        string        Credit Amount                     CanUpgrade        string        Can Upgrade                     CurrencyCode        string        Currency Code                     CurrencyPrefix        string        Currency Prefix                     ClientCountry        string        Client Country                     HasCard        string        Has Card            
  *
  * authToken String 
  * contentType String 
@@ -114,7 +114,7 @@ exports.clientPlanGet = function(authToken,contentType) {
 
 /**
  * Get Profile Details
- * <h4>Get Client's Profile Details</h4> <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Responce</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientProfileDetails\" >ClientProfileDetails</a></td>       <td>Array</td>     </tr>   </tbody> </table>
+ * Get Client's Profile Details  Response Body Parameters :                    Parameter        Type        Description                            Responce        <a href=\"http://www.benchmarkemail.com/models.htm#ClientProfileDetails\" >ClientProfileDetails</a>        Array            
  *
  * authToken String 
  * contentType String 
@@ -147,14 +147,14 @@ exports.clientProfileDetailsGet = function(authToken,contentType) {
     "confirmed" : "1",
     "contact_count" : "359394",
     "created_date" : "25/Aug/2015",
-    "email" : "pooja@cybermaxsolutions.com",
+    "email" : "email@emailDomain.com",
     "emails_sent" : "1315",
     "experience" : "",
-    "first_name" : "Pooja",
+    "first_name" : "firstName",
     "has_dedicated_ip" : "True",
-    "last_name" : "Gorde",
+    "last_name" : "lastName",
     "list_size" : "1",
-    "login" : "pooja@cybermaxsolutions.com",
+    "login" : "email@emailDomain.com",
     "opens" : "16",
     "origin_url" : "/Register",
     "paid_or_free" : "Paid",
@@ -178,7 +178,7 @@ exports.clientProfileDetailsGet = function(authToken,contentType) {
 
 /**
  * Get Sub-Account balance
- * <h4>Get Sub-Account balance</h4> <b>Query string parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>Sub-Account holder client ID</td>     </tr>   </tbody> </table>  <b>Response body parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Response</td>       <td>int</td>       <td>Plan Limit</td>     </tr>   </tbody> </table>
+ * Get Sub-Account balance  Query string parameters :                    Parameter        Required        Type        Description                            ID        Required        string        Sub-Account holder client ID                Response body parameters :                    Parameter        Type        Description                            Response        int        Plan Limit            
  *
  * authToken String 
  * contentType String 
@@ -202,7 +202,7 @@ exports.clientSubAccountBalanceByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Get Sub-Account Details
- * <h4>Get Sub-Account Details</h4> <b>Query string parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>Client ID</td>     </tr>   </tbody> </table> <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientSubAccountDetail\" >SubAccountDetail</a></td>       <td>&nbsp;</td>     </tr>     <tr>       <td>Errors</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a></td>       <td>List of errors</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Get Sub-Account Details  Query string parameters :                    Parameter        Required        Type        Description                            ID        Required        string        Client ID              Response Body Parameters :                    Parameter        Type        Description                            Data        <a href=\"http://www.benchmarkemail.com/models.htm#ClientSubAccountDetail\" >SubAccountDetail</a>                            Errors        <a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a>        List of errors                    Status        string        1 = Successful, -1 Error            
  *
  * authToken String 
  * contentType String 
@@ -216,12 +216,12 @@ exports.clientSubAccountByIDGet = function(authToken,contentType,iD) {
   "Response" : {
     "Data" : {
       "AllowCC" : "0",
-      "EmailAddress" : "mahesh27oct@cybermaxsolutions.com",
-      "FirstName" : "mahesh",
+      "EmailAddress" : "firstName27oct@cybermaxsolutions.com",
+      "FirstName" : "firstName",
       "HasAllowCC" : "1",
       "ID" : "683120",
-      "LastName" : "guhagarkar",
-      "Login" : "mahesh27oct",
+      "LastName" : "lastName",
+      "Login" : "firstName27oct",
       "Password" : "**********",
       "Phone" : "2516314",
       "PlanID" : "398",
@@ -242,7 +242,7 @@ exports.clientSubAccountByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Update Sub Account
- * <h4>Update Sub Account</h4> <b>Query String Parameter:</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>Sub Account ID</td>     </tr>   </tbody> </table> <b>URL parameters (to be encoded as JSON in body) :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>      <tr>       <td>Detail</td>       <td>Required</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientSubAccountDetail\">SubAccountDetail</a></td>       <td>Sub Account Detail Array</td>     </tr>   </tbody> </table> <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientSubAccountDetail\" >SubAccountDetail</a></td>       <td>&nbsp;</td>     </tr>     <tr>       <td>Errors</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a></td>       <td>List of errors</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Update Sub Account  Query String Parameter:                    Parameter        Required        Type        Description                            ID        Required        string        Sub Account ID              URL parameters (to be encoded as JSON in body) :                    Parameter        Required        Type        Description                             Detail        Required        <a href=\"http://www.benchmarkemail.com/models.htm#ClientSubAccountDetail\">SubAccountDetail</a>        Sub Account Detail Array              Response Body Parameters :                    Parameter        Type        Description                            Data        <a href=\"http://www.benchmarkemail.com/models.htm#ClientSubAccountDetail\" >SubAccountDetail</a>                            Errors        <a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a>        List of errors                    Status        string        1 = Successful, -1 Error            
  *
  * body UpdateSubAccountrequest 
  * authToken String 
@@ -283,7 +283,7 @@ exports.clientSubAccountByIDPatch = function(body,authToken,contentType,iD) {
 
 /**
  * Get Sub-Accounts
- * <h4>Get Sub-Accounts</h4> <b>Query string parameters :</b> None <br>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Count</td>       <td>String</td>       <td>Number of Sub-Accounts</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientDetail\" >ClientDetail</a></td>       <td>&nbsp;</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>     <tr>       <td>HasInbox</td>       <td>string</td>       <td>&nbsp;</td>     </tr>     <tr>       <td>HasClientAccounts</td>       <td>string</td>       <td>&nbsp;</td>     </tr>     <tr>       <td>HasDates</td>       <td>string</td>       <td>&nbsp;</td>     </tr>     <tr>       <td>UniqueCount</td>       <td>string</td>       <td>&nbsp;</td>     </tr>   </tbody> </table>
+ * Get Sub-Accounts  Query string parameters : None      Response Body Parameters :                    Parameter        Type        Description                            Count        String        Number of Sub-Accounts                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#ClientDetail\" >ClientDetail</a>                            Status        string        1 = Successful, -1 Error                    HasInbox        string                            HasClientAccounts        string                            HasDates        string                            UniqueCount        string                    
  *
  * authToken String 
  * contentType String 
@@ -299,26 +299,26 @@ exports.clientSubAccountGet = function(authToken,contentType) {
       "Active" : "1",
       "ActiveContacts" : "559",
       "CampaignsSent" : "0",
-      "FirstName" : "mahesh",
+      "FirstName" : "firstName",
       "ID" : "683120",
       "InboxAlloted" : "0",
       "InboxUsed" : "0",
-      "LastName" : "guhagarkar",
-      "Login" : "mahesh27oct",
-      "Name" : "mahesh guhagarkar",
+      "LastName" : "lastName",
+      "Login" : "firstName27oct",
+      "Name" : "firstName lastName",
       "PlanID" : "",
       "PlanName" : "List Plan 2,500"
     }, {
       "Active" : "1",
       "ActiveContacts" : "359394",
       "CampaignsSent" : "1024",
-      "FirstName" : "Pooja",
+      "FirstName" : "firstName",
       "ID" : "553754",
       "InboxAlloted" : "0",
       "InboxUsed" : "0",
-      "LastName" : "Gorde",
-      "Login" : "pooja@cybermaxsolutions.com",
-      "Name" : "Pooja Gorde",
+      "LastName" : "lastName",
+      "Login" : "email@emailDomain.com",
+      "Name" : "firstName lastName",
       "PlanID" : "",
       "PlanName" : ""
     } ],
@@ -340,7 +340,7 @@ exports.clientSubAccountGet = function(authToken,contentType) {
 
 /**
  * Get Sub-Account history details
- * <h4>Get Sub-Account history details</h4> <b>Query string parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>History ID</td>     </tr>     <tr>       <td>StartDate</td>       <td>Required</td>       <td>string</td>       <td>Billing cycle start date</td>     </tr>     <tr>       <td>EndDate</td>       <td>Required</td>       <td>string</td>       <td>Billing cycle End Date</td>     </tr>   </tbody> </table>  <b>Response body parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientSubAccountCampaign\" >SubAccountCampaign</a></td>       <td>Array of error</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Get Sub-Account history details  Query string parameters :                    Parameter        Required        Type        Description                            ID        Required        string        History ID                    StartDate        Required        string        Billing cycle start date                    EndDate        Required        string        Billing cycle End Date                Response body parameters :                    Parameter        Type        Description                            Data        <a href=\"http://www.benchmarkemail.com/models.htm#ClientSubAccountCampaign\" >SubAccountCampaign</a>        Array of error                    Status        string        1 = Successful, -1 Error            
  *
  * iD String 
  * startDate String 
@@ -376,7 +376,7 @@ exports.clientSubAccountHistoryByHistoryIDGet = function(iD,startDate,endDate,au
 
 /**
  * Get Sub-Account History
- * <h4>Get Sub-Account History</h4> <b>Query string parameters :</b> None <br>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientDate\" >ClientDate</a></td>       <td>&nbsp;</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Get Sub-Account History  Query string parameters : None      Response Body Parameters :                    Parameter        Type        Description                            Data        <a href=\"http://www.benchmarkemail.com/models.htm#ClientDate\" >ClientDate</a>                            Status        string        1 = Successful, -1 Error            
  *
  * authToken String 
  * contentType String 
@@ -426,7 +426,7 @@ exports.clientSubAccountHistoryGet = function(authToken,contentType) {
 
 /**
  * Add/Remove inbox tests from Sub-Account
- * <h4>Add/Remove inbox tests from Sub-Account</h4> <b>Request Body parameters:</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>Sub-Account holder Client ID</td>     </tr>     <tr>       <td>Tests</td>       <td>Required</td>       <td>int</td>       <td>&nbsp;</td>     </tr>   </tbody> </table>  <b>Response body parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Buy</td>       <td>string</td>       <td>Available Tests to Buy</td>     </tr>     <tr>       <td>Errors</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a></td>       <td>Array of error</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>     <tr>       <td>SubAccountBuy</td>       <td>string</td>       <td>Number of tests Sub-Account Buyed</td>     </tr>     <tr>       <td>SubAccountID</td>       <td>string</td>       <td>Sub-Account holder Client ID</td>     </tr>     <tr>       <td>SubAccountUsed</td>       <td>string</td>       <td>&nbsp;</td>     </tr>     <tr>       <td>Used</td>       <td>string</td>       <td>Number of tests used by Sub-Account</td>     </tr>   </tbody> </table>
+ * Add/Remove inbox tests from Sub-Account  Request Body parameters:                    Parameter        Required        Type        Description                            ID        Required        string        Sub-Account holder Client ID                    Tests        Required        int                        Response body parameters :                    Parameter        Type        Description                            Buy        string        Available Tests to Buy                    Errors        <a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a>        Array of error                    Status        string        1 = Successful, -1 Error                    SubAccountBuy        string        Number of tests Sub-Account Buyed                    SubAccountID        string        Sub-Account holder Client ID                    SubAccountUsed        string                            Used        string        Number of tests used by Sub-Account            
  *
  * body Add~1remove inbox tests from subAccountrequest 
  * authToken String 
@@ -459,7 +459,7 @@ exports.clientSubAccountInboxByIDPost = function(body,authToken,contentType,iD) 
 
 /**
  * Get Sub-Accounts plan list
- * <h4>Get Sub-Accounts plan list</h4> <b>Request Body parameters:</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>Sub-Account holder client ID</td>     </tr>   </tbody> </table>  <b>Response body parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientSubAccountPlan\" >SubAccountPlan</a></td>       <td>List of plans</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Get Sub-Accounts plan list  Request Body parameters:                    Parameter        Required        Type        Description                            ID        Required        string        Sub-Account holder client ID                Response body parameters :                    Parameter        Type        Description                            Data        <a href=\"http://www.benchmarkemail.com/models.htm#ClientSubAccountPlan\" >SubAccountPlan</a>        List of plans                    Status        string        1 = Successful, -1 Error            
  *
  * authToken String 
  * contentType String 
@@ -681,7 +681,7 @@ exports.clientSubAccountPlanListByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Create Sub-Account
- * <h4>Create Sub-Account</h4> <b>URL parameters (to be encoded as JSON in body) :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>      <tr>       <td>Detail</td>       <td>Required</td>       <td>SubAccountDetail</td>       <td>Sub Account Detail Array</td>     </tr>   </tbody> </table> <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientSubAccountDetail\" >SubAccountDetail</a></td>       <td>&nbsp;</td>     </tr>     <tr>       <td>Errors</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a></td>       <td>List of errors</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Create Sub-Account  URL parameters (to be encoded as JSON in body) :                    Parameter        Required        Type        Description                             Detail        Required        SubAccountDetail        Sub Account Detail Array              Response Body Parameters :                    Parameter        Type        Description                            Data        <a href=\"http://www.benchmarkemail.com/models.htm#ClientSubAccountDetail\" >SubAccountDetail</a>                            Errors        <a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a>        List of errors                    Status        string        1 = Successful, -1 Error            
  *
  * body Create subAccountrequest 
  * authToken String 
@@ -721,7 +721,7 @@ exports.clientSubAccountPost = function(body,authToken,contentType) {
 
 /**
  * Change Sub-Account status
- * <h4>Change Sub-Account status</h4> <b>Query string parameters :</b> None <br>  <b>Request Body parameters:</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Status</td>       <td>Required</td>       <td>string</td>       <td>1 to activate, 0 to deactivate</td>     </tr>   </tbody> </table>  <b>Response body parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Errors</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a></td>       <td>Array of error</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Change Sub-Account status  Query string parameters : None      Request Body parameters:                    Parameter        Required        Type        Description                            Status        Required        string        1 to activate, 0 to deactivate                Response body parameters :                    Parameter        Type        Description                            Errors        <a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a>        Array of error                    Status        string        1 = Successful, -1 Error            
  *
  * authToken String 
  * contentType String 

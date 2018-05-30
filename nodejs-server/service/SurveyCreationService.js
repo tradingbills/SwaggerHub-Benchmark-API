@@ -3,7 +3,7 @@
 
 /**
  * Get a Details of survey
- * <h4>Get a Details of survey</h4> <b>Query string parameters : </b> None <br> <b>Request Body parameters :</b> <table>   <thead>     <th>Parameter</th>     <th>Required</th>     <th>Type</th>     <th>Description</th>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>Survey ID</td>     </tr>   </tbody> </table>  <b>Response Body Parameters :</b> <table>   <thead>     <th>Parameter</th>     <th>Type</th>     <th>Description</th>   </thead>   <tbody>     <tr>       <td>surveyData</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyData\" >SurveyData</a></td>       <td>Array of survey detals returned.</td>     </tr>   </tbody> </table>
+ * Get a Details of survey  Query string parameters :  None    Request Body parameters :            Parameter      Required      Type      Description                      ID        Required        string        Survey ID                Response Body Parameters :            Parameter      Type      Description                      surveyData        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyData\" >SurveyData</a>        Array of survey detals returned.            
  *
  * authToken String 
  * contentType String 
@@ -24,7 +24,7 @@ exports.surveyByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Update Details of Survey
- * <h4>Update Details of Survey</h4> <b>Query string Parameters : </b> None <br> <b>Request Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>Survey ID</td>     </tr>     <tr>       <td>Data</td>       <td>Required</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyData\" >SurveyData </a></td>       <td>Array of survey data</td>     </tr>   </tbody> </table>  <b>Response Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyData\" >SurveyData </a></td>       <td>Data of survey returned.</td>     </tr>     <tr>       <td>Errors</td>       <td>ErrorData</td>       <td>Return error message</td>     </tr>   </tbody> </table>
+ * Update Details of Survey  Query string Parameters :  None    Request Body Parameters :                     Parameter        Required        Type        Description                            ID        Required        string        Survey ID                    Data        Required        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyData\" >SurveyData </a>        Array of survey data                Response Body Parameters :                     Parameter        Type        Description                            Data        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyData\" >SurveyData </a>        Data of survey returned.                    Errors        ErrorData        Return error message            
  *
  * body UpdateDetailsOfSurveyrequest 
  * authToken String 
@@ -51,7 +51,7 @@ exports.surveyByIDPatch = function(body,authToken,contentType,iD) {
 
 /**
  * Delete question of a survey
- * <h4>Delete question of a Survey</h4> <b>Query string parameters : </b> None <br> <b>Request Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>Survey ID</td>     </tr>     <tr>       <td>QuestionID</td>       <td>Required</td>       <td>string</td>       <td>Question ID</td>     </tr>   </tbody> </table>  <b>Response Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Response</td>       <td>string</td>       <td>Survey ID if successful else error</td>     </tr>   </tbody> </table>
+ * Delete question of a Survey  Query string parameters :  None    Request Body Parameters :                     Parameter        Required        Type        Description                            ID        Required        string        Survey ID                    QuestionID        Required        string        Question ID                Response Body Parameters :                     Parameter        Type        Description                            Response        string        Survey ID if successful else error            
  *
  * authToken String 
  * contentType String 
@@ -76,7 +76,7 @@ exports.surveyQuestionByIDAndQuestionIDDelete = function(authToken,contentType,i
 
 /**
  * Update Question of a Survey
- * <h4>Update Question of a Survey</h4> <b>Query string parameters : </b> None <br> <b>Request Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>Survey ID</td>     </tr>     <tr>       <td>QuestionID</td>       <td>Required</td>       <td>string</td>       <td>Question ID</td>     </tr>     <tr>       <td>QuestionData</td>       <td>Required</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyQuestion\" >SurveyQuestion</a></td>       <td>Array of question data</td>     </tr>   </tbody> </table>  <b>Response Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Response</td>       <td>string</td>       <td>Survey ID if successful else error</td>     </tr>   </tbody> </table>
+ * Update Question of a Survey  Query string parameters :  None    Request Body Parameters :                     Parameter        Required        Type        Description                            ID        Required        string        Survey ID                    QuestionID        Required        string        Question ID                    QuestionData        Required        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyQuestion\" >SurveyQuestion</a>        Array of question data                Response Body Parameters :                     Parameter        Type        Description                            Response        string        Survey ID if successful else error            
  *
  * body UpdateQuestionOfASurveyrequest 
  * authToken String 
@@ -132,7 +132,7 @@ exports.surveyQuestionByIDAndQuestionIDPatch = function(body,authToken,contentTy
 
 /**
  * Add Question to Survey
- * <h4>Add Question to Survey</h4> <b>Query string Parameters : </b> None <br> <b>Request Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>Survey ID</td>     </tr>     <tr>       <td>QuestionData</td>       <td>Required</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyQuestion\" >SurveyQuestion </a></td>       <td>Array of question data</td>     </tr>   </tbody> </table>  <b>Response Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Count</td>       <td>int</td>       <td>Total number</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 if successful, -1 if error</td>     </tr>     <tr>       <td>Data</td>       <td>SurveyQuestion</td>       <td>Array of survey question list returned.</td>     </tr>     <tr>       <td>Errors</td>       <td>ErrorData</td>       <td>Return error message</td>     </tr>   </tbody> </table>
+ * Add Question to Survey  Query string Parameters :  None    Request Body Parameters :                     Parameter        Required        Type        Description                            ID        Required        string        Survey ID                    QuestionData        Required        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyQuestion\" >SurveyQuestion </a>        Array of question data                Response Body Parameters :                     Parameter        Type        Description                            Count        int        Total number                    Status        string        1 if successful, -1 if error                    Data        SurveyQuestion        Array of survey question list returned.                    Errors        ErrorData        Return error message            
  *
  * body AddQuestionToSurveyrequest 
  * authToken String 
@@ -187,7 +187,7 @@ exports.surveyQuestionByIDPost = function(body,authToken,contentType,iD) {
 
 /**
  * Sort Question of a survey
- * <h4>Sort Question of a survey</h4> <b>Query string parameters : </b> None <br> <b>Request Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>Survey ID</td>     </tr>     <tr>       <td>SortOrder</td>       <td>Required</td>       <td>string</td>       <td>Comma seperated question ids</td>     </tr>   </tbody> </table>  <b>Response Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Response</td>       <td>string</td>       <td>Survey ID if successful else error</td>     </tr>   </tbody> </table>
+ * Sort Question of a survey  Query string parameters :  None    Request Body Parameters :                     Parameter        Required        Type        Description                            ID        Required        string        Survey ID                    SortOrder        Required        string        Comma seperated question ids                Response Body Parameters :                     Parameter        Type        Description                            Response        string        Survey ID if successful else error            
  *
  * body SortQuestionOfASurveyrequest 
  * authToken String 
@@ -212,7 +212,7 @@ exports.surveyQuestionSortByIDPatch = function(body,authToken,contentType,iD) {
 
 /**
  * Get template list of survey
- * <h4>Get template list of survey</h4> <b>Query string Parameters : </b> None <br> <b>Request Body Parameters : </b> None <br> <b>Response Body Parameters : </b> <table>   <thead>     <th>Parameter</th>     <th>Type</th>     <th>Description</th>   </thead>   <tbody>     <tr>       <td>Count</td>       <td>int</td>       <td>Total number</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 if successful, -1 if error</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyData\" >SurveyData</a></td>       <td>Array of survey list returned.</td>     </tr>   </tbody> </table>
+ * Get template list of survey  Query string Parameters :  None    Request Body Parameters :  None    Response Body Parameters :             Parameter      Type      Description                      Count        int        Total number                    Status        string        1 if successful, -1 if error                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyData\" >SurveyData</a>        Array of survey list returned.            
  *
  * authToken String 
  * contentType String 

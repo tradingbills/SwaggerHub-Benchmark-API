@@ -3,7 +3,7 @@
 
 /**
  * Delete the Webhooks
- * <h4>Delete webhooks</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ListID}}</td><td>required</td><td>string</td><td>ID of the list</td></tr>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the webhook</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\">ErrorData</a></td><td>Error Code</td></tr>  </tbody>  </table>
+ * Delete webhooks   URL Parameters            KeyRequiredTypeDescription         {{ListID}}requiredstringID of the list   {{ID}}requiredstringID of the webhook            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   Error<a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\">ErrorData</a>Error Code      
  *
  * authToken String 
  * contentType String 
@@ -31,7 +31,7 @@ exports.contactWebhooksByListIDAndIDDelete = function(authToken,contentType,list
 
 /**
  * Update Webhook
- * <h4>Update webhook data</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ListID}}</td><td>required</td><td>string</td><td>ID of the list</td></tr>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the webhook</td></tr>  </tbody>  </table>    <h4>Body Parameters (To be passed as a JSON string)</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Data</td><td>required</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactWebhooksRecord\">WebhooksRecord</a></td><td>Details of the webhook</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\">ErrorData</a></td><td>Error Code</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactWebhooksRecord\">WebhooksRecord</a></td><td>Data</td></tr>  </tbody>  </table>
+ * Update webhook data   URL Parameters            KeyRequiredTypeDescription         {{ListID}}requiredstringID of the list   {{ID}}requiredstringID of the webhook            Body Parameters (To be passed as a JSON string)            KeyRequiredTypeDescription         Datarequired<a href=\"http://www.benchmarkemail.com/models.htm#ContactWebhooksRecord\">WebhooksRecord</a>Details of the webhook            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   Error<a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\">ErrorData</a>Error Code   Data<a href=\"http://www.benchmarkemail.com/models.htm#ContactWebhooksRecord\">WebhooksRecord</a>Data      
  *
  * body UpdateWebhookrequest 
  * authToken String 
@@ -70,7 +70,7 @@ exports.contactWebhooksByListIDAndIDPatch = function(body,authToken,contentType,
 
 /**
  * Create Webhook
- * <h4>Create New Webhook</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ListID}}</td><td>required</td><td>string</td><td>ID of the list</td></tr>  </tbody>  </table>    <h4>Body Parameters (To be passed as a JSON string)</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Data</td><td>required</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactWebhooksRecord\">WebhooksRecord</a></td><td>Details of the webhook</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactWebhooksRecord\">WebhooksRecord</a></td><td>Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\">ErrorData</a></td><td>Error Code</td></tr>  </tbody>  </table>
+ * Create New Webhook   URL Parameters            KeyRequiredTypeDescription         {{ListID}}requiredstringID of the list            Body Parameters (To be passed as a JSON string)            KeyRequiredTypeDescription         Datarequired<a href=\"http://www.benchmarkemail.com/models.htm#ContactWebhooksRecord\">WebhooksRecord</a>Details of the webhook            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   Data<a href=\"http://www.benchmarkemail.com/models.htm#ContactWebhooksRecord\">WebhooksRecord</a>Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\">ErrorData</a>Error Code      
  *
  * body CreateWebhookrequest 
  * authToken String 

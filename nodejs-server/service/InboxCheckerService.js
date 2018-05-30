@@ -3,7 +3,7 @@
 
 /**
  * Delete a Inbox
- * <h4>Delete a Inbox</h4>   <b>Request Body Parameters: </b>    <table>      <tr>        <th>Parameter</th>        <th>Required</th>        <th>Type</th>        <th>Description</th>      </tr>      <tr>        <td>ID</td>        <td>Required</td>        <td>string</td>        <td>Inbox ID</td>      </tr>    </table>    <h4>Response Body Parameters:</h4>    <table>      <tr>        <th>Parameter</th>        <th>Type</th>        <th>Description</th>      </tr>      <tr>        <td>Status</td>        <td>string</td>        <td>1 if successful, -1 if error</td>      </tr>      <tr>        <td>Error</td>        <td><a href='http://www.benchmarkemail.com/models.htm#ErrorData'>ErrorData</a></td>        <td>Return error message</td>      </tr>    </table>
+ * Delete a Inbox    Request Body Parameters:                      Parameter         Required         Type         Description                       ID         Required         string         Inbox ID                 Response Body Parameters:                     Parameter         Type         Description                       Status         string         1 if successful, -1 if error                       Error         <a href='http://www.benchmarkemail.com/models.htm#ErrorData'>ErrorData</a>         Return error message            
  *
  * authToken String 
  * contentType String 
@@ -30,7 +30,7 @@ exports.inboxByIDDelete = function(authToken,contentType,iD) {
 
 /**
  * Get a Inbox Master Result
- * <h4>Get a Inbox Master Result</h4>  <b>Request Body Parameters : </b>  <table>      <tr>        <th>Parameter</th>        <th>Required</th>        <th>Type</th>        <th>Description</th>      </tr>      <tr>        <td>ID</td>        <td>Required</td>        <td>string</td>        <td>Inbox ID</td>      </tr>    </table>    <h4>Response Body Parameters:</h4>    <table>      <tr>        <th>Parameter</th>        <th>Type</th>        <th>Description</th>      </tr>      <tr>        <td>Status</td>        <td>string</td>        <td>1 if successful, -1 if error</td>      </tr>      <tr>        <td>Error</td>        <td><a href='http://www.benchmarkemail.com/models.htm#ErrorData'>ErrorData</a></td>        <td>Return error message</td>      </tr>      <tr>        <td>Data</td>        <td><a href='http://www.benchmarkemail.com/models.htm#InboxMasterData'>InboxMasterData</a></td>        <td>Return Inbox Master Data</td>      </tr>      <tr>        <td>SpamData</td>        <td><a href='http://www.benchmarkemail.com/models.htm#InboxSpamData'>InboxSpamData</a></td>        <td>Return Spam Data</td>      </tr>      <tr>        <td>Summary</td>        <td><a href='http://www.benchmarkemail.com/models.htm#InboxSummary'>InboxSummary</a></td>        <td>Return Inbox Summary</td>      </tr>    </table>
+ * Get a Inbox Master Result   Request Body Parameters :                    Parameter         Required         Type         Description                       ID         Required         string         Inbox ID                 Response Body Parameters:                     Parameter         Type         Description                       Status         string         1 if successful, -1 if error                       Error         <a href='http://www.benchmarkemail.com/models.htm#ErrorData'>ErrorData</a>         Return error message                       Data         <a href='http://www.benchmarkemail.com/models.htm#InboxMasterData'>InboxMasterData</a>         Return Inbox Master Data                       SpamData         <a href='http://www.benchmarkemail.com/models.htm#InboxSpamData'>InboxSpamData</a>         Return Spam Data                       Summary         <a href='http://www.benchmarkemail.com/models.htm#InboxSummary'>InboxSummary</a>         Return Inbox Summary            
  *
  * authToken String 
  * contentType String 
@@ -51,7 +51,7 @@ exports.inboxByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Get a Inbox List
- * <h4>Get a Inbox List</h4>  <b>Query String Parameters : </b>    <table>      <tr>        <th>Parameter</th>        <th>Required</th>        <th>Type</th>        <th>Description</th>      </tr>      <tr>        <td>Status</td>        <td>Optional</td>        <td>string</td>        <td>Completed (1) Or Not (0)</td>      </tr>      <tr>        <td>PageNumber</td>        <td>Required</td>        <td>string</td>        <td>Page Number</td>      </tr>      <tr>        <td>PageSize</td>        <td>Required</td>        <td>string</td>        <td>Number of rows on the page</td>      </tr>      <tr>        <td>OrderBy</td>        <td>Required</td>        <td>string</td>        <td>Order By Column</td>      </tr>      <tr>        <td>Filter</td>        <td>Optional</td>        <td>string</td>        <td>Filter by name</td>      </tr>      <tr>        <td>SortOrder</td>        <td>Required</td>        <td>string</td>        <td>ASC or DESC</td>      </tr>    </table>    <b>Response Body Parameters:</b>    <table>      <tr>        <th>Parameter</th>        <th>Type</th>        <th>Description</th>      </tr>      <tr>        <td>Count</td>        <td>int</td>        <td>Total number</td>      </tr>      <tr>        <td>Status</td>        <td>string</td>        <td>1 if successful, -1 if error</td>      </tr>      <tr>        <td>Data</td>        <td><a href='http://www.benchmarkemail.com/models.htm#InboxListData'>InboxListData</td>        <td>Array of Inbox list returned.</td>      </tr>    </table>
+ * Get a Inbox List   Query String Parameters :                      Parameter         Required         Type         Description                       Status         Optional         string         Completed (1) Or Not (0)                       PageNumber         Required         string         Page Number                       PageSize         Required         string         Number of rows on the page                       OrderBy         Required         string         Order By Column                       Filter         Optional         string         Filter by name                       SortOrder         Required         string         ASC or DESC                 Response Body Parameters:                     Parameter         Type         Description                       Count         int         Total number                       Status         string         1 if successful, -1 if error                       Data         <a href='http://www.benchmarkemail.com/models.htm#InboxListData'>InboxListData         Array of Inbox list returned.            
  *
  * filter String 
  * pageNumber String 
@@ -108,14 +108,14 @@ exports.inboxGet = function(filter,pageNumber,pageSize,status,orderBy,sortOrder,
       "CreatedDate" : "Mar 03 2017, 02:21 PM",
       "ID" : "11118461",
       "Status" : "1",
-      "TemplateName" : "Mahesh classic - IE - NAME",
+      "TemplateName" : "firstName classic - IE - NAME",
       "TestCount" : 1,
       "TestID" : "23063a6f-ec6b-4e77-8815-0b119e4eb85e"
     }, {
       "CreatedDate" : "Mar 02 2017, 04:48 PM",
       "ID" : "11317763",
       "Status" : "1",
-      "TemplateName" : "mahesh - drag drop 02march",
+      "TemplateName" : "firstName - drag drop 02march",
       "TestCount" : 2,
       "TestID" : "6c47764a-2a09-4c38-a88e-6a46514d0c89"
     }, {
@@ -154,7 +154,7 @@ exports.inboxGet = function(filter,pageNumber,pageSize,status,orderBy,sortOrder,
 
 /**
  * Create a Inbox
- * <h4>Create a Inbox</h4> <b> Request Body Parameters : </b>  <table>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>     <tr>       <td>EmailID</td>       <td>Required</td>       <td>string</td>       <td>Email ID</td>     </tr>     <tr>       <td>TestID</td>       <td>Required</td>       <td>string</td>       <td>Test ID (ID of the Applications in which the test is required like 0,22)</td>     </tr>   </table>   <h4>Response Body Parameters:</h4>   <table>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 if successful, -1 if error</td>     </tr>     <tr>       <td>Data</td>       <td>string</td>       <td>The Test ID</td>     </tr>   </table>
+ * Create a Inbox   Request Body Parameters :                  Parameter        Required        Type        Description                    EmailID        Required        string        Email ID                    TestID        Required        string        Test ID (ID of the Applications in which the test is required like 0,22)              Response Body Parameters:                  Parameter        Type        Description                    Status        string        1 if successful, -1 if error                    Data        string        The Test ID          
  *
  * body CreateAInboxrequest 
  * authToken String 
@@ -181,7 +181,7 @@ exports.inboxPost = function(body,authToken,contentType) {
 
 /**
  * Get a Inbox Detail Result
- * <h4>Get a Inbox Detail Tests</h4>    <b> Request Body Parameters : </b> None <br>    <b> Response body parameters : </b>   <table>      <tr>        <th>Parameter</th>        <th>Type</th>        <th >Description</th>      </tr>      <tr>        <td>TotalPurchase</td>        <td>int</td>        <td>Total Purchase test</td>      </tr>      <tr>        <td>TotalTest</td>        <td>int</td>        <td>Total tests used</td>      </tr>      <tr>        <td>TotalBalance</td>        <td>int</td>        <td>Total Remaining test</td>      </tr>      <tr>        <td>TestCount</td>        <td>string</td>        <td>Selected test count</td>      </tr>      <tr>        <td>TopTest</td>        <td>string</td>        <td>Popular/top tests (| seperated)</td>      </tr>      <tr>        <td>Status</td>        <td>string</td>        <td>Status of test</td>      </tr>      <tr>        <td>InboxCheckerPrice</td>        <td>string</td>        <td>&nbsp;</td>      </tr>      <tr>        <td>Applications</td>        <td><a href='http://www.benchmarkemail.com/models.htm#InboxApplicationData'>InboxApplicationData</a></td>        <td>Array</td>      </tr>    </table>
+ * Get a Inbox Detail Tests       Request Body Parameters :  None         Response body parameters :                     Parameter         Type         <th >Description                       TotalPurchase         int         Total Purchase test                       TotalTest         int         Total tests used                       TotalBalance         int         Total Remaining test                       TestCount         string         Selected test count                       TopTest         string         Popular/top tests (| seperated)                       Status         string         Status of test                       InboxCheckerPrice         string                                Applications         <a href='http://www.benchmarkemail.com/models.htm#InboxApplicationData'>InboxApplicationData</a>         Array            
  *
  * authToken String 
  * contentType String 

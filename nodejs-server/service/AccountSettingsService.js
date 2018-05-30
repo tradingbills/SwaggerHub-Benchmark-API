@@ -3,7 +3,7 @@
 
 /**
  * Get All Confirmed Email
- * <h4>Get All Confirmed Email</h4> <b>Query string parameters :</b> None <br>  <b>Request Body parameters:</b> None <br>  <b>Response body parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Count</td>       <td>string</td>       <td>Total Confirmed Emails</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientConfirmEmailAllData\" >ConfirmEmailAllData</a></td>       <td>&nbsp;</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Get All Confirmed Email  Query string parameters : None      Request Body parameters: None      Response body parameters :                    Parameter        Type        Description                            Count        string        Total Confirmed Emails                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#ClientConfirmEmailAllData\" >ConfirmEmailAllData</a>                            Status        string        1 = Successful, -1 Error            
  *
  * authToken String 
  * contentType String 
@@ -31,21 +31,21 @@ exports.clientConfirmedEmailAllGet = function(authToken,contentType) {
       "Sequence" : 2
     }, {
       "DateValue" : "14 Nov 2016",
-      "Email" : "mahesh@cybermaxsolutions.com",
+      "Email" : "firstName@cybermaxsolutions.com",
       "ID" : "857914",
       "IsConfirmed" : "1",
       "ReSend" : "",
       "Sequence" : 3
     }, {
       "DateValue" : "11 May 2016",
-      "Email" : "pooja.gorde@gmail.com",
+      "Email" : "firstName.lastName@gmail.com",
       "ID" : "788113",
       "IsConfirmed" : "1",
       "ReSend" : "",
       "Sequence" : 4
     }, {
       "DateValue" : "25 Aug 2015",
-      "Email" : "pooja@cybermaxsolutions.com",
+      "Email" : "email@emailDomain.com",
       "ID" : "674564",
       "IsConfirmed" : "1",
       "ReSend" : "",
@@ -72,7 +72,7 @@ exports.clientConfirmedEmailAllGet = function(authToken,contentType) {
 
 /**
  * Resend Confirm Email
- * <h4>Resend Confirm Email</h4> <b>Query string parameters :</b> None <br>  <b>Request Body parameters:</b>  <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Email</td>       <td>Required</td>       <td>string</td>       <td>Email ID</td>     </tr>   </tbody> </table> <b>Response body parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>string</td>       <td>&nbsp;</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Resend Confirm Email  Query string parameters : None      Request Body parameters:                     Parameter        Required        Type        Description                            Email        Required        string        Email ID              Response body parameters :                    Parameter        Type        Description                            ID        string                            Status        string        1 = Successful, -1 Error            
  *
  * authToken String 
  * contentType String 
@@ -99,7 +99,7 @@ exports.clientConfirmedEmailByEmailGet = function(authToken,contentType,email) {
 
 /**
  * Send Confirm Email Verification Email
- * <h4>Send Confirm Email Verification Email</h4> <b>Query string parameters :</b> None <br>  <b>Request Body parameters:</b>  <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>EmailIDs</td>       <td>Required</td>       <td>string</td>       <td>Email Address</td>     </tr>   </tbody> </table> <b>Response body parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Errors</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a></td>       <td>Array of Error</td>     </tr>     <tr>       <td>FinalString</td>       <td>string</td>       <td>FinalString</td>     </tr>     <tr>       <td>Message</td>       <td>string</td>       <td>Message Text</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>Status</td>     <tr>       <td>Success</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>     </tr>   </tbody> </table>
+ * Send Confirm Email Verification Email  Query string parameters : None      Request Body parameters:                     Parameter        Required        Type        Description                            EmailIDs        Required        string        Email Address              Response body parameters :                    Parameter        Type        Description                            Errors        <a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a>        Array of Error                    FinalString        string        FinalString                    Message        string        Message Text                    Status        string        Status              Success        string        1 = Successful, -1 Error                  
  *
  * body SendConfirmEmailVerificationEmailrequest 
  * authToken String 
@@ -129,7 +129,7 @@ exports.clientConfirmedEmailEmailPost = function(body,authToken,contentType) {
 
 /**
  * Get List of Confirmed Emails
- * <h4>Get List of Confirmed Emails</h4> <b>Query String Parameters :</b> None <br>  <b>Request Body Parameters:</b> None <br>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Emails</td>       <td>string</td>       <td>List of Emails</td>     </tr>     <tr>       <td>Error</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a></td>       <td>Array of error</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Get List of Confirmed Emails  Query String Parameters : None      Request Body Parameters: None      Response Body Parameters :                    Parameter        Type        Description                            Emails        string        List of Emails                    Error        <a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a>        Array of error                    Status        string        1 = Successful, -1 Error            
  *
  * authToken String 
  * contentType String 
@@ -140,7 +140,7 @@ exports.clientConfirmedEmailGet = function(authToken,contentType) {
     var examples = {};
     examples['application/json'] = {
   "Response" : {
-    "Emails" : [ "dayashankar@cybermaxsolutions.com", "mahesh@cybermaxsolutions.com", "pooja.gorde@gmail.com", "pooja@cybermaxsolutions.com" ],
+    "Emails" : [ "dayashankar@cybermaxsolutions.com", "firstName@cybermaxsolutions.com", "firstName.lastName@gmail.com", "email@emailDomain.com" ],
     "Error" : [ ],
     "Status" : "1"
   }
@@ -156,7 +156,7 @@ exports.clientConfirmedEmailGet = function(authToken,contentType) {
 
 /**
  * Get Current email at the time of Reset Email
- * <h4>Get Current email at the time of Reset Email </h4> <b>Query String Parameter : </b> <table> <thead> <tr> <th>Key</th> <th>Required</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td>GUID</td> <td>optional</td> <td>Unique ID</td> </tr> </tbody> </table> <b>Response body parameters</b> <table> <thead> <tr> <th>Key</th><th>Type</th><th>Description</th></tr> </thead> <tbody> <tr><td>Email</td><td>String</td><td>Email Address</td></tr> <tr><td>Status</td><td>String</td><td>1 if success, -1 if error</td></tr> <tr><td>Errors</td><td><a http://www.benchmarkemail.com/models.htm#ErrorData>ErrorData</a></td><td>Array</td></tr> </tbody> </table>
+ * Get Current email at the time of Reset Email   Query String Parameter :         Key  Required  Description          GUID  optional  Unique ID        Response body parameters        KeyTypeDescription      EmailStringEmail Address  StatusString1 if success, -1 if error  Errors<a http://www.benchmarkemail.com/models.htm#ErrorData>ErrorData</a>Array    
  *
  * gUID String 
  * authToken String 
@@ -168,7 +168,7 @@ exports.clientEmailResetGet = function(gUID,authToken,contentType) {
     var examples = {};
     examples['application/json'] = {
   "Response" : {
-    "Email" : "pooja@cybermaxsolutions.com",
+    "Email" : "email@emailDomain.com",
     "Errors" : [ ],
     "Status" : "1"
   }
@@ -184,7 +184,7 @@ exports.clientEmailResetGet = function(gUID,authToken,contentType) {
 
 /**
  * Send Reset Email
- * <h4>Send Reset Email to change primary email</h4> <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>retVal</td>       <td>string</td>       <td>return Value</td>     </tr>     <tr>       <td>Error</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a></td>       <td>Array of error</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Send Reset Email to change primary email  Response Body Parameters :                    Parameter        Type        Description                            retVal        string        return Value                    Error        <a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a>        Array of error                    Status        string        1 = Successful, -1 Error            
  *
  * authToken String 
  * contentType String 
@@ -211,7 +211,7 @@ exports.clientEmailResetLinkPatch = function(authToken,contentType) {
 
 /**
  * Update/Reset Email
- * <h4>Reset primary email </h4>  <b>URL Parameters (To be encoded as JSON parameter)</b>  <table>  <thead>  <tr>  <th>Key</th>  <th>Required</th>  <th>Description</th>  </tr>  </thead>  <tbody>  <tr>  <td>GUID</td>  <td>Required</td>  <td>The ID which is available on the email link send for reset the email</a>  </tr>  <tr>  <td>NewEmail</td>  <td>Required</td>  <td>New Email</a>  </tr>  <tr>  <td>ConfirmEmail</td>  <td>Required</td>  <td>Confirm Email</a>  </tr>  </tbody>  </table>  <b>Response body parameters</b>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>String</td><td>1 if success, -1 if error</td></tr>  <tr><td>Email</td><td>String</td><td>Email Address</td></tr>  <tr><td>Errors</td><td><a href='http://www.benchmarkemail.com/models.htm#ErrorData'>ErrorData</a></td><td>Array</td></tr>  </tbody>  </table>
+ * Reset primary email    URL Parameters (To be encoded as JSON parameter)            Key   Required   Description               GUID   Required   The ID which is available on the email link send for reset the email</a>         NewEmail   Required   New Email</a>         ConfirmEmail   Required   Confirm Email</a>            Response body parameters            KeyTypeDescription         StatusString1 if success, -1 if error   EmailStringEmail Address   Errors<a href='http://www.benchmarkemail.com/models.htm#ErrorData'>ErrorData</a>Array      
  *
  * body Update~1resetEmailrequest 
  * authToken String 
@@ -239,7 +239,7 @@ exports.clientEmailResetPatch = function(body,authToken,contentType) {
 
 /**
  * Get Client Filter Domain
- * <h4>Get Client Filter Domain</h4> <b>Query String Parameters :</b> None <br>  <b>Request Body Parameters:</b> None <br>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Count</td>       <td>string</td>       <td>Number of Domains</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientFilterDomain\" >ClientFilterDomain</a></td>       <td>List of Domains</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 Successful, -1 error</td>     </tr>   </tbody> </table>
+ * Get Client Filter Domain  Query String Parameters : None      Request Body Parameters: None      Response Body Parameters :                    Parameter        Type        Description                            Count        string        Number of Domains                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#ClientFilterDomain\" >ClientFilterDomain</a>        List of Domains                    Status        string        1 Successful, -1 error            
  *
  * authToken String 
  * contentType String 
@@ -274,7 +274,7 @@ exports.clientFilterDomainGet = function(authToken,contentType) {
 
 /**
  * Get Client Details
- * <h4>Get Client Details</h4> <b>Query String Parameters :</b> None <br>  <b>Request Body Parameters:</b> None <br>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Response</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientProfileData\" >ProfileData</a></td>       <td>Client Profile data</td>     </tr>   </tbody> </table>
+ * Get Client Details  Query String Parameters : None      Request Body Parameters: None      Response Body Parameters :                    Parameter        Type        Description                            Response        <a href=\"http://www.benchmarkemail.com/models.htm#ClientProfileData\" >ProfileData</a>        Client Profile data            
  *
  * authToken String 
  * contentType String 
@@ -332,7 +332,7 @@ exports.clientGet = function(authToken,contentType) {
 
 /**
  * Save Website Domain
- * <h4>Provide your domain name to link it to your account</h4> <b>Response Body Parameters : </b> <table> <thead> <tr> <th>Parameter</th> <th>Required</th> <th>Type</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td>CompanyWebsite</td> <td>Required</td> <td>String</td> <td>Company Website like BobsVacations.com</td> </tr> </tbody> </table>
+ * Provide your domain name to link it to your account  Response Body Parameters :         Parameter  Required  Type  Description          CompanyWebsite  Required  String  Company Website like BobsVacations.com      
  *
  * body SaveWebsiteDomainrequest 
  * authToken String 
@@ -356,7 +356,7 @@ exports.clientInitSurveyPost = function(body,authToken,contentType) {
 
 /**
  * Change Password
- * <h4>Change Password</h4> <b>Body Parameters (to be encoded as a JSON string)</b> <table> <thead> <tr> <th>Key</th> <th>Required</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td>NewPassword</td> <td>Required</td> <td>New Password</td> </tr> <tr> <td>ConfirmPassword</td> <td>Required</td> <td>Confirm Password</td> </tr> </tbody> </table> <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>retVal</td>       <td>string</td>       <td>return Value</td>     </tr>     <tr>       <td>Error</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a></td>       <td>Array of error</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Change Password  Body Parameters (to be encoded as a JSON string)        Key  Required  Description          NewPassword  Required  New Password      ConfirmPassword  Required  Confirm Password        Response Body Parameters :                    Parameter        Type        Description                            retVal        string        return Value                    Error        <a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a>        Array of error                    Status        string        1 = Successful, -1 Error            
  *
  * body ChangePasswordrequest 
  * authToken String 
@@ -384,7 +384,7 @@ exports.clientPasswordPatch = function(body,authToken,contentType) {
 
 /**
  * Update/Edit Profile
- * <h4>Update/Edit Profile like first name,phone no etc </h4>  <b>URL Parameters (To be encoded as JSON parameter)</b>  <table>  <thead>  <tr>  <th>Key</th>  <th>Required</th>  <th>Description</th>  </tr>  </thead>  <tbody>  <tr>  <td>FirstName</td>  <td>Required</td>  <td>First Name</a>  </tr>  <tr>  <td>LastName</td>  <td>Required</td>  <td>Last Name</a>  </tr>  <tr>  <td>PhoneNo</td>  <td>Required</td>  <td>Phone Number</a>  </tr>  </tbody>  </table>  <b>Response body parameters</b>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>String</td><td>1 if success, -1 if error</td></tr>  <tr><td>retVal</td><td>String</td><td></td></tr>  <tr><td>Errors</td><td><a href='http://www.benchmarkemail.com/models.htm#ErrorData'>ErrorData</a></td><td>Array</td></tr>  </tbody>  </table>
+ * Update/Edit Profile like first name,phone no etc    URL Parameters (To be encoded as JSON parameter)            Key   Required   Description               FirstName   Required   First Name</a>         LastName   Required   Last Name</a>         PhoneNo   Required   Phone Number</a>            Response body parameters            KeyTypeDescription         StatusString1 if success, -1 if error   retValString   Errors<a href='http://www.benchmarkemail.com/models.htm#ErrorData'>ErrorData</a>Array      
  *
  * body Update~1editProfilerequest 
  * authToken String 
@@ -412,7 +412,7 @@ exports.clientPatch = function(body,authToken,contentType) {
 
 /**
  * Get Client Account Settings
- * <h4>Get Client Account Settings</h4> <b>Query String Parameters :</b> None <br>  <b>Request Body Parameters:</b> None <br>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Company</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientSettingCompanyData\" >SettingCompanyData</a></td>       <td>Array of error</td>     </tr>     <tr>       <td>FooterID</td>       <td>string</td>       <td>Email Footer ID</td>     </tr>     <tr>       <td>FromEmail</td>       <td>string</td>       <td>From Email Address</td>     </tr>     <tr>       <td>FromName</td>       <td>string</td>       <td>From Name</td>     </tr>     <tr>       <td>Language</td>       <td>string</td>       <td>Language</td>     </tr>     <tr>       <td>PermissionPositionHeader</td>       <td>string</td>       <td>Permission Position Header</td>     </tr>     <tr>       <td>SenderID</td>       <td>string</td>       <td>Sender ID</td>     </tr>     <tr>       <td>SignatureEmail</td>       <td>string</td>       <td>Signature Email Address</td>     </tr>     <tr>       <td>SignatureURL</td>       <td>string</td>       <td>Signature URL</td>     </tr>     <tr>       <td>TimeZone</td>       <td>string</td>       <td>Time Zone</td>     </tr>     <tr>       <td>Token</td>       <td>string</td>       <td>API Token</td>     </tr>   </tbody> </table>
+ * Get Client Account Settings  Query String Parameters : None      Request Body Parameters: None      Response Body Parameters :                    Parameter        Type        Description                            Company        <a href=\"http://www.benchmarkemail.com/models.htm#ClientSettingCompanyData\" >SettingCompanyData</a>        Array of error                    FooterID        string        Email Footer ID                    FromEmail        string        From Email Address                    FromName        string        From Name                    Language        string        Language                    PermissionPositionHeader        string        Permission Position Header                    SenderID        string        Sender ID                    SignatureEmail        string        Signature Email Address                    SignatureURL        string        Signature URL                    TimeZone        string        Time Zone                    Token        string        API Token            
  *
  * authToken String 
  * contentType String 
@@ -459,7 +459,7 @@ exports.clientSettingGet = function(authToken,contentType) {
 
 /**
  * Update Client Accounts Setting
- * <h4>Update Client Accounts Setting</h4> <b>Query String Parameters :</b> None <br>  <b>Request Body Parameters:</b>  <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Company</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ClientSettingCompanyData\" >SettingCompanyData</a></td>       <td>Setting Company Data</td>     </tr>     <tr>       <td>Language</td>       <td>string</td>       <td>Language</td>     </tr>     <tr>       <td>PermissionPositionHeader</td>       <td>string</td>       <td>Permission Position Header</td>     </tr>     <tr>       <td>TimeZone</td>       <td>string</td>       <td>Time Zone</td>     </tr>     <tr>       <td>FooterID</td>       <td>string</td>       <td>Email Footer ID</td>     </tr>     <tr>       <td>SenderID</td>       <td>string</td>       <td>Sender ID</td>     </tr>     <tr>       <td>FromName</td>       <td>string</td>       <td>From Name</td>     </tr>     <tr>       <td>FromEmail</td>       <td>string</td>       <td>From Email Address</td>     </tr>     <tr>       <td>SignatureEmail</td>       <td>string</td>       <td>Signature Email</td>     </tr>     <tr>       <td>SignatureName</td>       <td>string</td>       <td>Signature Name</td>     </tr>     <tr>       <td>SignatureURL</td>       <td>string</td>       <td>Signature URL</td>     </tr>   </tbody> </table>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Error</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a></td>       <td>Array of error</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>     <tr>       <td>retVal</td>       <td>string</td>       <td>&nbsp;</td>     </tr>   </tbody> </table>
+ * Update Client Accounts Setting  Query String Parameters : None      Request Body Parameters:                     Parameter        Type        Description                            Company        <a href=\"http://www.benchmarkemail.com/models.htm#ClientSettingCompanyData\" >SettingCompanyData</a>        Setting Company Data                    Language        string        Language                    PermissionPositionHeader        string        Permission Position Header                    TimeZone        string        Time Zone                    FooterID        string        Email Footer ID                    SenderID        string        Sender ID                    FromName        string        From Name                    FromEmail        string        From Email Address                    SignatureEmail        string        Signature Email                    SignatureName        string        Signature Name                    SignatureURL        string        Signature URL                Response Body Parameters :                    Parameter        Type        Description                            Error        <a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a>        Array of error                    Status        string        1 = Successful, -1 Error                    retVal        string                    
  *
  * body UpdateClientAccountsSettingrequest 
  * authToken String 
@@ -487,7 +487,7 @@ exports.clientSettingPatch = function(body,authToken,contentType) {
 
 /**
  * Get Token
- * <h4>Get Token</h4> <b>Query String Parameters :</b> None <br>  <b>Request Body Parameters:</b> None <br>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>AuthURL</td>       <td>string</td>       <td>Auth URL</td>     </tr>     <tr>       <td>Name</td>       <td>string</td>       <td>Client Name</td>     </tr>     <tr>       <td>Secret</td>       <td>string</td>       <td>Secret</td>     </tr>     <tr>       <td>Token</td>       <td>string</td>       <td>Token</td>     </tr>   </tbody> </table>
+ * Get Token  Query String Parameters : None      Request Body Parameters: None      Response Body Parameters :                    Parameter        Type        Description                            AuthURL        string        Auth URL                    Name        string        Client Name                    Secret        string        Secret                    Token        string        Token            
  *
  * authToken String 
  * contentType String 
@@ -516,7 +516,7 @@ exports.clientTokenByTypeGet = function(authToken,contentType,type) {
 
 /**
  * Get Token Details
- * <h4>Get Token Details</h4>
+ * Get Token Details
  *
  * authToken String 
  * contentType String 
@@ -542,7 +542,7 @@ exports.clientTokenDetailByTypeGet = function(authToken,contentType,type) {
 
 /**
  * Generate Token
- * <h4>Generate Token</h4> <b>Query String Parameters :</b> None <br>  <b>Request Body Parameters:</b> None <br>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>retVal</td>       <td>string</td>       <td>Token</td>     </tr>   </tbody> </table>
+ * Generate Token  Query String Parameters : None      Request Body Parameters: None      Response Body Parameters :                    Parameter        Type        Description                            retVal        string        Token            
  *
  * authToken String 
  * contentType String 

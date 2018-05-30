@@ -3,7 +3,7 @@
 
 /**
  * GET Compare report By  AB Test ID
- * GET Report Details By ABSplit ID  <h4>URL parameters:</h4>  <table>  <tr>    <th>Parameter</th>    <th>Type</th>    <th>Description</th>  </tr>  <tr>    <td>ID</td>    <td>string</td>    <td>ABSplit ID</td>  </tr>  </table>  <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>String</td><td>1 if success, -1 if error</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ABTestReportCompareData\">ReportCompareData</a></td><td>Array</td></tr>  </tbody>  </table>
+ * GET Report Details By ABSplit ID   URL parameters:           Parameter     Type     Description           ID     string     ABSplit ID         Response body parameters            KeyTypeDescription         StatusString1 if success, -1 if error   Data<a href=\"http://www.benchmarkemail.com/models.htm#ABTestReportCompareData\">ReportCompareData</a>Array      
  *
  * authToken String 
  * contentType String 
@@ -78,7 +78,7 @@ exports.aBSplitCompareByIDGet = function(authToken,contentType,iD) {
 
 /**
  * GET Report Details By  AB Test ID
- * GET Report Details By ABSplit ID  <h4>URL parameters:</h4>  <table>  <tr>    <th>Parameter</th>    <th>Type</th>    <th>Description</th>  </tr>  <tr>    <td>ID</td>    <td>string</td>    <td>Final Unique ID</td>  </tr>  <tr>    <td>ABID</td>    <td>string</td>    <td>ABSplit ID</td>  </tr>  </table>  <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>String</td><td>1 if success, -1 if error</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ABTestReportSummaryData\">ReportSummaryData</a></td><td>Array</td></tr>  </tbody>  </table>
+ * GET Report Details By ABSplit ID   URL parameters:           Parameter     Type     Description           ID     string     Final Unique ID           ABID     string     ABSplit ID         Response body parameters            KeyTypeDescription         StatusString1 if success, -1 if error   Data<a href=\"http://www.benchmarkemail.com/models.htm#ABTestReportSummaryData\">ReportSummaryData</a>Array      
  *
  * authToken String 
  * contentType String 
@@ -102,12 +102,12 @@ exports.aBSplitReportByIDAndABIDGet = function(authToken,contentType,iD,aBID) {
       "ContactLists" : [ {
         "ID" : "14553950",
         "IsSegment" : "0",
-        "Name" : "mahesh - xlsx",
+        "Name" : "firstName - xlsx",
         "SegmentID" : "0"
       } ],
       "CreatedDate" : "Aug 24, 2017",
       "Forwards" : 0,
-      "FromEmail" : "pooja.gorde@gmail.com",
+      "FromEmail" : "firstName.lastName@gmail.com",
       "FromName" : "寄件人名稱",
       "GroupA" : "12211741",
       "GroupAType" : "WINNER",
@@ -128,7 +128,7 @@ exports.aBSplitReportByIDAndABIDGet = function(authToken,contentType,iD,aBID) {
       "RSSURL" : "",
       "Recepients" : "",
       "Remainder" : "12213383",
-      "ReplyEmail" : "pooja.gorde@gmail.com",
+      "ReplyEmail" : "firstName.lastName@gmail.com",
       "ScheduleDate" : "Aug 24 2017, 11:32 PM",
       "Sent" : 9,
       "SentDate" : "",
@@ -154,7 +154,7 @@ exports.aBSplitReportByIDAndABIDGet = function(authToken,contentType,iD,aBID) {
 
 /**
  * GET  AB Test Report
- * GET ABSplit Report  <h4>URL body parameter (optional)</h4>    <table>      <tr>        <th>Parameter</th>        <th>Type</th>        <th>Description</th>      </tr>      <tr>        <td>PageNumber</td>        <td>string</td>        <td>Page Number</td>      </tr>      <tr>        <td>PageSize</td>        <td>string</td>        <td>Number of rows on the page</td>      </tr>      <tr>        <td>OrderBy</td>        <td>string</td>        <td>Order By Column Email,count,date</td>      </tr>      <tr>        <td>Filter</td>        <td>string</td>        <td>Filter by template name</td>      </tr>       <tr>        <td>Language</td>        <td>string</td>        <td>Language</td>      </tr>      <tr>        <td>SortOrder</td>        <td>string</td>        <td>ASC or DESC</td>      </tr>    </table>    <h4>Response body parameters:</h4>    <table>      <tr>        <th>Parameter</th>        <th>Type</th>        <th>Description</th>      </tr>      <tr>        <td>Count</td>        <td>int</td>        <td>Total number</td>      </tr>      <tr>        <td>Status</td>        <td>string</td>        <td>1 if successful, -1 if error</td>      </tr>      <tr>        <td>Data</td>        <td><a href='http://www.benchmarkemail.com/models.htm#ABTestReportData'>ReportData</td>        <td>Array of Report Data returned.</td>      </tr>    </table>
+ * GET ABSplit Report   URL body parameter (optional)                     Parameter         Type         Description                       PageNumber         string         Page Number                       PageSize         string         Number of rows on the page                       OrderBy         string         Order By Column Email,count,date                       Filter         string         Filter by template name                        Language         string         Language                       SortOrder         string         ASC or DESC                 Response body parameters:                     Parameter         Type         Description                       Count         int         Total number                       Status         string         1 if successful, -1 if error                       Data         <a href='http://www.benchmarkemail.com/models.htm#ABTestReportData'>ReportData         Array of Report Data returned.            
  *
  * authToken String 
  * contentType String 
@@ -168,14 +168,14 @@ exports.aBSplitReportGet = function(authToken,contentType) {
     "Count" : 7,
     "Data" : [ {
       "AbID" : "39978",
-      "CommunityURL" : "http://community.benchmarkemail.com/users/pooja%40cybermaxsolutions.com/newsletter/Aug-24-2017-Email-1",
+      "CommunityURL" : "http://community.benchmarkemail.com/users/firstName%40cybermaxsolutions.com/newsletter/Aug-24-2017-Email-1",
       "CreatedDate" : "Aug 24, 2017",
       "EmailName" : "Aug 24 2017 Email 1",
       "ID" : "12213383",
       "IsFavorite" : "0",
       "ListCount" : "9",
       "ListID" : 14553950,
-      "ListName" : "mahesh - xlsx",
+      "ListName" : "firstName - xlsx",
       "ModifiedDate" : "Aug 24, 2017",
       "RssURL" : "",
       "ScheduleDate" : "Aug 24, 2017",
@@ -183,7 +183,7 @@ exports.aBSplitReportGet = function(authToken,contentType) {
       "isSegment" : 0
     }, {
       "AbID" : "39977",
-      "CommunityURL" : "http://community.benchmarkemail.com/users/pooja%40cybermaxsolutions.com/newsletter/AB-TEST-3333",
+      "CommunityURL" : "http://community.benchmarkemail.com/users/firstName%40cybermaxsolutions.com/newsletter/AB-TEST-3333",
       "CreatedDate" : "Aug 24, 2017",
       "EmailName" : "AB TEST 3333",
       "ID" : "12213359",
@@ -198,7 +198,7 @@ exports.aBSplitReportGet = function(authToken,contentType) {
       "isSegment" : 0
     }, {
       "AbID" : "39974",
-      "CommunityURL" : "http://community.benchmarkemail.com/users/pooja%40cybermaxsolutions.com/newsletter/AB-1234",
+      "CommunityURL" : "http://community.benchmarkemail.com/users/firstName%40cybermaxsolutions.com/newsletter/AB-1234",
       "CreatedDate" : "Aug 24, 2017",
       "EmailName" : "AB 1234",
       "ID" : "12213253",
@@ -213,7 +213,7 @@ exports.aBSplitReportGet = function(authToken,contentType) {
       "isSegment" : 0
     }, {
       "AbID" : "33732",
-      "CommunityURL" : "http://community.benchmarkemail.com/users/pooja%40cybermaxsolutions.com/newsletter/IE---08-dec",
+      "CommunityURL" : "http://community.benchmarkemail.com/users/firstName%40cybermaxsolutions.com/newsletter/IE---08-dec",
       "CreatedDate" : "Dec 19, 2016",
       "EmailName" : "IE - 08 dec",
       "ID" : "10992585",
@@ -228,7 +228,7 @@ exports.aBSplitReportGet = function(authToken,contentType) {
       "isSegment" : 0
     }, {
       "AbID" : "33721",
-      "CommunityURL" : "http://community.benchmarkemail.com/users/pooja%40cybermaxsolutions.com/newsletter/Email-in-IE",
+      "CommunityURL" : "http://community.benchmarkemail.com/users/firstName%40cybermaxsolutions.com/newsletter/Email-in-IE",
       "CreatedDate" : "Dec 19, 2016",
       "EmailName" : "Email in IE",
       "ID" : "10992584",
@@ -243,7 +243,7 @@ exports.aBSplitReportGet = function(authToken,contentType) {
       "isSegment" : 0
     }, {
       "AbID" : "33708",
-      "CommunityURL" : "http://community.benchmarkemail.com/users/pooja%40cybermaxsolutions.com/newsletter/FF---08-dec",
+      "CommunityURL" : "http://community.benchmarkemail.com/users/firstName%40cybermaxsolutions.com/newsletter/FF---08-dec",
       "CreatedDate" : "Dec 19, 2016",
       "EmailName" : "FF - 08 dec",
       "ID" : "10992583",
@@ -258,9 +258,9 @@ exports.aBSplitReportGet = function(authToken,contentType) {
       "isSegment" : 0
     }, {
       "AbID" : "33709",
-      "CommunityURL" : "http://community.benchmarkemail.com/users/pooja%40cybermaxsolutions.com/newsletter/Mahesh---IE",
+      "CommunityURL" : "http://community.benchmarkemail.com/users/firstName%40cybermaxsolutions.com/newsletter/firstName---IE",
       "CreatedDate" : "Dec 19, 2016",
-      "EmailName" : "Mahesh - IE",
+      "EmailName" : "firstName - IE",
       "ID" : "10992572",
       "IsFavorite" : "0",
       "ListCount" : "45",
@@ -286,7 +286,7 @@ exports.aBSplitReportGet = function(authToken,contentType) {
 
 /**
  * Get the Results for the  AB Test
- * Update AB split  <h4>URL parameters:</h4>  <table>  <tr>    <th>Parameter</th>    <th>Type</th>    <th>Description</th>  </tr>  <tr>    <td>ID</td>    <td>string</td>    <td>ABSplit ID</td>  </tr>  </table>  <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>String</td><td>1 if success, -1 if error</td></tr>  <tr><td>Results</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ABResult\">ABResult</a></td><td>Array</td></tr>  <tr><td>FinalResult</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ABResultFinal\">ABResultFinal</a></td><td>Array</td></tr>  </tbody>  </table>
+ * Update AB split   URL parameters:           Parameter     Type     Description           ID     string     ABSplit ID         Response body parameters            KeyTypeDescription         StatusString1 if success, -1 if error   Results<a href=\"http://www.benchmarkemail.com/models.htm#ABResult\">ABResult</a>Array   FinalResult<a href=\"http://www.benchmarkemail.com/models.htm#ABResultFinal\">ABResultFinal</a>Array      
  *
  * authToken String 
  * contentType String 
@@ -373,7 +373,7 @@ exports.aBSplitResultsByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Get Summary Report of an Automation
- * Get summary report of an Automation  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th>  <th>Required</th>  <th>Description</th>  </tr>  </thead>  <tbody>  <tr>  <td>{{AutomationID}}</td>  <td>Required</td>  <td>Automation ID</a>  </tr>  </tbody>  </table>  <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Count</td><td>Int</td><td>Total count of emails for archive</td></tr>  <tr><td>Status</td><td>String</td><td>1 if success, -1 if error</td></tr>  <tr><td>Name</td><td>String</td><td>Name of Automation</td></tr>  <tr><td>Data</td><td><a href='http://www.benchmarkemail.com/models.htm#AutomationSummaryData'>AutomationSummaryData</a></td><td>Array</td></tr>  </tbody>  </table>
+ * Get summary report of an Automation   URL Parameters            Key   Required   Description               {{AutomationID}}   Required   Automation ID</a>            Response body parameters            KeyTypeDescription         CountIntTotal count of emails for archive   StatusString1 if success, -1 if error   NameStringName of Automation   Data<a href='http://www.benchmarkemail.com/models.htm#AutomationSummaryData'>AutomationSummaryData</a>Array      
  *
  * authToken String 
  * contentType String 
@@ -454,7 +454,7 @@ exports.automationReportByAutomationIDGet = function(authToken,contentType,autom
       "ID" : "12453271",
       "Opens" : "0",
       "Sends" : "0",
-      "Subject" : "Pooja Test",
+      "Subject" : "firstName Test",
       "Unsubscribes" : "0"
     }, {
       "Bounces" : "0",
@@ -484,7 +484,7 @@ exports.automationReportByAutomationIDGet = function(authToken,contentType,autom
       "ID" : "12453273",
       "Opens" : "0",
       "Sends" : "0",
-      "Subject" : "Pooja test API",
+      "Subject" : "firstName test API",
       "Unsubscribes" : "0"
     } ],
     "Name" : "automation 10 march",
@@ -502,7 +502,7 @@ exports.automationReportByAutomationIDGet = function(authToken,contentType,autom
 
 /**
  * Get Reports for Autoresponders
- * Get Reports for Autoresponders <h4>Query String Parameter : </h4> <table> <thead> <tr> <th>Key</th> <th>Required</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td>PageNumber</td> <td>optional</td> <td>Page Number</td> </tr> <tr> <td>PageSize</td> <td>optional</td> <td>Number of records to show per page</td> </tr> <tr> <td>Filter</td> <td>optional</td> <td>Filter for automation name</td> </tr> <tr> <td>OrderBy</td> <td>optional</td> <td>Column by which to sort like name,schedule,email,status,date</td> </tr> <tr> <td>SortBy</td> <td>optional</td> <td>The column to sort as <code>asc</code> or <code>desc</code></td> </tr> </tbody> </table> <h4>Response body parameters</h4> <table> <thead> <tr> <th>Key</th><th>Type</th><th>Description</th></tr> </thead> <tbody> <tr><td>Count</td><td>Int</td><td>Total count of emails for archive</td></tr> <tr><td>Status</td><td>String</td><td>1 if success, -1 if error</td></tr> <tr><td>Data</td><td><a href='http://www.benchmarkemail.com/models.htm#AutomationData'>AutomationData</a></td><td>Array</td></tr> </tbody> </table>
+ * Get Reports for Autoresponders  Query String Parameter :         Key  Required  Description          PageNumber  optional  Page Number      PageSize  optional  Number of records to show per page      Filter  optional  Filter for automation name      OrderBy  optional  Column by which to sort like name,schedule,email,status,date      SortBy  optional  The column to sort as <code>asc</code> or <code>desc</code>        Response body parameters        KeyTypeDescription      CountIntTotal count of emails for archive  StatusString1 if success, -1 if error  Data<a href='http://www.benchmarkemail.com/models.htm#AutomationData'>AutomationData</a>Array    
  *
  * authToken String 
  * contentType String 
@@ -518,7 +518,7 @@ exports.automationReportGet = function(authToken,contentType) {
       "AutomationType" : "1",
       "Automations" : 10,
       "ContactCount" : 6,
-      "FromEmail" : "pooja.gorde@gmail.com",
+      "FromEmail" : "firstName.lastName@gmail.com",
       "FromName" : "寄件人名稱",
       "ID" : "91626",
       "IsSegment" : "",
@@ -532,8 +532,8 @@ exports.automationReportGet = function(authToken,contentType) {
       "AutomationType" : "1",
       "Automations" : 3,
       "ContactCount" : 4,
-      "FromEmail" : "pooja.gorde@gmail.com",
-      "FromName" : "Pooja",
+      "FromEmail" : "firstName.lastName@gmail.com",
+      "FromName" : "firstName",
       "ID" : "91397",
       "IsSegment" : "",
       "ListID" : "14595342",
@@ -546,7 +546,7 @@ exports.automationReportGet = function(authToken,contentType) {
       "AutomationType" : "2",
       "Automations" : 3,
       "ContactCount" : 1,
-      "FromEmail" : "mahesh@cybermaxsolutions.com",
+      "FromEmail" : "firstName@cybermaxsolutions.com",
       "FromName" : "Cybermax Solutions",
       "ID" : "91275",
       "IsSegment" : "",
@@ -560,8 +560,8 @@ exports.automationReportGet = function(authToken,contentType) {
       "AutomationType" : "1",
       "Automations" : 2,
       "ContactCount" : 7,
-      "FromEmail" : "pooja.gorde@gmail.com",
-      "FromName" : "Pooja",
+      "FromEmail" : "firstName.lastName@gmail.com",
+      "FromName" : "firstName",
       "ID" : "90951",
       "IsSegment" : "",
       "ListID" : "14553794",
@@ -574,8 +574,8 @@ exports.automationReportGet = function(authToken,contentType) {
       "AutomationType" : "1",
       "Automations" : 1,
       "ContactCount" : 3,
-      "FromEmail" : "pooja.gorde@gmail.com",
-      "FromName" : "Pooja",
+      "FromEmail" : "firstName.lastName@gmail.com",
+      "FromName" : "firstName",
       "ID" : "89835",
       "IsSegment" : "",
       "ListID" : "14483434",
@@ -588,8 +588,8 @@ exports.automationReportGet = function(authToken,contentType) {
       "AutomationType" : "1",
       "Automations" : 1,
       "ContactCount" : 6,
-      "FromEmail" : "pooja.gorde@gmail.com",
-      "FromName" : "Pooja",
+      "FromEmail" : "firstName.lastName@gmail.com",
+      "FromName" : "firstName",
       "ID" : "89906",
       "IsSegment" : "",
       "ListID" : "14525571",
@@ -602,22 +602,22 @@ exports.automationReportGet = function(authToken,contentType) {
       "AutomationType" : "2",
       "Automations" : 1,
       "ContactCount" : 4,
-      "FromEmail" : "mahesh@cybermaxsolutions.com",
-      "FromName" : "Mahesh - IE - A subscriber opens your email",
+      "FromEmail" : "firstName@cybermaxsolutions.com",
+      "FromName" : "firstName - IE - A subscriber opens your email",
       "ID" : "89900",
       "IsSegment" : "",
       "ListID" : "14525366",
       "ListName" : "Engage_open89900_127624",
       "ModifiedDate" : "Feb 03, 2017",
-      "Name" : "Mahesh - IE - A subscriber opens your email",
+      "Name" : "firstName - IE - A subscriber opens your email",
       "SegmentID" : "null",
       "Status" : "1"
     }, {
       "AutomationType" : "1",
       "Automations" : 2,
       "ContactCount" : 1,
-      "FromEmail" : "pooja.gorde@gmail.com",
-      "FromName" : "Pooja",
+      "FromEmail" : "firstName.lastName@gmail.com",
+      "FromName" : "firstName",
       "ID" : "89830",
       "IsSegment" : "",
       "ListID" : "14522495",
@@ -630,8 +630,8 @@ exports.automationReportGet = function(authToken,contentType) {
       "AutomationType" : "1",
       "Automations" : 1,
       "ContactCount" : 3,
-      "FromEmail" : "pooja.gorde@gmail.com",
-      "FromName" : "Pooja",
+      "FromEmail" : "firstName.lastName@gmail.com",
+      "FromName" : "firstName",
       "ID" : "89825",
       "IsSegment" : "",
       "ListID" : "14483434",
@@ -644,8 +644,8 @@ exports.automationReportGet = function(authToken,contentType) {
       "AutomationType" : "1",
       "Automations" : 11,
       "ContactCount" : 3,
-      "FromEmail" : "pooja.gorde@gmail.com",
-      "FromName" : "Pooja",
+      "FromEmail" : "firstName.lastName@gmail.com",
+      "FromName" : "firstName",
       "ID" : "88312",
       "IsSegment" : "",
       "ListID" : "14435742",
@@ -669,7 +669,7 @@ exports.automationReportGet = function(authToken,contentType) {
 
 /**
  * GET Campaign History By Email ID
- * <h4>GET Campaign History By Email ID</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailCampaignHistoryData\">CampaignHistoryData</a></td><td>Campaign History Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  </tbody>  </table>
+ * GET Campaign History By Email ID   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailCampaignHistoryData\">CampaignHistoryData</a>Campaign History Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors      
  *
  * authToken String 
  * contentType String 
@@ -702,7 +702,7 @@ exports.emailsCampaignHistoryByIDGet = function(authToken,contentType,iD) {
 
 /**
  * GET Save as List
- * <h4>GET Save as List</h4>    <h4>Query String parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>EmailID</td><td>optional</td><td>string</td><td>ID of the EMail</td></tr>  <tr><td>EventID</td><td>optional</td><td>string</td><td>ID of the Event</td></tr>  <tr><td>ABID</td><td>optional</td><td>string</td><td>ID of the AB Test</td></tr>  <tr><td>RType</td><td>optional</td><td>string</td><td>Report Type</td></tr>  <tr><td>LinkName</td><td>optional</td><td>string</td><td>Link Name</td></tr>  <tr><td>Filter</td><td>optional</td><td>string</td><td>Filter</td></tr>  <tr><td>Region</td><td>optional</td><td>string</td><td>Region</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 error</td></tr>  <tr><td>ListName</td><td>string</td><td>List Name</td></tr>  <tr><td>ListDescription</td><td>string</td><td>List Description</td></tr>  <tr><td>ReportTypeText</td><td>string</td><td>Report type</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Errors</td></tr>  </tbody>  </table>
+ * GET Save as List      Query String parameters            KeyRequiredTypeDescription         EmailIDoptionalstringID of the EMail   EventIDoptionalstringID of the Event   ABIDoptionalstringID of the AB Test   RTypeoptionalstringReport Type   LinkNameoptionalstringLink Name   FilteroptionalstringFilter   RegionoptionalstringRegion            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 error   ListNamestringList Name   ListDescriptionstringList Description   ReportTypeTextstringReport type   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Errors      
  *
  * authToken String 
  * contentType String 
@@ -731,7 +731,7 @@ exports.emailsGetSaveAsListGet = function(authToken,contentType) {
 
 /**
  * GET Link Detail By Email ID
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  </tbody>  </table>    <h4>Query String parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>filter</td><td>optional</td><td>int</td><td>ID of the link</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>EmailName</td><td>string</td><td>Email Name</td></tr>  <tr><td>Subject</td><td>int</td><td>Subject</td></tr>  <tr><td>URL</td><td>string</td><td>URL</td></tr>  <tr><td>IsAutoresponder</td><td>string</td><td>Is Autoresponder</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email            Query String parameters            KeyRequiredTypeDescription         filteroptionalintID of the link            Response body parameters            KeyTypeDescription         EmailNamestringEmail Name   SubjectintSubject   URLstringURL   IsAutoresponderstringIs Autoresponder      
  *
  * authToken String 
  * contentType String 
@@ -760,7 +760,7 @@ exports.emailsLinkDetailByIDGet = function(authToken,contentType,iD) {
 
 /**
  * GET RSS History By Email ID
- * <h4>GET RSS History By Email ID</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailRSSHistoryData\">RSSHistoryData</a></td><td>RSS History Data</td></tr>  <tr><td>EmailName</td><td>string</td><td>Email Name</td></tr>  </tbody>  </table>
+ * GET RSS History By Email ID   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailRSSHistoryData\">RSSHistoryData</a>RSS History Data   EmailNamestringEmail Name      
  *
  * authToken String 
  * contentType String 
@@ -2040,7 +2040,7 @@ exports.emailsRSSHistoryByIDGet = function(authToken,contentType,iD) {
 
 /**
  * GET AbuseCampaign report By Email ID
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>HotmailISP</td><td>string</td><td>HotmailISP Total</td></tr>  <tr><td>AOLISP</td><td>string</td><td>AOLISP Total</td></tr>  <tr><td>YahooISP</td><td>string</td><td>YahooISP Total</td></tr>  <tr><td>OthersISP</td><td>string</td><td>OtherISP Total</td></tr>  <tr><td>AbuseLinkISP</td><td>string</td><td>AbuseLinkISP Total</td></tr>  <tr><td>Total</td><td>string</td><td>Abuse total</td></tr>  <tr><td>YourComplaintRate</td><td>string</td><td>Abuse Percentage</td></tr>  <tr><td>TotalSent</td><td>string</td><td>Total Mail Sent Number</td></tr>  <tr><td>Subject</td><td>string</td><td>Subject</td></tr>  <tr><td>Emails</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailAbuseCampaignData\">EmailAbuseCampaignData</a></td><td>Email Abuse Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 error   CountintTotal number   HotmailISPstringHotmailISP Total   AOLISPstringAOLISP Total   YahooISPstringYahooISP Total   OthersISPstringOtherISP Total   AbuseLinkISPstringAbuseLinkISP Total   TotalstringAbuse total   YourComplaintRatestringAbuse Percentage   TotalSentstringTotal Mail Sent Number   SubjectstringSubject   Emails<a href=\"http://www.benchmarkemail.com/models.htm#EmailAbuseCampaignData\">EmailAbuseCampaignData</a>Email Abuse Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors      
  *
  * authToken String 
  * contentType String 
@@ -2083,7 +2083,7 @@ exports.emailsReportAbuseCampaignByIDGet = function(authToken,contentType,iD) {
 
 /**
  * GET Abuse report
- * <h4>GET Abuse report</h4>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>TotalCount</td><td>string</td><td>Abuse Total</td></tr>  <tr><td>Total</td><td>string</td><td>Abuse total</td></tr>  <tr><td>YourComplaintRate</td><td>string</td><td>Abuse Percentage</td></tr>  <tr><td>Emails</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailAbuseData\">EmailAbuseData</a></td><td>Email Abuse Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  </tbody>  </table>
+ * GET Abuse report      Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 error   CountintTotal number   TotalCountstringAbuse Total   TotalstringAbuse total   YourComplaintRatestringAbuse Percentage   Emails<a href=\"http://www.benchmarkemail.com/models.htm#EmailAbuseData\">EmailAbuseData</a>Email Abuse Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors      
  *
  * authToken String 
  * contentType String 
@@ -2122,7 +2122,7 @@ exports.emailsReportAbuseGet = function(authToken,contentType) {
 
 /**
  * GET Bounces report By Email ID
- * <h4>GET Bounces report By Email ID</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailBounceData\">EmailBounceData</a></td><td>EMail Bounces Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  </tbody>  </table>
+ * GET Bounces report By Email ID   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailBounceData\">EmailBounceData</a>EMail Bounces Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors      
  *
  * authToken String 
  * contentType String 
@@ -2161,7 +2161,7 @@ exports.emailsReportBouncesByIDGet = function(authToken,contentType,iD) {
 
 /**
  * GET Report Details By Email ID
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailReportSummaryData\">ReportSummaryData</a></td><td>Report Summary Data</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Response body parameters            KeyTypeDescription         Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailReportSummaryData\">ReportSummaryData</a>Report Summary Data      
  *
  * authToken String 
  * contentType String 
@@ -2228,7 +2228,7 @@ exports.emailsReportByIDGet = function(authToken,contentType,iD) {
 
 /**
  * GET Click HeatMap By Email ID
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailReportHeatMapData\">ReportHeatMapData</a></td><td>Email Heat Map Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailReportHeatMapData\">ReportHeatMapData</a>Email Heat Map Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors      
  *
  * authToken String 
  * contentType String 
@@ -2273,7 +2273,7 @@ exports.emailsReportClickHeatMapByIDGet = function(authToken,contentType,iD) {
 
 /**
  * GET Click Performance By Email ID
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailClickPerformanceData\">EmailClickPerformanceData</a></td><td>Email Click Performance Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailClickPerformanceData\">EmailClickPerformanceData</a>Email Click Performance Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors      
  *
  * authToken String 
  * contentType String 
@@ -2306,7 +2306,7 @@ exports.emailsReportClickPerformanceByIDGet = function(authToken,contentType,iD)
 
 /**
  * GET Click Performance Details By Email ID
- * <h4>GET Click Performance Details By Email ID</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  </tbody>  </table>    <h4>Query String parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>PageNumber</td><td>optional</td><td>int</td><td>Page number</td></tr>  <tr><td>PageSize</td><td>optional</td><td>int</td><td>Number of records to show per page</td></tr>  <tr><td>OrderBy</td><td>optional</td><td>int</td><td>Field to order by</td></tr>  <tr><td>SortOrder</td><td>optional</td><td>int</td><td>Sort Order, <code>asc</code> or <code>desc</code></td></tr>  <tr><td>sequence</td><td>optional</td><td>string</td><td>Sequence</td></tr>  <tr><td>ClickURL</td><td>optional</td><td>string</td><td>Click URL</td></tr>  <tr><td>linkid</td><td>optional</td><td>string</td><td>ID Link</td></tr>  <tr><td>Language</td><td>optional</td><td>string</td><td>Language</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailClickMapData\">EmailClickMapData</a></td><td>Email Click Map Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  </tbody>  </table>
+ * GET Click Performance Details By Email ID   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email            Query String parameters            KeyRequiredTypeDescription         PageNumberoptionalintPage number   PageSizeoptionalintNumber of records to show per page   OrderByoptionalintField to order by   SortOrderoptionalintSort Order, <code>asc</code> or <code>desc</code>   sequenceoptionalstringSequence   ClickURLoptionalstringClick URL   linkidoptionalstringID Link   LanguageoptionalstringLanguage            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailClickMapData\">EmailClickMapData</a>Email Click Map Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors      
  *
  * authToken String 
  * contentType String 
@@ -2342,7 +2342,7 @@ exports.emailsReportClickPerformanceDetailsByIDGet = function(authToken,contentT
 
 /**
  * GET Clicks report By Email ID
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailReportDataGeneric\">ReportDataGeneric</a></td><td>Email Clicks Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Errors</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailReportDataGeneric\">ReportDataGeneric</a>Email Clicks Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Errors      
  *
  * authToken String 
  * contentType String 
@@ -2380,7 +2380,7 @@ exports.emailsReportClicksByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Get Report Download
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  <tr><td>{{RType}}</td><td>required</td><td>string</td><td>Type of report:  <code>1</code> or <code>8</code> Clicks  <code>2</code> Forwards  <code>3</code> Bounces  <code>4</code> Complaints  <code>5</code> Unsubscribes  <code>6</code> Opens  <code>7</code> Unopens  <code>9</code> Soft Bounces  <code>10</code> Hard Bounces  <code>11</code> Survey Respondents  <code>12</code> Opens State</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>ListDescription</td><td>string</td><td>List Description</td></tr>  <tr><td>ContactMasterID</td><td>string</td><td>ID of the list</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailReportDownloadData\">ReportDownloadData</a></td><td>Data</td></tr>  <tr><td>ListName</td><td>string</td><td>List Name</td></tr>  <tr><td>EmailName</td><td>string</td><td>Email Name</td></tr>  <tr><td>EmailSentName</td><td>string</td><td>Email Sent Name</td></tr>  <tr><td>EmailSubject</td><td>string</td><td>Email Subject</td></tr>  <tr><td>MailType</td><td>string</td><td>Mail Type</td></tr>  <tr><td>ReportType</td><td>string</td><td>Report Type</td></tr>  <tr><td>Count</td><td>int</td><td>Count</td></tr>  <tr><td>HasPin</td><td>int</td><td>Has Pin</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email   {{RType}}requiredstringType of report:   <code>1</code> or <code>8</code> Clicks   <code>2</code> Forwards   <code>3</code> Bounces   <code>4</code> Complaints   <code>5</code> Unsubscribes   <code>6</code> Opens   <code>7</code> Unopens   <code>9</code> Soft Bounces   <code>10</code> Hard Bounces   <code>11</code> Survey Respondents   <code>12</code> Opens State            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   ListDescriptionstringList Description   ContactMasterIDstringID of the list   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailReportDownloadData\">ReportDownloadData</a>Data   ListNamestringList Name   EmailNamestringEmail Name   EmailSentNamestringEmail Sent Name   EmailSubjectstringEmail Subject   MailTypestringMail Type   ReportTypestringReport Type   CountintCount   HasPinintHas Pin      
  *
  * authToken String 
  * contentType String 
@@ -2535,7 +2535,7 @@ exports.emailsReportDownloadByIDAndRTypeGet = function(authToken,contentType,iD,
 
 /**
  * Report Download
- * <h4>Report Download</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  <tr><td>{{RType}}</td><td>required</td><td>string</td><td>Report Type</td></tr>  </tbody>  </table>    <h4>Body Parameters (To be passed as a JSON string)</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Mode</td><td>required</td><td>string</td><td>Mode</td></tr>  <tr><td>Fields</td><td>required</td><td>string</td><td>Fields</td></tr>  <tr><td>PIN</td><td>required</td><td>string</td><td>PIN</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Content</td><td>int</td><td>Content</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  </tbody>  </table>
+ * Report Download   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email   {{RType}}requiredstringReport Type            Body Parameters (To be passed as a JSON string)            KeyRequiredTypeDescription         ModerequiredstringMode   FieldsrequiredstringFields   PINrequiredstringPIN            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   ContentintContent   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors      
  *
  * authToken String 
  * contentType String 
@@ -2564,7 +2564,7 @@ exports.emailsReportDownloadByIDAndRTypePost = function(authToken,contentType,iD
 
 /**
  * GET Forwards report By Email ID
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailReportDataGeneric\">ReportDataGeneric</a></td><td>Email Forward Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Errors</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailReportDataGeneric\">ReportDataGeneric</a>Email Forward Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Errors      
  *
  * authToken String 
  * contentType String 
@@ -2602,7 +2602,7 @@ exports.emailsReportForwardsByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Get Report
- * <h4>Get Report</h4>    <h4>Query String parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>PageNumber</td><td>optional</td><td>int</td><td>Page number</td></tr>  <tr><td>PageSize</td><td>optional</td><td>int</td><td>Number of records to show per page</td></tr>  <tr><td>ABFilter</td><td>optional</td><td>string</td><td>AB Filter</td></tr>  <tr><td>FilterType</td><td>optional</td><td>string</td><td>Filter Type</td></tr>  <tr><td>Filter</td><td>optional</td><td>string</td><td>Filter</td></tr>  <tr><td>OrderBy</td><td>optional</td><td>int</td><td>Field to order by</td></tr>  <tr><td>SortOrder</td><td>optional</td><td>int</td><td>Sort Order</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailReportSummaryData\">ReportSummaryData</a></td><td>Report Summary data</td></tr>  </tbody>  </table>
+ * Get Report      Query String parameters            KeyRequiredTypeDescription         PageNumberoptionalintPage number   PageSizeoptionalintNumber of records to show per page   ABFilteroptionalstringAB Filter   FilterTypeoptionalstringFilter Type   FilteroptionalstringFilter   OrderByoptionalintField to order by   SortOrderoptionalintSort Order            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailReportSummaryData\">ReportSummaryData</a>Report Summary data      
  *
  * authToken String 
  * contentType String 
@@ -2794,7 +2794,7 @@ exports.emailsReportGet = function(authToken,contentType) {
 
 /**
  * GET Opens Report
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailOpenData\">EmailOpenData</a></td><td>Email Open Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailOpenData\">EmailOpenData</a>Email Open Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors      
  *
  * authToken String 
  * contentType String 
@@ -2833,7 +2833,7 @@ exports.emailsReportOpensByIDGet = function(authToken,contentType,iD) {
 
 /**
  * GET Opens Hourly Report By Email ID
- * <h4>GET Opens Hourly Report By Email ID</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailOpensHourlyData\">EmailOpensHourlyData</a></td><td>Email Open Hourly Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  </tbody>  </table>
+ * GET Opens Hourly Report By Email ID   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailOpensHourlyData\">EmailOpensHourlyData</a>Email Open Hourly Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors      
  *
  * authToken String 
  * contentType String 
@@ -2982,7 +2982,7 @@ exports.emailsReportOpensHourlyByIDGet = function(authToken,contentType,iD) {
 
 /**
  * GET Opens Location Report By Email ID and CountryCode
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  <tr><td>{{CountryCode}}</td><td>required</td><td>string</td><td>Country Code</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailOpensLocationData\">EmailOpensLocationData</a></td><td>Email Open Location Data</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  <tr><td>Map</td><td>string</td><td>Map</td></tr>  <tr><td>Name</td><td>string</td><td>Name</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email   {{CountryCode}}requiredstringCountry Code            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailOpensLocationData\">EmailOpensLocationData</a>Email Open Location Data   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors   MapstringMap   NamestringName      
  *
  * authToken String 
  * contentType String 
@@ -3199,7 +3199,7 @@ exports.emailsReportOpensLocationByIDAndCountryCodeGet = function(authToken,cont
 
 /**
  * GET Opens Location Report
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailOpensLocationData\">EmailOpensLocationData</a></td><td>Email Open Location Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailOpensLocationData\">EmailOpensLocationData</a>Email Open Location Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors      
  *
  * authToken String 
  * contentType String 
@@ -4428,7 +4428,7 @@ exports.emailsReportOpensLocationByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Getting opens by country and region
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  <tr><td>{{Country}}</td><td>required</td><td>string</td><td>Country</td></tr>  <tr><td>{{Region}}</td><td>required</td><td>string</td><td>Region</td></tr>  </tbody>  </table>    <h4>Query String parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Language</td><td>optional</td><td>string</td><td>Language</td></tr>  <tr><td>PageNumber</td><td>optional</td><td>int</td><td>Page number</td></tr>  <tr><td>PageSize</td><td>optional</td><td>int</td><td>Number of records to show per page</td></tr>  <tr><td>Filter</td><td>optional</td><td>int</td><td>Filter</td></tr>  <tr><td>OrderBy</td><td>optional</td><td>int</td><td>Field to order by, <code>email</code>, <code>data</code></td></tr>  <tr><td>SortOrder</td><td>optional</td><td>int</td><td>Sort Order, <code>asc</code> or <code>desc</code></td></tr>  <tr><td>AbID</td><td>optional</td><td>string</td><td>ID of AB Test</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailOpenRegionData\">EmailOpenRegionData</a></td><td>Opens Region</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  <tr><td>Subject</td><td>string</td><td>Subject</td></tr>  <tr><td>Name</td><td>string</td><td>Name</td></tr>  <tr><td>IsAutoresponder</td><td>string</td><td>Whether the email is an autoresponder or not</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email   {{Country}}requiredstringCountry   {{Region}}requiredstringRegion            Query String parameters            KeyRequiredTypeDescription         LanguageoptionalstringLanguage   PageNumberoptionalintPage number   PageSizeoptionalintNumber of records to show per page   FilteroptionalintFilter   OrderByoptionalintField to order by, <code>email</code>, <code>data</code>   SortOrderoptionalintSort Order, <code>asc</code> or <code>desc</code>   AbIDoptionalstringID of AB Test            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailOpenRegionData\">EmailOpenRegionData</a>Opens Region   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors   SubjectstringSubject   NamestringName   IsAutoresponderstringWhether the email is an autoresponder or not      
  *
  * authToken String 
  * contentType String 
@@ -4468,7 +4468,7 @@ exports.emailsReportOpensRegionByIDAndCountryGet = function(authToken,contentTyp
 
 /**
  * GET Social Performance
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the EMail</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>FacebookShareCount</td><td>int</td><td>Facebook Share number</td></tr>  <tr><td>FacebookLikeCount</td><td>int</td><td>Facebook Like number</td></tr>  <tr><td>TwitterCount</td><td>int</td><td>Twitter number</td></tr>  <tr><td>LinkedInCount</td><td>int</td><td>LinkedIn number</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the EMail            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   FacebookShareCountintFacebook Share number   FacebookLikeCountintFacebook Like number   TwitterCountintTwitter number   LinkedInCountintLinkedIn number      
  *
  * authToken String 
  * contentType String 
@@ -4498,7 +4498,7 @@ exports.emailsReportSocialPerformanceByIDGet = function(authToken,contentType,iD
 
 /**
  * GET Unopens report By Email ID
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailUnopenedData\">EmailUnopenedData</a></td><td>Email Unopened Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Errors</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailUnopenedData\">EmailUnopenedData</a>Email Unopened Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Errors      
  *
  * authToken String 
  * contentType String 
@@ -4536,7 +4536,7 @@ exports.emailsReportUnopensByIDGet = function(authToken,contentType,iD) {
 
 /**
  * GET Unsubscribe report By Email ID
- * <h4>GET Unsubscribe report By Email ID</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailUnsubscribeData\">EmailUnsubscribeData</a></td><td>Email Unsubscribe Data</td></tr>  <tr><td>Summary</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailUnsubscribeReasonCountData\">UnsubscribeReasonCountData</a></td><td>Unsubscribe Reasons</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Errors</td></tr>  </tbody>  </table>
+ * GET Unsubscribe report By Email ID   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailUnsubscribeData\">EmailUnsubscribeData</a>Email Unsubscribe Data   Summary<a href=\"http://www.benchmarkemail.com/models.htm#EmailUnsubscribeReasonCountData\">UnsubscribeReasonCountData</a>Unsubscribe Reasons   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Errors      
  *
  * authToken String 
  * contentType String 
@@ -4583,7 +4583,7 @@ exports.emailsReportUnsubscribesByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Save as List
- * <h4>Save as List</h4>    <h4>Body Parameters (To be passed as a JSON string)</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>EmailID</td><td>optional</td><td>string</td><td>Email ID</td></tr>  <tr><td>EventID</td><td>optional</td><td>string</td><td>Event ID</td></tr>  <tr><td>ABID</td><td>optional</td><td>string</td><td>AB ID</td></tr>  <tr><td>RType</td><td>optional</td><td>string</td><td>Report Type</td></tr>  <tr><td>LinkName</td><td>optional</td><td>string</td><td>LinkName</td></tr>  <tr><td>Filter</td><td>optional</td><td>string</td><td>Filter</td></tr>  <tr><td>Region</td><td>optional</td><td>string</td><td>Region</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 error</td></tr>  <tr><td>ListName</td><td>string</td><td>List Name</td></tr>  <tr><td>ListDescription</td><td>string</td><td>List Description</td></tr>  <tr><td>ReportTypeText</td><td>string</td><td>Report type</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Array of errors</td></tr>  </tbody>  </table>
+ * Save as List      Body Parameters (To be passed as a JSON string)            KeyRequiredTypeDescription         EmailIDoptionalstringEmail ID   EventIDoptionalstringEvent ID   ABIDoptionalstringAB ID   RTypeoptionalstringReport Type   LinkNameoptionalstringLinkName   FilteroptionalstringFilter   RegionoptionalstringRegion            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 error   ListNamestringList Name   ListDescriptionstringList Description   ReportTypeTextstringReport type   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Array of errors      
  *
  * authToken String 
  * contentType String 
@@ -4612,7 +4612,7 @@ exports.emailsSaveAsListPatch = function(authToken,contentType) {
 
 /**
  * GET URL List By Email ID
- * <h4>GET URL List By Email ID</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Data</td><td>required</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ClientGenericList\">GenericList</a></td><td>URL Data</td></tr>  </tbody>  </table>
+ * GET URL List By Email ID   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email            Response body parameters            KeyTypeDescription         Datarequired<a href=\"http://www.benchmarkemail.com/models.htm#ClientGenericList\">GenericList</a>URL Data      
  *
  * authToken String 
  * contentType String 
@@ -4659,7 +4659,7 @@ exports.emailsURLListByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Get Poll response report
- * <h4>Get Poll response report</h4> <b>Query string parameters :</b> None <br> <b>Request Body parameters:</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>PollID</td>       <td>Required</td>       <td>String</td>       <td>Poll ID</td>     </tr>   </tbody> </table>  <b>Response body parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>string</td>       <td>Poll ID</td>     </tr>     <tr>       <td>Name</td>       <td>String</td>       <td>Name of a poll</td>     </tr>     <tr>       <td>URL</td>       <td>string</td>       <td>Poll URL</td>     </tr>     <tr>       <td>Code</td>       <td>String</td>       <td>Code</td>     </tr>     <tr>       <td>ShareLink</td>       <td>string</td>       <td>Link to share Poll</td>     </tr>     <tr>       <td>Question</td>       <td>String</td>       <td>Question</td>     </tr>     <tr>       <td>Status</td>       <td>String</td>       <td>Status</td>     </tr>     <tr>       <td>Options</td>       <td>ArrayList</td>       <td>Array of Answers</td>     </tr>     <tr>       <td>Button</td>       <td>string</td>       <td>Button</td>     </tr>     <tr>       <td>Responses</td>       <td>String</td>       <td>Name of Responses</td>     </tr>     <tr>       <td>CreatedDate</td>       <td>string</td>       <td>Poll Created Date</td>     </tr>     <tr>       <td>LiveDate</td>       <td>String</td>       <td>Poll Live Date</td>     </tr>     <tr>       <td>ModifiedDate</td>       <td>string</td>       <td>Poll Modified Date</td>     </tr>     <tr>       <td>Sequence</td>       <td>string</td>       <td>Sequence</td>     </tr>     <tr>       <td>CSS</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#CSSData\" >CSSData</a></td>       <td>&nbsp;</td>     </tr>     <tr>       <td>Answers</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#AnswerData\" >AnswerData</a></td>       <td>&nbsp;</td>     </tr>   </tbody> </table>
+ * Get Poll response report  Query string parameters : None    Request Body parameters:                    Parameter        Required        Type        Description                            PollID        Required        String        Poll ID                Response body parameters :                    Parameter        Type        Description                            ID        string        Poll ID                    Name        String        Name of a poll                    URL        string        Poll URL                    Code        String        Code                    ShareLink        string        Link to share Poll                    Question        String        Question                    Status        String        Status                    Options        ArrayList        Array of Answers                    Button        string        Button                    Responses        String        Name of Responses                    CreatedDate        string        Poll Created Date                    LiveDate        String        Poll Live Date                    ModifiedDate        string        Poll Modified Date                    Sequence        string        Sequence                    CSS        <a href=\"http://www.benchmarkemail.com/models.htm#CSSData\" >CSSData</a>                            Answers        <a href=\"http://www.benchmarkemail.com/models.htm#AnswerData\" >AnswerData</a>                    
  *
  * authToken String 
  * contentType String 
@@ -4680,7 +4680,7 @@ exports.pollResponseByPollIDGet = function(authToken,contentType,pollID) {
 
 /**
  * Get Report Answer Comment in Survey
- * <h4>Get Report Answer Comment in Survey</h4> <b>Query string parameters : </b> <table> <thead> <tr> <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr> </thead> <tbody> <tr><td>QuestionID</td><td>required</td><td>int</td><td>ID of the question</td></tr> </tbody> </table> <b>Request Body parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>SurveyID</td>       <td>Required</td>       <td>string</td>       <td>SurveyID</td>     </tr>   </tbody> </table> <b>Response body parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Name</td>       <td>string</td>       <td>Survey Name</td>     </tr>     <tr>       <td>Answers</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyCommentAnswers\" >SurveyCommentAnswers</a></td>       <td>Answers</td>     </tr>   </tbody> </table>
+ * Get Report Answer Comment in Survey  Query string parameters :         KeyRequiredTypeDescription      QuestionIDrequiredintID of the question      Request Body parameters :                     Parameter        Required        Type        Description                            SurveyID        Required        string        SurveyID              Response body parameters :                     Parameter        Type        Description                            Name        string        Survey Name                    Answers        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyCommentAnswers\" >SurveyCommentAnswers</a>        Answers            
  *
  * questionID String 
  * authToken String 
@@ -4711,7 +4711,7 @@ exports.surveyReportAnswerCommentBySurveyIDGet = function(questionID,authToken,c
 
 /**
  * Get ReportAnswerOther in Survey
- * <h4>Get ReportAnswerOther in Survey</h4> <b>Query string parameters : </b> <table>   <thead>     <tr>       <th>Key</th><th>Required</th><th>Type</th><th>Description</th>     </tr>   </thead>   <tbody>     <tr><td>QuestionID</td><td>required</td><td>int</td><td>ID of the question</td></tr>   </tbody> </table> <b>Request Body parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>SurveyID</td>       <td>Required</td>       <td>string</td>       <td>SurveyID</td>     </tr>   </tbody> </table> <b>Response body parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Name</td>       <td>string</td>       <td>Survey Name</td>     </tr>     <tr>       <td>Answers</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyCommentAnswers\" >SurveyCommentAnswers</a></td>       <td>Answers</td>     </tr>   </tbody> </table>
+ * Get ReportAnswerOther in Survey  Query string parameters :                     KeyRequiredTypeDescription                    QuestionIDrequiredintID of the question        Request Body parameters :                     Parameter        Required        Type        Description                            SurveyID        Required        string        SurveyID              Response body parameters :                     Parameter        Type        Description                            Name        string        Survey Name                    Answers        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyCommentAnswers\" >SurveyCommentAnswers</a>        Answers            
  *
  * questionID String 
  * authToken String 
@@ -4742,7 +4742,7 @@ exports.surveyReportAnswerOtherBySurveyIDGet = function(questionID,authToken,con
 
 /**
  * Get Report Answer Text in Survey
- * <h4>Get Report Answer Text in Survey</h4> <b>Query string parameters : </b> <table>   <thead>     <tr>       <th>Key</th><th>Required</th><th>Type</th><th>Description</th>     </tr>   </thead>   <tbody>     <tr><td>QuestionID</td><td>required</td><td>int</td><td>ID of the question</td></tr>   </tbody> </table> <b>Request Body Parameters : </b> <table >   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>SurveyID</td>       <td>Required</td>       <td>string</td>       <td>Survey ID</td>     </tr>   </tbody> </table>  <b>Response Body Parameters : </b> <table >   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Responses</td>       <td>int</td>       <td>Responses</td>     </tr>     <tr>       <td>Name</td>       <td>string</td>       <td>Survey Name</td>     </tr>     <tr>       <td>Question</td>       <td>string</td>       <td>Survey ID</td>     </tr>     <tr>       <td>Answers</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyTextAnswers\" >SurveyTextAnswers</a></td>       <td>Questions</td>     </tr>   </tbody> </table>
+ * Get Report Answer Text in Survey  Query string parameters :                     KeyRequiredTypeDescription                    QuestionIDrequiredintID of the question        Request Body Parameters :   <table >                  Parameter        Required        Type        Description                            SurveyID        Required        string        Survey ID                Response Body Parameters :   <table >                  Parameter        Type        Description                            Responses        int        Responses                    Name        string        Survey Name                    Question        string        Survey ID                    Answers        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyTextAnswers\" >SurveyTextAnswers</a>        Questions            
  *
  * questionID String 
  * authToken String 
@@ -4778,7 +4778,7 @@ exports.surveyReportAnswerTextBySurveyIDGet = function(questionID,authToken,cont
 
 /**
  * Get Report detail of Survey
- * <h4>Get Report detail of Survey</h4> <b>Query string parameters : </b> None <br> <b>Request Body Parameters : </b> <table >   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>SurveyID</td>       <td>Required</td>       <td>string</td>       <td>Survey ID</td>     </tr>   </tbody> </table>  <b>Response Body Parameters : </b> <table >   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>QuestionCount</td>       <td>int</td>       <td>Count of questio</td>     </tr>     <tr>       <td>Responses</td>       <td>int</td>       <td>Responses</td>     </tr>     <tr>       <td>Name</td>       <td>string</td>       <td>Survey Name</td>     </tr>     <tr>       <td>ID</td>       <td>string</td>       <td>Survey ID</td>     </tr>     <tr>       <td>Questions</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyReportQuestion\" >SurveyReportQuestion</a></td>       <td>Questions</td>     </tr>   </tbody> </table>
+ * Get Report detail of Survey  Query string parameters :  None    Request Body Parameters :   <table >                  Parameter        Required        Type        Description                            SurveyID        Required        string        Survey ID                Response Body Parameters :   <table >                  Parameter        Type        Description                            QuestionCount        int        Count of questio                    Responses        int        Responses                    Name        string        Survey Name                    ID        string        Survey ID                    Questions        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyReportQuestion\" >SurveyReportQuestion</a>        Questions            
  *
  * authToken String 
  * contentType String 
@@ -5088,7 +5088,7 @@ exports.surveyReportDetailBySurveyIDGet = function(authToken,contentType,surveyI
 
 /**
  * Get full report of Survey
- * <h4>Get a Full report Of Survey</h4> <b>Query String Parameters:</b> None <br> <b>Request Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>SurveyID</td>       <td>Required</td>       <td>string</td>       <td>Survey ID</td>     </tr>   </tbody> </table> <b>Response Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Name</td>       <td>string</td>       <td>Survey Name</td>     </tr>     <tr>       <td>Responses</td>       <td>string</td>       <td></td>     </tr>     <tr>       <td>Columns</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyColumns\" >SurveyColumns</a></td>       <td></td>     </tr>     <tr>       <td>Answers</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyCompileAnswers\" >SurveyCompileAnswers</a></td>       <td></td>     </tr>   </tbody> </table>
+ * Get a Full report Of Survey  Query String Parameters: None    Request Body Parameters :                     Parameter        Required        Type        Description                            SurveyID        Required        string        Survey ID              Response Body Parameters :                     Parameter        Type        Description                            Name        string        Survey Name                    Responses        string                            Columns        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyColumns\" >SurveyColumns</a>                            Answers        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyCompileAnswers\" >SurveyCompileAnswers</a>                    
  *
  * authToken String 
  * contentType String 
@@ -5152,7 +5152,7 @@ exports.surveyReportFullBySurveyIDGet = function(authToken,contentType,surveyID)
 
 /**
  * Get Individual Question Result Detail in Survey
- * <h4>Get Individual Question Result Detail in Survey</h4> <b>Query string parameters : </b> None <br> <b>Request Body Parameters:</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>SurveyID</td>       <td>Required</td>       <td>string</td>       <td>Survey ID</td>     </tr>     <tr>       <td>EmailID</td>       <td>Required</td>       <td>string</td>       <td>Email Address</td>     </tr>   </tbody> </table> <b>Response Body Parameters:</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Status</td>       <td>string</td>       <td>1 if successful, -1 if error</td>     </tr>     <tr>       <td>Name</td>       <td>string</td>       <td>Name of a Survey</td>     </tr>     <tr>       <td>Email</td>       <td>string</td>       <td>Email Address</td>     </tr>     <tr>       <td>SurveyID</td>       <td>string</td>       <td>Survey ID</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyIndividualQuestion\" >SurveyIndividualQuestion</a></td>       <td></td>     </tr>     <tr>       <td>Errors</td>       <td>ErrorData</td>       <td>Error messages</td>     </tr>   </tbody> </table>
+ * Get Individual Question Result Detail in Survey  Query string parameters :  None    Request Body Parameters:                    Parameter        Required        Type        Description                            SurveyID        Required        string        Survey ID                    EmailID        Required        string        Email Address              Response Body Parameters:                    Parameter        Type        Description                            Status        string        1 if successful, -1 if error                    Name        string        Name of a Survey                    Email        string        Email Address                    SurveyID        string        Survey ID                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyIndividualQuestion\" >SurveyIndividualQuestion</a>                            Errors        ErrorData        Error messages            
  *
  * authToken String 
  * contentType String 
@@ -5247,7 +5247,7 @@ exports.surveyReportIndividualBySurveyIDAndEmailIDGet = function(authToken,conte
 
 /**
  * Get Report of Survey Individual Result
- * <h4>Get Report of Survey Individual Result</h4> <b>Query string parameters : </b> <table>   <thead>     <tr>       <th>Key</th><th>Required</th><th>Type</th><th>Description</th>     </tr>   </thead>   <tbody>     <tr><td>PageNumber</td><td>optional</td><td>int</td><td>Page number</td></tr>     <tr><td>PageSize</td><td>optional</td><td>int</td><td>Number of records to show per page</td></tr>     <tr><td>Filter</td><td>optional</td><td>string</td><td>Filter</td></tr>     <tr><td>OrderBy</td><td>optional</td><td>int</td><td>Field to order by, <code>date</code>, <code>email</code></td></tr>     <tr><td>SortOrder</td><td>optional</td><td>int</td><td>Sort Order, <code>asc</code> or <code>desc</code></td></tr>   </tbody> </table>  <b>Request Body Parameters:</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>SurveyID</td>       <td>Required</td>       <td>string</td>       <td>SurveyID</td>     </tr>   </tbody> </table> <b>Response Body Parameters:</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Count</td>       <td>Int</td>       <td></td>     </tr>     <tr>       <td>Responses</td>       <td>Int</td>       <td></td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 if successful, -1 if error</td>     </tr>     <tr>       <td>Name</td>       <td>string</td>       <td>Survey Name</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyIndividualAnswers\" >SurveyIndividualAnswers </a></td>       <td>Data</td>     </tr>   </tbody> </table>
+ * Get Report of Survey Individual Result  Query string parameters :                     KeyRequiredTypeDescription                    PageNumberoptionalintPage number      PageSizeoptionalintNumber of records to show per page      FilteroptionalstringFilter      OrderByoptionalintField to order by, <code>date</code>, <code>email</code>      SortOrderoptionalintSort Order, <code>asc</code> or <code>desc</code>          Request Body Parameters:                    Parameter        Required        Type        Description                            SurveyID        Required        string        SurveyID              Response Body Parameters:                    Parameter        Type        Description                            Count        Int                            Responses        Int                            Status        string        1 if successful, -1 if error                    Name        string        Survey Name                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyIndividualAnswers\" >SurveyIndividualAnswers </a>        Data            
  *
  * pageNumber String 
  * pageSize String 
@@ -5303,7 +5303,7 @@ exports.surveyReportIndividualBySurveyIDGet = function(pageNumber,pageSize,filte
 
 /**
  * Get Report List of Survey
- * <h4>Get Report List of Survey</h4> <b>Query string parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>     </thead>     <tbody>     <tr>       <td>PageNumber</td>       <td>Optional</td>       <td>int</td>       <td>Page Number</td>     </tr>     <tr>       <td>PageSize</td>       <td>Optional</td>       <td>int</td>       <td>Number of rows on the page</td>     </tr>     <tr>       <td>OrderBy</td>       <td>Optional</td>       <td>string</td>       <td>Order By Column</td>     </tr>     <tr>       <td>Filter</td>       <td>Optional</td>       <td>string</td>       <td>Filter by survey name</td>     </tr>     <tr>       <td>SortOrder</td>       <td>Optional</td>       <td>string</td>       <td>Sequence of order asc/desc</td>     </tr>   </tbody> </table>  <b>Response body parameters : </b> <table >   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>     </thead>     <tbody>     <tr>       <td>Count</td>       <td>int</td>       <td>Total number</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 if successful, -1 if error</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyData\" >SurveyData</a></td>       <td>Array of list returned.</td>     </tr>   </tbody> </table>
+ * Get Report List of Survey  Query string parameters :                     Parameter        Required        Type        Description                                PageNumber        Optional        int        Page Number                    PageSize        Optional        int        Number of rows on the page                    OrderBy        Optional        string        Order By Column                    Filter        Optional        string        Filter by survey name                    SortOrder        Optional        string        Sequence of order asc/desc                Response body parameters :   <table >                  Parameter        Type        Description                                Count        int        Total number                    Status        string        1 if successful, -1 if error                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyData\" >SurveyData</a>        Array of list returned.            
  *
  * pageNumber String 
  * pageSize String 

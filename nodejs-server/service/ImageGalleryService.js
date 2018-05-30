@@ -3,7 +3,7 @@
 
 /**
  * Delete an image
- * <h4>Delete an image</h4> <b>Query string parameters : </b> None <br> <b>Request Body Parameters : </b> <table>   <tr>     <th>Parameter</th>     <th>Required</th>     <th>Type</th>     <th>Description</th>   </tr>   <tr>     <td>ImageID</td>     <td>Required</td>     <td>string</td>     <td>Image ID</td>   </tr> </table> <b>Response Body Parameters : </b> <table>   <tr>     <th>Parameter</th>     <th>Type</th>     <th>Description</th>   </tr>   <tr>     <td>Response</td>     <td>int</td>     <td>1 if Success, -1 if error</td>   </tr> </table>
+ * Delete an image  Query string parameters :  None    Request Body Parameters :             Parameter      Required      Type      Description              ImageID      Required      string      Image ID        Response Body Parameters :             Parameter      Type      Description              Response      int      1 if Success, -1 if error      
  *
  * authToken String 
  * contentType String 
@@ -27,7 +27,7 @@ exports.imagesByImageIDDelete = function(authToken,contentType,imageID) {
 
 /**
  * Get image details
- * <h4>Get image details</h4> <b>Query string parameters : </b> None <br> <b>Request Body Parameter</b>   <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>     <tr>       <td>ImageID</td>       <td>Required</td>       <td>string</td>       <td>Image ID</td>     </tr>   </table> <b>Response body parameters : </b> <table>   <tr>     <th>Parameter</th>     <th>Type</th>     <th>Description</th>   </tr>   <tr>     <td>Height</td>     <td>int</td>     <td>Height of a image</td>   </tr>   <tr>     <td>ID</td>     <td>string</td>     <td>Image ID</td>   </tr>   <tr>     <td>Name</td>     <td>string</td>     <td>Name of image</td>   </tr>   <tr>     <td>Size</td>     <td>int</td>     <td>Size of image</td>   </tr>   <tr>     <td>Type</td>     <td>string</td>     <td>Type of image</td>   </tr>   <tr>     <td>URL</td>     <td>string</td>     <td>URL</td>   </tr>   <tr>     <td>Width</td>     <td>int</td>     <td>Width of a image</td>   </tr> </table>
+ * Get image details  Query string parameters :  None    Request Body Parameter    <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">              Parameter        Required        Type        Description                    ImageID        Required        string        Image ID            Response body parameters :             Parameter      Type      Description              Height      int      Height of a image              ID      string      Image ID              Name      string      Name of image              Size      int      Size of image              Type      string      Type of image              URL      string      URL              Width      int      Width of a image      
  *
  * authToken String 
  * contentType String 
@@ -59,7 +59,7 @@ exports.imagesByImageIDGet = function(authToken,contentType,imageID) {
 
 /**
  * Update an image
- * <h4>Update an image</h4> <b>Query string parameters : </b> <table>   <tr>     <th>Parameter</th>     <th>Required</th>     <th>Type</th>     <th>Description</th>   </tr>   <tr>     <td>ImageID</td>     <td>Required</td>     <td>string</td>     <td>Image ID</td>   </tr> </table> <b>Request Body Parameters : </b> <table>   <tr>     <th>Parameter</th>     <th>Required</th>     <th>Type</th>     <th>Description</th>   </tr>   <tr>     <td>ImageURL</td>     <td>Required</td>     <td>string</td>     <td>Image URL</td>   </tr> </table> <b>Response Body Parameters : </b> <table>   <tr>     <th>Parameter</th>     <th>Type</th>     <th>Description</th>   </tr>   <tr>     <td>Response</td>     <td>int</td>     <td>1 if Success, -1 if error</td>   </tr> </table>
+ * Update an image  Query string parameters :             Parameter      Required      Type      Description              ImageID      Required      string      Image ID        Request Body Parameters :             Parameter      Required      Type      Description              ImageURL      Required      string      Image URL        Response Body Parameters :             Parameter      Type      Description              Response      int      1 if Success, -1 if error      
  *
  * authToken String 
  * contentType String 
@@ -83,7 +83,7 @@ exports.imagesByImageIDPatch = function(authToken,contentType,imageID) {
 
 /**
  * Upload Logo Image
- * <h4>Upload Logo Image</h4> <b>Query string parameters : </b> None <br>  <b>Response Body Parameters : </b>   <table>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>     <tr>       <td>Data</td>       <td>Required</td>       <td>File</td>       <td>Image file to be uploaded</td>     </tr>     <tr>       <td>ImageType</td>       <td>Required</td>       <td>string</td>       <td>Type of a image</td>     </tr>     <tr>       <td>Extra</td>       <td>Required</td>       <td>string</td>       <td>listbuilder ID</td>     </tr>   </table>   <b>Response body parameters : </b>   <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">     <tr>       <th class=\"w_para\">Parameter</th>       <th class=\"w_type\">Type</th>       <th class=\"w_desc\">Description</th>     </tr>     <tr>       <td>Detail</td>       <td>string</td>       <td>Image URL</td>     </tr>     <tr>       <td>Error</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a></td>       <td>Array of videos returned.</td>     </tr>     <tr>       <td>ID</td>       <td>string</td>       <td>Image ID</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 if successful, -1 if error</td>     </tr>   </table>
+ * Upload Logo Image  Query string parameters :  None      Response Body Parameters :                   Parameter        Required        Type        Description                    Data        Required        File        Image file to be uploaded                    ImageType        Required        string        Type of a image                    Extra        Required        string        listbuilder ID              Response body parameters :     <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">              <th class=\"w_para\">Parameter        <th class=\"w_type\">Type        <th class=\"w_desc\">Description                    Detail        string        Image URL                    Error        <a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a>        Array of videos returned.                    ID        string        Image ID                    Status        string        1 if successful, -1 if error          
  *
  * data String Image file to be uploaded.
  * authToken String 
@@ -114,7 +114,7 @@ exports.imagesByImageTypeAndExtraPost = function(data,authToken,contentType,imag
 
 /**
  * Copy image to sub-account
- * <h4>Copy image to sub-account</h4> <b>Query string parameters : </b> <table>   <tr>     <th>Parameter</th>     <th>Required</th>     <th>Type</th>     <th>Description</th>   </tr>   <tr>     <td>ImageID</td>     <td>Required</td>     <td>string</td>     <td>Image ID</td>   </tr> </table> <b>Request Body Parameters : </b> <table>   <tr>     <th>Parameter</th>     <th>Required</th>     <th>Type</th>     <th>Description</th>   </tr>   <tr>     <td>Clients</td>     <td>Required</td>     <td>string</td>     <td>Client ID</td>   </tr> </table> <b>Response Body Parameters : </b> <table>   <tr>     <th>Parameter</th>     <th>Type</th>     <th>Description</th>   </tr>   <tr>     <td>Response</td>     <td>int</td>     <td>1 if Success, -1 if error</td>   </tr> </table>
+ * Copy image to sub-account  Query string parameters :             Parameter      Required      Type      Description              ImageID      Required      string      Image ID        Request Body Parameters :             Parameter      Required      Type      Description              Clients      Required      string      Client ID        Response Body Parameters :             Parameter      Type      Description              Response      int      1 if Success, -1 if error      
  *
  * authToken String 
  * contentType String 
@@ -138,7 +138,7 @@ exports.imagesCopyByImageIDPost = function(authToken,contentType,imageID) {
 
 /**
  * Get a list of images
- * <h4>Get a list of images</h4> <b>Query string parameters : </b>   <table>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>     <tr>       <td>Filter</td>       <td>Optional</td>       <td>int</td>       <td>Filterr</td>     </tr>     <tr>       <td>PageNumber</td>       <td>Required</td>       <td>int</td>       <td>Page Number</td>     </tr>     <tr>       <td>PageSize</td>       <td>Required</td>       <td>int</td>       <td>Number of rows on the page</td>     </tr>     <tr>       <td>OrderBy</td>       <td>Required</td>       <td>string</td>       <td>Order By Column</td>     </tr>     <tr>       <td>SortOrder</td>       <td>Optional</td>       <td>string</td>       <td>ASC or DESC</td>     </tr>   </table>   <b>Response body parameters : </b>   <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">     <tr>       <th class=\"w_para\">Parameter</th>       <th class=\"w_type\">Type</th>       <th class=\"w_desc\">Description</th>     </tr>     <tr>       <td>Count</td>       <td>int</td>       <td>Total number of videos</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 if successful, -1 if error</td>     </tr>     <tr>       <td>Data</td>       <td>Array</td>       <td>Array of videos returned.</td>     </tr>   </table>
+ * Get a list of images  Query string parameters :                   Parameter        Required        Type        Description                    Filter        Optional        int        Filterr                    PageNumber        Required        int        Page Number                    PageSize        Required        int        Number of rows on the page                    OrderBy        Required        string        Order By Column                    SortOrder        Optional        string        ASC or DESC              Response body parameters :     <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">              <th class=\"w_para\">Parameter        <th class=\"w_type\">Type        <th class=\"w_desc\">Description                    Count        int        Total number of videos                    Status        string        1 if successful, -1 if error                    Data        Array        Array of videos returned.          
  *
  * filter String 
  * pageNumber String 
@@ -210,7 +210,7 @@ exports.imagesGet = function(filter,pageNumber,pageSize,orderBy,sortOrder,authTo
 
 /**
  * Get list of Giphy images
- * <h4>Get list of Giphy images</h4> <b>Query string parameters : </b>  <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>PageNumber</td>       <td>Optional</td>       <td>string</td>       <td>Page Number</td>     </tr>     <tr>       <td>PageSize</td>       <td>Optional</td>       <td>string</td>       <td>Number of records per page</td>     </tr>     <tr>       <td>Filter</td>       <td>Optional</td>       <td>string</td>       <td>Filter</td>     </tr>   </tbody> </table> <b>Request body parameters : </b> None <br> <b>Response body parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Status</td>       <td>string</td>       <td>Status</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#GiphyImageData\" >GiphyImageData</a></td>       <td>Giphy Image Data</td>     </tr>   </tbody> </table>
+ * Get list of Giphy images  Query string parameters :                      Parameter        Required        Type        Description                            PageNumber        Optional        string        Page Number                    PageSize        Optional        string        Number of records per page                    Filter        Optional        string        Filter              Request body parameters :  None    Response body parameters :                     Parameter        Type        Description                            Status        string        Status                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#GiphyImageData\" >GiphyImageData</a>        Giphy Image Data            
  *
  * pageNumber String 
  * pageSize String 
@@ -264,7 +264,7 @@ exports.imagesGiphyImagesListGet = function(pageNumber,pageSize,filter,authToken
 
 /**
  * Upload an Image
- * <h4>Upload an Image</h4> <b>Query string parameters : </b> None <br>  <b>Response Body Parameters : </b>   <table>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>     <tr>       <td>Data</td>       <td>Required</td>       <td>File</td>       <td>Image file to be uploaded</td>     </tr>   </table>   <b>Response body parameters : </b>   <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">     <tr>       <th class=\"w_para\">Parameter</th>       <th class=\"w_type\">Type</th>       <th class=\"w_desc\">Description</th>     </tr>     <tr>       <td>Detail</td>       <td>string</td>       <td>Image URL</td>     </tr>     <tr>       <td>Error</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a></td>       <td>Array of videos returned.</td>     </tr>     <tr>       <td>ID</td>       <td>string</td>       <td>Image ID</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 if successful, -1 if error</td>     </tr>   </table>
+ * Upload an Image  Query string parameters :  None      Response Body Parameters :                   Parameter        Required        Type        Description                    Data        Required        File        Image file to be uploaded              Response body parameters :     <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">              <th class=\"w_para\">Parameter        <th class=\"w_type\">Type        <th class=\"w_desc\">Description                    Detail        string        Image URL                    Error        <a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\" >ErrorData</a>        Array of videos returned.                    ID        string        Image ID                    Status        string        1 if successful, -1 if error          
  *
  * data String Image File to be uploaded
  * authToken String 
@@ -293,7 +293,7 @@ exports.imagesPost = function(data,authToken,contentType) {
 
 /**
  * Get account summary
- * <h4>Get account summary</h4> <b>Query string parameters : </b> None <br> <b>Request body parameters : </b> None <br> <b>Response body parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>FreePlan</td>       <td>int</td>       <td>1 = FreePlan, 0 = PaidPlan</td>     </tr>     <tr>       <td>Limit</td>       <td>int</td>       <td>Total Space</td>     </tr>     <tr>       <td>PremiumClient</td>       <td>int</td>       <td>1 = hasImageHosting else 0</td>     </tr>     <tr>       <td>Used</td>       <td>int</td>       <td>Used Space</td>     </tr>   </tbody> </table>
+ * Get account summary  Query string parameters :  None    Request body parameters :  None    Response body parameters :                     Parameter        Type        Description                            FreePlan        int        1 = FreePlan, 0 = PaidPlan                    Limit        int        Total Space                    PremiumClient        int        1 = hasImageHosting else 0                    Used        int        Used Space            
  *
  * authToken String 
  * contentType String 

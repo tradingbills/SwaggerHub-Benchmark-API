@@ -3,7 +3,7 @@
 
 /**
  * Get download segment data
- * <h4>Get download segment data</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>IDs of the segment</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 error</td></tr>  <tr><td>SegmentName</td><td>string</td><td>Name of segment</td></tr>  <tr><td>SegmentDescription</td><td>string</td><td>Segment Description</td></tr>  <tr><td>ContactMasterID</td><td>string</td><td>List ID</td></tr>  <tr><td>Error</td><td>ErrorData</td><td>Array of errors</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>HasPin</td><td>int</td><td>1=Has Security Pin </td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactSegmentDownloadData\">SegmentDownloadData</a></td><td>Array of segment download data</td></tr>  </tbody>  </table>
+ * Get download segment data   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringIDs of the segment            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 error   SegmentNamestringName of segment   SegmentDescriptionstringSegment Description   ContactMasterIDstringList ID   ErrorErrorDataArray of errors   CountintTotal number   HasPinint1=Has Security Pin    Data<a href=\"http://www.benchmarkemail.com/models.htm#ContactSegmentDownloadData\">SegmentDownloadData</a>Array of segment download data      
  *
  * authToken String 
  * contentType String 
@@ -152,7 +152,7 @@ exports.contactSegmentDownloadByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Get Segment List
- * <h4>Get Segment List</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ListID}}</td><td>required</td><td>string</td><td>ID of the list</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total number</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactRecord\">ContactRecord</a></td><td>Segment Data</td></tr>  </tbody>  </table>
+ * Get Segment List   URL Parameters            KeyRequiredTypeDescription         {{ListID}}requiredstringID of the list            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal number   Data<a href=\"http://www.benchmarkemail.com/models.htm#ContactRecord\">ContactRecord</a>Segment Data      
  *
  * authToken String 
  * contentType String 
@@ -186,7 +186,7 @@ exports.contactSegmentListsByListIDGet = function(authToken,contentType,listID) 
 
 /**
  * Creating segment from contact IDs
- * <h4>Creates segment from contact IDs</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ListID}}</td><td>required</td><td>ID of the list</td></tr>  </tbody>  </table>    <h4>Body Parameters (to be encoded as a JSON string)</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>ContactIDs</td><td>required</td><td>IDs of the contacts to be inserted</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Data</td><td>string</td><td>Segment ID</td></tr>  </tbody>  </table>
+ * Creates segment from contact IDs   URL Parameters            KeyRequiredDescription         {{ListID}}requiredID of the list            Body Parameters (to be encoded as a JSON string)            KeyRequiredDescription         ContactIDsrequiredIDs of the contacts to be inserted            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   DatastringSegment ID      
  *
  * body CreatingSegmentFromContactIdsrequest 
  * authToken String 
@@ -214,7 +214,7 @@ exports.contactSegmentsByListIDPost = function(body,authToken,contentType,listID
 
 /**
  * Delete Segment
- * <h4>Deletes an existing segment</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>required</td><td>{{SegmentID}}</td><td>string</td><td>ID of the segment</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\">ErrorData</a></td><td>Array of error</td></tr>  </tbody>  </table>
+ * Deletes an existing segment   URL Parameters            KeyRequiredTypeDescription         required{{SegmentID}}stringID of the segment            Response body parameters            KeyTypeDescription         statusstring1 if successful, -1 if error   Error<a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\">ErrorData</a>Array of error      
  *
  * authToken String 
  * contentType String 
@@ -241,7 +241,7 @@ exports.contactSegmentsBySegmentIDDelete = function(authToken,contentType,segmen
 
 /**
  * Get segment by ID
- * <h4>Get an existing segment by ID</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{SegmentID}}</td><td>required</td><td>string</td><td>ID of the segment</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total Count</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactSegmentsRecord\">SegmentsRecord</a></td><td>Errors</td></tr>  </tbody>  </table>
+ * Get an existing segment by ID   URL Parameters            KeyRequiredTypeDescription         {{SegmentID}}requiredstringID of the segment            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal Count   Data<a href=\"http://www.benchmarkemail.com/models.htm#ContactSegmentsRecord\">SegmentsRecord</a>Errors      
  *
  * authToken String 
  * contentType String 
@@ -284,7 +284,7 @@ exports.contactSegmentsBySegmentIDGet = function(authToken,contentType,segmentID
 
 /**
  * Update Segment
- * <h4>Update Segment</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{SegmentID}}</td><td>required</td><td>string</td><td>ID of the segment</td></tr>  </tbody>  </table>    <h4>Body Parameters (To be passed as a JSON string)</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Data</td><td>optional</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactSegmentMasterDataRecord\">SegmentMasterDataRecord</a></td><td>Degment related data</td></tr>  </tbody>  </table>
+ * Update Segment   URL Parameters            KeyRequiredTypeDescription         {{SegmentID}}requiredstringID of the segment            Body Parameters (To be passed as a JSON string)            KeyRequiredTypeDescription         Dataoptional<a href=\"http://www.benchmarkemail.com/models.htm#ContactSegmentMasterDataRecord\">SegmentMasterDataRecord</a>Degment related data      
  *
  * body UpdateSegmentrequest 
  * authToken String 
@@ -318,7 +318,7 @@ exports.contactSegmentsBySegmentIDPatch = function(body,authToken,contentType,se
 
 /**
  * Delete the Segment Criteria
- * <h4>Delete Segment</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{SegmentID}}</td><td>required</td><td>string</td><td>ID of the segment</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>ErrorData</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\">ErrorData</a></td><td>Error Code</td></tr>  </tbody>  </table>
+ * Delete Segment   URL Parameters            KeyRequiredTypeDescription         {{SegmentID}}requiredstringID of the segment            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   ErrorData<a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\">ErrorData</a>Error Code      
  *
  * authToken String 
  * contentType String 
@@ -345,7 +345,7 @@ exports.contactSegmentsCriteriaBySegmentIDDelete = function(authToken,contentTyp
 
 /**
  * Create Criteria
- * <h4>Create a new Segments Criteria</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{SegmentID}}</td><td>required</td><td>string</td><td>ID of the segment</td></tr>  </tbody>  </table>    <h4>Body Parameters (To be passed as a JSON string)</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Criteria</td><td>required</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactSegmentMasterDataRecord\">SegmentMasterDataRecord</a></td><td>  Criteria  eg.  [{\"field\": \"Email\",\"fieldtype\": \"0\",\"condition\": [\"starts san\"]}]  </td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Title</td><td>string</td><td> </td></tr>  <tr><td>Detail</td><td>string</td><td></td></tr>  <tr><td>ErrorData</td><td>string</td><td>Error Code</td></tr>  </tbody>  </table>
+ * Create a new Segments Criteria   URL Parameters            KeyRequiredTypeDescription         {{SegmentID}}requiredstringID of the segment            Body Parameters (To be passed as a JSON string)            KeyRequiredTypeDescription         Criteriarequired<a href=\"http://www.benchmarkemail.com/models.htm#ContactSegmentMasterDataRecord\">SegmentMasterDataRecord</a>   Criteria   eg.   [{\"field\": \"Email\",\"fieldtype\": \"0\",\"condition\": [\"starts san\"]}]               Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   Titlestring    Detailstring   ErrorDatastringError Code      
  *
  * body CreateCriteriarequest 
  * authToken String 
@@ -375,7 +375,7 @@ exports.contactSegmentsCriteriaBySegmentIDPost = function(body,authToken,content
 
 /**
  * Getting a list of segments
- * <h4>Get Segments</h4>      <h4>Query String parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>PageNumber</td><td>optional</td><td>int </td><td>Page Number</td></tr>  <tr><td>PageSize</td><td>required</td><td>int </td><td>Number of rows on the page</td></tr>  <tr><td>Filter</td><td>required</td><td>string </td><td>Filter value</td></tr>  <tr><td>OrderBy</td><td>required</td><td>string </td><td>Order By Column (<code>Name</code> / <code>date</code>)</td></tr>  <tr><td>SortOrder</td><td>required</td><td>string </td><td><code>ASC</code> or <code>DESC</code></td></tr>  </tbody>  </table>      <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Count</td><td>int</td><td>Total Count</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactSegmentsRecord\">SegmentsRecord</a></td><td>Errors</td></tr>  </tbody>  </table>
+ * Get Segments         Query String parameters            KeyRequiredTypeDescription         PageNumberoptionalint Page Number   PageSizerequiredint Number of rows on the page   Filterrequiredstring Filter value   OrderByrequiredstring Order By Column (<code>Name</code> / <code>date</code>)   SortOrderrequiredstring <code>ASC</code> or <code>DESC</code>               Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   CountintTotal Count   Data<a href=\"http://www.benchmarkemail.com/models.htm#ContactSegmentsRecord\">SegmentsRecord</a>Errors      
  *
  * authToken String 
  * contentType String 
@@ -432,7 +432,7 @@ exports.contactSegmentsGet = function(authToken,contentType) {
 
 /**
  * Get Segment Auto Generate Name
- * <h4>Get Segment Auto Generate Name</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ListID}}</td><td>required</td><td>string</td><td>ID of the list</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Data</td><td>String</td><td>Segment Name</td></tr>  <tr><td>ErrorData</td><td>String</td><td>Error Code</td></tr>  </tbody>  </table>
+ * Get Segment Auto Generate Name   URL Parameters            KeyRequiredTypeDescription         {{ListID}}requiredstringID of the list            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   DataStringSegment Name   ErrorDataStringError Code      
  *
  * authToken String 
  * contentType String 
@@ -460,7 +460,7 @@ exports.contactSegmentsNameByListIDGet = function(authToken,contentType,listID) 
 
 /**
  * Get Segment Details
- * <h4>Get Segment Details</h4> <h4>URL Parameters</h4> <table> <thead> <tr> <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr> </thead> <tbody> <tr><td>{{SegmentID}}</td><td>required</td><td>string</td><td>ID of the segment</td></tr> </tbody> </table>  <h4>Query String Parameters</h4> <table> <thead> <tr> <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr> </thead> <tbody> <tr><td>PageNumber</td><td>optional</td><td>int</td><td>Page Number</td></tr> <tr><td>PageSize</td><td>optional</td><td>int</td><td>Number of rows on the page</td></tr> <tr><td>OrderBy</td><td>optional</td><td>string</td><td>Order By column like email,date</td></tr> <tr><td>SortOrder</td><td>optional</td><td>String </td><td>ASC or DESC</td></tr> <tr><td>SearchFilter</td><td>optional</td><td>string</td><td>Filter value</td></tr> <tr><td>SearchType</td><td>optional</td><td>string</td><td> 1 - starts with<br /> 2 - is exactly equal to<br /> 3 - contains<br /> 4 - ends with</td></tr> <tr><td>SearchField</td><td>optional</td><td>String</td><td>Email Name</td></tr>  </tbody> </table>  <h4>Response body parameters</h4> <table> <thead> <tr> <th>Key</th><th>Type</th><th>Description</th></tr> </thead> <tbody> <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr> <tr><td>Count</td><td>int</td><td>Total Count</td></tr> <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactSegmentDetailsRecord\">SegmentDetailsRecord</a></td><td>Array of Data</td></tr> </tbody> </table>
+ * Get Segment Details  URL Parameters        KeyRequiredTypeDescription      {{SegmentID}}requiredstringID of the segment        Query String Parameters        KeyRequiredTypeDescription      PageNumberoptionalintPage Number  PageSizeoptionalintNumber of rows on the page  OrderByoptionalstrinlastNamer By column like email,date  SortOrderoptionalString ASC or DESC  SearchFilteroptionalstringFilter value  SearchTypeoptionalstring 1 - starts with<br /> 2 - is exactly equal to<br /> 3 - contains<br /> 4 - ends with  SearchFieldoptionalStringEmail Name          Response body parameters        KeyTypeDescription      Statusstring1 if successful, -1 if error  CountintTotal Count  Data<a href=\"http://www.benchmarkemail.com/models.htm#ContactSegmentDetailsRecord\">SegmentDetailsRecord</a>Array of Data    
  *
  * pageNumber String 
  * pageSize Integer 

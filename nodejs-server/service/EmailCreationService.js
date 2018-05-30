@@ -3,7 +3,7 @@
 
 /**
  * Get Details for the AB Split
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ABSplitMasterVariableData\">ABSplitMasterVariableData</a></td><td>ABSplit Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Errors</td></tr>  <tr><td>ConfirmationLink</td><td>string</td><td>The link for confirmation of the form</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   Data<a href=\"http://www.benchmarkemail.com/models.htm#ABSplitMasterVariableData\">ABSplitMasterVariableData</a>ABSplit Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Errors   ConfirmationLinkstringThe link for confirmation of the form      
  *
  * authToken String 
  * contentType String 
@@ -24,7 +24,7 @@ exports.emailsABSplitByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Get Details of Email
- * <h4>Get Details of Email</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>IDs of the EMail</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Errors</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailData\">EmailData</a></td><td>EMail Data</td></tr>  </tbody>  </table>
+ * Get Details of Email   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringIDs of the EMail            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Errors   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailData\">EmailData</a>EMail Data      
  *
  * authToken String 
  * contentType String 
@@ -45,7 +45,7 @@ exports.emailsByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Update the email
- * <h4>Update the email</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Body Parameters (To be passed as a JSON string)</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Detail</td><td>required</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailData\">EmailData</a></td><td>EMail Data</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailData\">EmailData</a></td><td>EMail Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Errors</td></tr>  </tbody>  </table>
+ * Update the email   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Body Parameters (To be passed as a JSON string)            KeyRequiredTypeDescription         Detailrequired<a href=\"http://www.benchmarkemail.com/models.htm#EmailData\">EmailData</a>EMail Data            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailData\">EmailData</a>EMail Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Errors      
  *
  * authToken String 
  * contentType String 
@@ -66,7 +66,7 @@ exports.emailsByIDPatch = function(authToken,contentType,iD) {
 
 /**
  * GET Community Category
- * <h4>Get a list of contacts</h4>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ClientGenericList\">GenericList</a></td><td>Community Category Data</td></tr>  </tbody>  </table>
+ * Get a list of contacts      Response body parameters            KeyTypeDescription         Data<a href=\"http://www.benchmarkemail.com/models.htm#ClientGenericList\">GenericList</a>Community Category Data      
  *
  * authToken String 
  * contentType String 
@@ -142,7 +142,7 @@ exports.emailsCommunityCategoryGet = function(authToken,contentType) {
 
 /**
  * Create Email
- * <h4>Create Email</h4>    <h4>Body Parameters (To be passed as a JSON string)</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Detail</td><td>required</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailData\">EmailData</a></td><td>Email Details</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailData\">EmailData</a></td><td>EMail Data</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Errors</td></tr>  </tbody>  </table>
+ * Create Email      Body Parameters (To be passed as a JSON string)            KeyRequiredTypeDescription         Detailrequired<a href=\"http://www.benchmarkemail.com/models.htm#EmailData\">EmailData</a>Email Details            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailData\">EmailData</a>EMail Data   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Errors      
  *
  * authToken String 
  * contentType String 
@@ -162,7 +162,7 @@ exports.emailsPost = function(authToken,contentType) {
 
 /**
  * Schedule RSS Emails
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Body Parameters (To be passed as a JSON string)</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Schedule</td><td>required</td><td>string</td><td><ul><li><code>1</code> = Every Day</li><li><code>7</code> = Weekly</li><li><code>15</code> = Half Monthly</li><li><code>30</code> = Monthly</li></ul></td></tr>  <tr><td>ScheduleTime</td><td>required</td><td>string</td><td>Schedule Time</td></tr>  <tr><td>ScheduleInterval</td><td>required</td><td>string</td><td>Days on which it should be allowed to send<ul><li><code>1</code> - Sunday</li><li><code>2</code> - Monday</li><li><code>3</code> - Tuesday</li><li><code>4</code> - Wednesday</li><li><code>5</code> - Thursday</li><li><code>6</code> - Friday</li><li><code>7</code> - Saturday</li></ul>  For every day, <code>1234567</code></td></tr>  <tr><td>TimeZone</td><td>required</td><td>string</td><td>Timezone of the schedule</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Errors</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Body Parameters (To be passed as a JSON string)            KeyRequiredTypeDescription         Schedulerequiredstring<ul><li><code>1</code> = Every Day</li><li><code>7</code> = Weekly</li><li><code>15</code> = Half Monthly</li><li><code>30</code> = Monthly</li></ul>   ScheduleTimerequiredstringSchedule Time   ScheduleIntervalrequiredstringDays on which it should be allowed to send<ul><li><code>1</code> - Sunday</li><li><code>2</code> - Monday</li><li><code>3</code> - Tuesday</li><li><code>4</code> - Wednesday</li><li><code>5</code> - Thursday</li><li><code>6</code> - Friday</li><li><code>7</code> - Saturday</li></ul>   For every day, <code>1234567</code>   TimeZonerequiredstringTimezone of the schedule            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Errors      
  *
  * authToken String 
  * contentType String 
@@ -189,7 +189,7 @@ exports.emailsRSSScheduleByIDPost = function(authToken,contentType,iD) {
 
 /**
  * Get the recipient count for the email
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the Email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 = Successful, -1 Error</td></tr>  <tr><td>Count</td><td>int</td><td>Number of contacts</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the Email            Response body parameters            KeyTypeDescription         Statusstring1 = Successful, -1 Error   CountintNumber of contacts      
  *
  * authToken String 
  * contentType String 
@@ -216,7 +216,7 @@ exports.emailsRecipientCountByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Schedule the email
- * <h4>Schedule the email</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Body Parameters (To be passed as a JSON string)</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>ScheduleDate</td><td>required</td><td>string</td><td>Schedule Date</td></tr>  <tr><td>TimeZone</td><td>required</td><td>string</td><td>Timezone of the schedule date</td></tr>  <tr><td>SendType</td><td>optional</td><td>string</td><td>Only if resend<ul><li><code>2</code> Send to same list</li><li><code>3</code> Send to fixed other contacts (segment)</li></ul></td></tr>  <tr><td>ListID</td><td>optional</td><td>string</td><td>Only if resend  List ID of the contacts to be targetted</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Errors</td></tr>  </tbody>  </table>
+ * Schedule the email   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Body Parameters (To be passed as a JSON string)            KeyRequiredTypeDescription         ScheduleDaterequiredstringSchedule Date   TimeZonerequiredstringTimezone of the schedule date   SendTypeoptionalstringOnly if resend<ul><li><code>2</code> Send to same list</li><li><code>3</code> Send to fixed other contacts (segment)</li></ul>   ListIDoptionalstringOnly if resend   List ID of the contacts to be targetted            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Errors      
  *
  * authToken String 
  * contentType String 
@@ -243,7 +243,7 @@ exports.emailsScheduleByIDPost = function(authToken,contentType,iD) {
 
 /**
  * SpamCheck
- * <h4>SpamCheck</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>Errors</td></tr>  <tr><td>Data</td><td>string</td><td>Spam scrore Data</td></tr>  </tbody>  </table>
+ * SpamCheck   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>Errors   DatastringSpam scrore Data      
  *
  * authToken String 
  * contentType String 
@@ -271,7 +271,7 @@ exports.emailsSpamByIDGet = function(authToken,contentType,iD) {
 
 /**
  * Send Email Test
- * <h4>Get a list of contacts</h4>  <h4>URL Parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>{{ID}}</td><td>required</td><td>string</td><td>ID of the email</td></tr>  </tbody>  </table>    <h4>Body Parameters (To be passed as a JSON string)</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Emails</td><td>required</td><td>string</td><td>Comma separated list of email addresses</td></tr>  <tr><td>Message</td><td>required</td><td>string</td><td>Email Message  </td></tr>  </tbody>  </table>    <h4>Response body parameters</h4>  <table>  <thead>  <tr>  <th>Key</th><th>Type</th><th>Description</th></tr>  </thead>  <tbody>  <tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>  <tr><td>Error</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a></td><td>EMail History</td></tr>  <tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#EmailData\">EmailData</a></td><td>EMail Data</td></tr>  </tbody>  </table>
+ * Get a list of contacts   URL Parameters            KeyRequiredTypeDescription         {{ID}}requiredstringID of the email            Body Parameters (To be passed as a JSON string)            KeyRequiredTypeDescription         EmailsrequiredstringComma separated list of email addresses   MessagerequiredstringEmail Message              Response body parameters            KeyTypeDescription         Statusstring1 if successful, -1 if error   Error<a href=\"http://www.benchmarkemail.com/models.htm#EmailErrorData\">ErrorData</a>EMail History   Data<a href=\"http://www.benchmarkemail.com/models.htm#EmailData\">EmailData</a>EMail Data      
  *
  * authToken String 
  * contentType String 
@@ -284,7 +284,7 @@ exports.emailsTestByIDPost = function(authToken,contentType,iD) {
     examples['application/json'] = {
   "Response" : {
     "Error" : [ ],
-    "Status" : "mohit@cybermaxsolutions.com, pooja@cybermaxsolutions.com"
+    "Status" : "mohit@cybermaxsolutions.com, email@emailDomain.com"
   }
 };
     if (Object.keys(examples).length > 0) {

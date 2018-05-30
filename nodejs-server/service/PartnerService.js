@@ -3,7 +3,7 @@
 
 /**
  * Get Partner Commission Level 1 List
- * <h4>Get Partner Commission Level 1 List</h4> <b>Query string parameters :</b>  <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>imonth</td>       <td>Required</td>       <td>String</td>       <td>Month</td>     </tr>     <tr>       <td>iyear</td>       <td>Required</td>       <td>String</td>       <td>Year</td>     </tr>     <tr>       <td>Sort</td>       <td>Required</td>       <td>string</td>       <td>&nbsp;</td>     </tr>   </tbody> </table>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Count</td>       <td>String</td>       <td>Number of Commission List</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#PartnerCommissionsLevel1ListData\" >PartnerCommissionsLevel1ListData</a></td>       <td>Partner Commission Level 1 Data</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Get Partner Commission Level 1 List  Query string parameters :                     Parameter        Required        Type        Description                            imonth        Required        String        Month                    iyear        Required        String        Year                    Sort        Required        string                        Response Body Parameters :                    Parameter        Type        Description                            Count        String        Number of Commission List                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#PartnerCommissionsLevel1ListData\" >PartnerCommissionsLevel1ListData</a>        Partner Commission Level 1 Data                    Status        string        1 = Successful, -1 Error            
  *
  * imonth String 
  * iyear String 
@@ -39,7 +39,7 @@ exports.partnerCommissionLevel1ListGet = function(imonth,iyear,sort,authToken,co
 
 /**
  * Get Partner Commission Level 2 List
- * <h4>Get Partner Commission Level 2 List</h4> <b>Query string parameters :</b>  <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Client ID</td>       <td>Required</td>       <td>String</td>       <td>Client ID</td>     </tr>   </tbody> </table>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ClientName</td>       <td>String</td>       <td>Name of Client</td>     </tr>     <tr>       <td>Count</td>       <td>String</td>       <td>Count</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#PartnerCommissionsLevel2ListData\" >PartnerCommissionsLevel2ListData</a></td>       <td>Partner Commission Level 2 Data</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Get Partner Commission Level 2 List  Query string parameters :                     Parameter        Required        Type        Description                            Client ID        Required        String        Client ID                Response Body Parameters :                    Parameter        Type        Description                            ClientName        String        Name of Client                    Count        String        Count                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#PartnerCommissionsLevel2ListData\" >PartnerCommissionsLevel2ListData</a>        Partner Commission Level 2 Data                    Status        string        1 = Successful, -1 Error            
  *
  * client_id String 
  * authToken String 
@@ -374,7 +374,7 @@ exports.partnerCommissionLevel2ListGet = function(client_id,authToken,contentTyp
 
 /**
  * Get Commission List
- * <h4>Get Commission List</h4> <b>Query string parameters :</b> None <br>  <b>Request Body parameters:</b> None <br>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Count</td>       <td>String</td>       <td>Number of Commission List</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#PartnerCommissionsListData\" >PartnerCommissionsListData</a></td>       <td>List of Partner Commissions Data</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Get Commission List  Query string parameters : None      Request Body parameters: None      Response Body Parameters :                    Parameter        Type        Description                            Count        String        Number of Commission List                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#PartnerCommissionsListData\" >PartnerCommissionsListData</a>        List of Partner Commissions Data                    Status        string        1 = Successful, -1 Error            
  *
  * authToken String 
  * contentType String 
@@ -393,7 +393,7 @@ exports.partnerCommissionListGet = function(authToken,contentType) {
       "CommissionPercent" : "0%",
       "Current" : "1",
       "ID" : "",
-      "Level" : "March&nbsp;2009",
+      "Level" : "March2009",
       "New" : "0",
       "Sequence" : 1
     } ],
@@ -411,7 +411,7 @@ exports.partnerCommissionListGet = function(authToken,contentType) {
 
 /**
  * Get Profile Details
- * <h4>Get Profile Details</h4> <b>Query String Parameters : </b> None <br>  <b>Request Body Parameters : </b> None <br>  <b>Response Body Parameter : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Response</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#PartnerProfileData\" > ProfileData </a></td>       <td>Partner Profile Details</td>     </tr>   </tbody> </table>
+ * Get Profile Details  Query String Parameters :  None      Request Body Parameters :  None      Response Body Parameter :                     Parameter        Type        Description                            Response        <a href=\"http://www.benchmarkemail.com/models.htm#PartnerProfileData\" > ProfileData </a>        Partner Profile Details            
  *
  * authToken String 
  * contentType String 
@@ -459,7 +459,7 @@ exports.partnerProfileGet = function(authToken,contentType) {
 
 /**
  * Update Profile Details
- * <h4>Update Profile Details</h4> <b>Query String Parameters : </b> None <br>  <b>Request Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Detail</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#PartnerProfileUpdate\" > ProfileUpdate </a></td>       <td>Partner Profile Details</td>     </tr>   </tbody> </table>  <b>Response Body Parameter : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Errors</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#PartnerErrorData\" > ErrorData </a></td>       <td>List of errors</td>     </tr>     <tr>       <td>status</td>       <td>string</td>       <td>1 = sucess, -1 = error</td>     </tr>   </tbody> </table>
+ * Update Profile Details  Query String Parameters :  None      Request Body Parameters :                     Parameter        Type        Description                            Detail        <a href=\"http://www.benchmarkemail.com/models.htm#PartnerProfileUpdate\" > ProfileUpdate </a>        Partner Profile Details                Response Body Parameter :                     Parameter        Type        Description                            Errors        <a href=\"http://www.benchmarkemail.com/models.htm#PartnerErrorData\" > ErrorData </a>        List of errors                    status        string        1 = sucess, -1 = error            
  *
  * body UpdateProfileDetailsrequest 
  * authToken String 
@@ -486,7 +486,7 @@ exports.partnerProfilePatch = function(body,authToken,contentType) {
 
 /**
  * Get Referrals Level 1 List
- * <h4>Get Referrals Level 1 List</h4> <b>Query string parameters :</b>  <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>imonth</td>       <td>Required</td>       <td>String</td>       <td>Month</td>     </tr>     <tr>       <td>iyear</td>       <td>Required</td>       <td>String</td>       <td>Year</td>     </tr>     <tr>       <td>Sort</td>       <td>Required</td>       <td>string</td>       <td>&nbsp;</td>     </tr>   </tbody> </table>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Count</td>       <td>String</td>       <td>Number of Commission List</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#PartnerReferralsLevel1ListData\" >PartnerReferralsLevel1ListData</a></td>       <td>Partner Referrals Level 1 Data</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Get Referrals Level 1 List  Query string parameters :                     Parameter        Required        Type        Description                            imonth        Required        String        Month                    iyear        Required        String        Year                    Sort        Required        string                        Response Body Parameters :                    Parameter        Type        Description                            Count        String        Number of Commission List                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#PartnerReferralsLevel1ListData\" >PartnerReferralsLevel1ListData</a>        Partner Referrals Level 1 Data                    Status        string        1 = Successful, -1 Error            
  *
  * imonth String 
  * iyear String 
@@ -521,7 +521,7 @@ exports.partnerReferralsLevel1ListGet = function(imonth,iyear,sort,authToken,con
 
 /**
  * Get Referrals List
- * <h4>Get referrals list</h4> <b>Query string parameters :</b> None <br>  <b>Request Body parameters:</b> None <br>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Count</td>       <td>String</td>       <td>Number of Commission List</td>     </tr>     <tr>       <td>Data</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#PartnerReferralsListData\" >PartnerReferralsListData</a></td>       <td>List of Partner PartnerReferrals Data</td>     </tr>     <tr>       <td>Status</td>       <td>string</td>       <td>1 = Successful, -1 Error</td>     </tr>   </tbody> </table>
+ * Get referrals list  Query string parameters : None      Request Body parameters: None      Response Body Parameters :                    Parameter        Type        Description                            Count        String        Number of Commission List                    Data        <a href=\"http://www.benchmarkemail.com/models.htm#PartnerReferralsListData\" >PartnerReferralsListData</a>        List of Partner PartnerReferrals Data                    Status        string        1 = Successful, -1 Error            
  *
  * authToken String 
  * contentType String 
@@ -534,7 +534,7 @@ exports.partnerReferralsListGet = function(authToken,contentType) {
   "Response" : {
     "Count" : 1,
     "Data" : [ {
-      "Level1" : "<a href='/Partner/ReportSignup1?imonth=11&iyear=2005&sort=1' class = 'linkdarkblue underline' >November &nbsp;2005</a>",
+      "Level1" : "<a href='/Partner/ReportSignup1?imonth=11&iyear=2005&sort=1' class = 'linkdarkblue underline' >November 2005</a>",
       "Sequence" : 1,
       "lblFree" : "0",
       "lblPaid" : "1",
@@ -554,7 +554,7 @@ exports.partnerReferralsListGet = function(authToken,contentType) {
 
 /**
  * Get Web Page Ads Detail
- * <h4>Get Web Page Ads Detail</h4> <b>Query string parameters :</b> None <br>  <b>Request Body parameters:</b> None <br>  <b>Response Body Parameters :</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>String</td>       <td>&nbsp;</td>     </tr>     <tr>       <td>ClientID</td>       <td>string</td>       <td>Client ID</td>     </tr>     <tr>       <td>HtmlResponse</td>       <td>string</td>       <td>HTML Code</td>     </tr>   </tbody> </table>
+ * Get Web Page Ads Detail  Query string parameters : None      Request Body parameters: None      Response Body Parameters :                    Parameter        Type        Description                            ID        String                            ClientID        string        Client ID                    HtmlResponse        string        HTML Code            
  *
  * authToken String 
  * contentType String 

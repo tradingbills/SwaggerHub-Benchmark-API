@@ -3,7 +3,7 @@
 
 /**
  * Use template for Survey
- * <h4>Copy template in Survey</h4> <b>Query string parameters : </b> None <br> <b>Request Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>ID</td>       <td>Required</td>       <td>string</td>       <td>Survey ID</td>     </tr>     <tr>       <td>Name</td>       <td>Required</td>       <td>string</td>       <td>Survey name</td>     </tr>   </tbody> </table>  <b>Response Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Response</td>       <td>string</td>       <td>New Survey ID if successful else error</td>     </tr>   </tbody> </table>
+ * Copy template in Survey  Query string parameters :  None    Request Body Parameters :                     Parameter        Required        Type        Description                            ID        Required        string        Survey ID                    Name        Required        string        Survey name                Response Body Parameters :                     Parameter        Type        Description                            Response        string        New Survey ID if successful else error            
  *
  * body UseTemplateForSurveyrequest 
  * authToken String 
@@ -28,7 +28,7 @@ exports.surveyCopyTemplateByIDPost = function(body,authToken,contentType,iD) {
 
 /**
  * Create a Survey
- * <h4>Create a Survey</h4> <b>Query String Parameters : </b> None <br> <b>Request Body Parameters : </b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Required</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Data</td>       <td>Required</td>       <td><a href=\"http://www.benchmarkemail.com/models.htm#SurveyData\" >SurveyData</a></td>       <td>Array of survey data post.</td>     </tr>   </tbody> </table> <b>Response Body Parameters:</b> <table>   <thead>     <tr>       <th>Parameter</th>       <th>Type</th>       <th>Description</th>     </tr>   </thead>   <tbody>     <tr>       <td>Response</td>       <td>string</td>       <td>1 if successful, -1 if error</td>     </tr>   </tbody> </table>
+ * Create a Survey  Query String Parameters :  None    Request Body Parameters :                     Parameter        Required        Type        Description                            Data        Required        <a href=\"http://www.benchmarkemail.com/models.htm#SurveyData\" >SurveyData</a>        Array of survey data post.              Response Body Parameters:                    Parameter        Type        Description                            Response        string        1 if successful, -1 if error            
  *
  * body CreateASurveyrequest 
  * authToken String 
