@@ -19,7 +19,7 @@ paths:
   /Contact/ContactDetails:
     get:
       tags:
-      - "/Contacts - Details"
+      - "/Contact - Details"
       summary: "Search Contacts"
       description: "<h4>Search Contacts</h4>\r\n<h4>Query String parameters</h4>\r\
         \n<table>\r\n<thead>\r\n<tr>\r\n<th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>\r\
@@ -150,10 +150,10 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-      x-swagger-router-controller: "ContactsDetails"
+      x-swagger-router-controller: "ContactDetails"
     delete:
       tags:
-      - "/Contacts - Details"
+      - "/Contact - Details"
       summary: "Delete the selected contacts from current lists"
       description: "<h4>Delete the selected contacts from current lists </h4>\r\n\
         <h4>Request body  parameters</h4>\r\n<table>\r\n<thead>\r\n<tr>\r\n<th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>\r\
@@ -254,7 +254,7 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-      x-swagger-router-controller: "ContactsDetails"
+      x-swagger-router-controller: "ContactDetails"
 definitions:
   SearchContacts:
     type: "object"
