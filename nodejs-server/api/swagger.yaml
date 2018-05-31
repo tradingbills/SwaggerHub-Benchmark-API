@@ -16,34 +16,60 @@ consumes:
 produces:
 - "application/json"
 paths:
-  /Contact/ExportToList:
+  /Engagement/CampaignList:
     get:
       tags:
-      - "General"
-      summary: "Get Export List"
-      description: "Export List\n\n<h4>Query String Parameters</h4>\n<table>\n<thead>\n\
-        <tr>\n<th>Key</th>\n<th>Required</th>\n<th>Description</th>\n</tr>\n</thead>\n\
-        <tbody>\n<tr>\n<td>ReportFor</td>\n<td>optional</td>\n<td><ul><li><code>1</code>\
-        \ - Clicks</li><li><code>2</code> - Forwards</li><li><code>3</code> - Bounces</li><li><code>5</code>\
-        \ - Unsubscribe</li><li><code>6</code> - Opens</li><li><code>7</code> - Unopens</li><li><code>8</code>\
-        \ – Clicks For url</li><li><code>11</code> - Individual Survey</li><li><code>12</code>\
-        \ - Opens State Wise</li></ul></td>\n</tr>\n<tr><td>EmailID</td><td>optional</td><td>Unique\
-        \ ID (i.e Campaign ID)</td></tr>\n<tr>\n<td>IsOverWrite</td>\n<td>optional</td>\n\
-        <td><ul><li><code>1</code> - OverWrite if List Exists</li><li><code>0</code>\
-        \ - Don't Over Write if List Exists (It will stop process if list found with\
-        \ the same name)</li></td>\n</tr>\n</ul>\n<tr><td>LinkName</td><td>optional</td><td>Name\
-        \ of link</td></tr>\n<tr>\n<td>Filter</td>\n<td>optional</td>\n<td><ul><li><code>1</code>\
-        \ - Soft Bounces</li><li><code>2</code> - Hard Bounces</li></ul></td>\n</tr>\n\
-        <tr><td>Region</td><td>optional</td><td>Region or  State</td></tr>\n\n</tbody>\n\
-        </table>\n\n<h4>Response body parameters</h4>\n<table>\n<thead>\n<tr>\n<th>Key</th><th>Type</th><th>Description</th></tr>\n\
-        </thead>\n<tbody>\n<tr><td>Status</td><td>string</td><td>1 if successful,\
-        \ -1 if error</td></tr>\n<tr><td>ReportTypeText</td><td>string</td><td>Returns\
-        \ the report type like bounces,SURVEY RESPONDENTS,OPENS etc</td></tr>\n<tr><td>ListName</td><td>string</td><td>List\
-        \ Name</td></tr>\n</tbody>\n</table>"
-      operationId: "ContactExportToListGet"
+      - "Engagement"
+      summary: "Get a Campaign List of Engagement"
+      description: "<h4>Get a Campaign List of Engagement</h4>\n<b>Query string parameters\
+        \ :</b>\n<table>\n  <thead>\n    <tr>\n      <th>Parameter</th>\n      <th>Required</th>\n\
+        \      <th>Type</th>\n      <th>Description</th>\n    </tr>\n  </thead>\n\
+        \  <tbody>\n    <tr>\n      <td>PageNumber</td>\n      <td>Optional</td>\n\
+        \      <td>string</td>\n      <td>Page Number</td>\n    </tr>\n    <tr>\n\
+        \      <td>PageSize</td>\n      <td>Optional</td>\n      <td>string</td>\n\
+        \      <td>Number of rows on the page</td>\n    </tr>\n    <tr>\n      <td>OrderBy</td>\n\
+        \      <td>Optional</td>\n      <td>string</td>\n      <td>Order By Column</td>\n\
+        \    </tr>\n    <tr>\n      <td>Filter</td>\n      <td>Optional</td>\n   \
+        \   <td>string</td>\n      <td>Filter by name</td>\n    </tr>\n    <tr>\n\
+        \      <td>SortOrder</td>\n      <td>Optional</td>\n      <td>string</td>\n\
+        \      <td>ASC or DESC</td>\n    </tr>\n  </tbody>\n</table>\n\n<b>Response\
+        \ body parameters :</b>\n<table>\n  <thead>\n    <tr>\n      <th>Parameter</th>\n\
+        \      <th>Type</th>\n      <th>Description</th>\n    </tr>\n  </thead>\n\
+        \  <tbody>\n    <tr>\n      <td>Count</td>\n      <td>int</td>\n      <td>Total\
+        \ number</td>\n    </tr>\n    <tr>\n      <td>Status</td>\n      <td>string</td>\n\
+        \      <td>1 = Successful, -1 Error</td>\n    </tr>\n    <tr>\n      <td>Data</td>\n\
+        \      <td><a href=\"http://www.benchmarkemail.com/models.htm#EngagementCampaignData\"\
+        \ > CampaignData</a></td>\n      <td>Array of Campaign list returned.</td>\n\
+        \    </tr>\n  </tbody>\n</table>"
+      operationId: "EngagementCampaignListGet"
       produces:
       - "application/json"
       parameters:
+      - name: "PageNumber"
+        in: "query"
+        description: ""
+        required: true
+        type: "string"
+      - name: "PageSize"
+        in: "query"
+        description: ""
+        required: true
+        type: "string"
+      - name: "OrderBy"
+        in: "query"
+        description: ""
+        required: true
+        type: "string"
+      - name: "Filter"
+        in: "query"
+        description: ""
+        required: true
+        type: "string"
+      - name: "SortOrder"
+        in: "query"
+        description: ""
+        required: true
+        type: "string"
       - name: "AuthToken"
         in: "header"
         description: ""
@@ -58,18 +84,53 @@ paths:
         200:
           description: ""
           schema:
-            $ref: "#/definitions/GetExportList"
+            $ref: "#/definitions/GetACampaignListOfEngagement"
           examples:
             application/json:
               Response:
-                ListName: "Unopened Report : Oct 06 2017 Email 1"
-                ReportTypeText: "UNOPENS"
+                Count: 51
+                Data:
+                - Clicks: 0
+                  EmailName: "Test Pooja"
+                  ID: "12263198"
+                  MailSent: 8
+                  Opens: 0
+                  ScheduleDate: "Oct 06, 2017"
+                  TimeZone: "IST"
+                - Clicks: 0
+                  EmailName: "Aug 21 2017 Email 1"
+                  ID: "12194338"
+                  MailSent: 5
+                  Opens: 0
+                  ScheduleDate: "Aug 24, 2017"
+                  TimeZone: "IST"
+                - Clicks: 0
+                  EmailName: "Aug 24 2017 Email"
+                  ID: "12211505"
+                  MailSent: 11
+                  Opens: 0
+                  ScheduleDate: "Aug 24, 2017"
+                  TimeZone: "IST"
+                - Clicks: 0
+                  EmailName: "ISSUE Campaign Copy Copy Copy"
+                  ID: "12210851"
+                  MailSent: 3998
+                  Opens: 0
+                  ScheduleDate: "Aug 24, 2017"
+                  TimeZone: "IST"
+                - Clicks: 0
+                  EmailName: "ISSUE Campaign Copy Copy"
+                  ID: "12210437"
+                  MailSent: 3998
+                  Opens: 0
+                  ScheduleDate: "Aug 24, 2017"
+                  TimeZone: "IST"
                 Status: "1"
       security: []
       x-unitTests:
       - request:
           method: "GET"
-          uri: "/Contact/ExportToList"
+          uri: "/Engagement/CampaignList?PageNumber={{PageNumber}}&PageSize={{PageSize}}&OrderBy={{OrderBy}}&Filter={{Filter}}&SortOrder={{SortOrder}}"
           headers:
             AuthToken: "{{Authentication Token}}"
             Content-Type: "application/json"
@@ -83,71 +144,166 @@ paths:
             access-control-allow-origin: "*"
             cache-control: "private"
             content-type: "application/json; charset=utf-8"
-            date: "Tue, 17 Oct 2017 05:51:36 GMT"
+            date: "Mon, 23 Oct 2017 05:38:33 GMT"
             server: "Microsoft-IIS/8.0"
             transfer-encoding: "chunked"
             x-aspnet-version: "4.0.30319"
             x-powered-by: "ASP.NET"
-          body: "{\"Response\":{\"ListName\":\"Unopened Report : Oct 06 2017 Email\
-            \ 1\",\"ReportTypeText\":\"UNOPENS\",\"Status\":\"1\"}}"
+          body: "{\"Response\":{\"Count\":51,\"Data\":[{\"Clicks\":0,\"EmailName\"\
+            :\"Test Pooja\",\"ID\":\"12263198\",\"MailSent\":8,\"Opens\":0,\"ScheduleDate\"\
+            :\"Oct 06, 2017\",\"TimeZone\":\"IST\"},{\"Clicks\":0,\"EmailName\":\"\
+            Aug 21 2017 Email 1\",\"ID\":\"12194338\",\"MailSent\":5,\"Opens\":0,\"\
+            ScheduleDate\":\"Aug 24, 2017\",\"TimeZone\":\"IST\"},{\"Clicks\":0,\"\
+            EmailName\":\"Aug 24 2017 Email\",\"ID\":\"12211505\",\"MailSent\":11,\"\
+            Opens\":0,\"ScheduleDate\":\"Aug 24, 2017\",\"TimeZone\":\"IST\"},{\"\
+            Clicks\":0,\"EmailName\":\"ISSUE Campaign Copy Copy Copy\",\"ID\":\"12210851\"\
+            ,\"MailSent\":3998,\"Opens\":0,\"ScheduleDate\":\"Aug 24, 2017\",\"TimeZone\"\
+            :\"IST\"},{\"Clicks\":0,\"EmailName\":\"ISSUE Campaign Copy Copy\",\"\
+            ID\":\"12210437\",\"MailSent\":3998,\"Opens\":0,\"ScheduleDate\":\"Aug\
+            \ 24, 2017\",\"TimeZone\":\"IST\"}],\"Status\":\"1\"}}"
         x-testShouldPass: true
         x-testEnabled: true
-        x-testName: "Get Export List"
-        x-testDescription: "Export List    Query String Parameters        Key  Required\
-          \  Description          ReportFor  optional  <ul><li><code>1</code> - Clicks</li><li><code>2</code>\
-          \ - Forwards</li><li><code>3</code> - Bounces</li><li><code>5</code> - Unsubscribe</li><li><code>6</code>\
-          \ - Opens</li><li><code>7</code> - Unopens</li><li><code>8</code> – Clicks\
-          \ For url</li><li><code>11</code> - Individual Survey</li><li><code>12</code>\
-          \ - Opens State Wise</li></ul>    EmailIDoptionalUnique ID (i.e Campaign\
-          \ ID)    IsOverWrite  optional  <ul><li><code>1</code> - OverWrite if List\
-          \ Exists</li><li><code>0</code> - Don't Over Write if List Exists (It will\
-          \ stop process if list found with the same name)</li>    </ul>  LinkNameoptionalName\
-          \ of link    Filter  optional  <ul><li><code>1</code> - Soft Bounces</li><li><code>2</code>\
-          \ - Hard Bounces</li></ul>    RegionoptionalRegion or  State          Response\
-          \ body parameters        KeyTypeDescription      Statusstring1 if successful,\
-          \ -1 if error  ReportTypeTextstringReturns the report type like bounces,SURVEY\
-          \ RESPONDENTS,OPENS etc  ListNamestringList Name    "
+        x-testName: "Get a Campaign List of Engagement"
+        x-testDescription: "<h4>Get a Campaign List of Engagement</h4>\n<b>Query string\
+          \ parameters :</b>\n<table>\n  <thead>\n    <tr>\n      <th>Parameter</th>\n\
+          \      <th>Required</th>\n      <th>Type</th>\n      <th>Description</th>\n\
+          \    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>PageNumber</td>\n\
+          \      <td>Optional</td>\n      <td>string</td>\n      <td>Page Number</td>\n\
+          \    </tr>\n    <tr>\n      <td>PageSize</td>\n      <td>Optional</td>\n\
+          \      <td>string</td>\n      <td>Number of rows on the page</td>\n    </tr>\n\
+          \    <tr>\n      <td>OrderBy</td>\n      <td>Optional</td>\n      <td>string</td>\n\
+          \      <td>Order By Column</td>\n    </tr>\n    <tr>\n      <td>Filter</td>\n\
+          \      <td>Optional</td>\n      <td>string</td>\n      <td>Filter by name</td>\n\
+          \    </tr>\n    <tr>\n      <td>SortOrder</td>\n      <td>Optional</td>\n\
+          \      <td>string</td>\n      <td>ASC or DESC</td>\n    </tr>\n  </tbody>\n\
+          </table>\n\n<b>Response body parameters :</b>\n<table>\n  <thead>\n    <tr>\n\
+          \      <th>Parameter</th>\n      <th>Type</th>\n      <th>Description</th>\n\
+          \    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Count</td>\n    \
+          \  <td>int</td>\n      <td>Total number</td>\n    </tr>\n    <tr>\n    \
+          \  <td>Status</td>\n      <td>string</td>\n      <td>1 = Successful, -1\
+          \ Error</td>\n    </tr>\n    <tr>\n      <td>Data</td>\n      <td><a href=\"\
+          http://www.benchmarkemail.com/models.htm#EngagementCampaignData\" > CampaignData</a></td>\n\
+          \      <td>Array of Campaign list returned.</td>\n    </tr>\n  </tbody>\n\
+          </table>"
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-      x-swagger-router-controller: "General"
+      x-swagger-router-controller: "Engagement"
 definitions:
-  GetExportList:
+  GetACampaignListOfEngagement:
     type: "object"
     required:
     - "Response"
     properties:
       Response:
-        $ref: "#/definitions/Response126"
-    title: "Get Export List"
+        $ref: "#/definitions/GetACampaignListOfEngagement_Response"
+    title: "Get a Campaign List of Engagement"
     example:
       Response:
-        ListName: "Unopened Report : Oct 06 2017 Email 1"
-        ReportTypeText: "UNOPENS"
+        Count: 51
+        Data:
+        - Clicks: 0
+          EmailName: "Test Pooja"
+          ID: "12263198"
+          MailSent: 8
+          Opens: 0
+          ScheduleDate: "Oct 06, 2017"
+          TimeZone: "IST"
+        - Clicks: 0
+          EmailName: "Aug 21 2017 Email 1"
+          ID: "12194338"
+          MailSent: 5
+          Opens: 0
+          ScheduleDate: "Aug 24, 2017"
+          TimeZone: "IST"
+        - Clicks: 0
+          EmailName: "Aug 24 2017 Email"
+          ID: "12211505"
+          MailSent: 11
+          Opens: 0
+          ScheduleDate: "Aug 24, 2017"
+          TimeZone: "IST"
+        - Clicks: 0
+          EmailName: "ISSUE Campaign Copy Copy Copy"
+          ID: "12210851"
+          MailSent: 3998
+          Opens: 0
+          ScheduleDate: "Aug 24, 2017"
+          TimeZone: "IST"
+        - Clicks: 0
+          EmailName: "ISSUE Campaign Copy Copy"
+          ID: "12210437"
+          MailSent: 3998
+          Opens: 0
+          ScheduleDate: "Aug 24, 2017"
+          TimeZone: "IST"
         Status: "1"
-  Response126:
-    type: "object"
+  GetACampaignListOfEngagement_Response:
     required:
-    - "ListName"
-    - "ReportTypeText"
+    - "Count"
+    - "Data"
     - "Status"
     properties:
-      ListName:
-        type: "string"
-        example: "Unopened Report : Oct 06 2017 Email 1"
+      Count:
+        type: "integer"
+        format: "int32"
+        example: 51
         description: ""
-      ReportTypeText:
-        type: "string"
-        example: "UNOPENS"
+      Data:
+        type: "array"
+        example:
+        - Clicks: 0
+          EmailName: "Test Pooja"
+          ID: "12263198"
+          MailSent: 8
+          Opens: 0
+          ScheduleDate: "Oct 06, 2017"
+          TimeZone: "IST"
+        - Clicks: 0
+          EmailName: "Aug 21 2017 Email 1"
+          ID: "12194338"
+          MailSent: 5
+          Opens: 0
+          ScheduleDate: "Aug 24, 2017"
+          TimeZone: "IST"
+        - Clicks: 0
+          EmailName: "Aug 24 2017 Email"
+          ID: "12211505"
+          MailSent: 11
+          Opens: 0
+          ScheduleDate: "Aug 24, 2017"
+          TimeZone: "IST"
+        - Clicks: 0
+          EmailName: "ISSUE Campaign Copy Copy Copy"
+          ID: "12210851"
+          MailSent: 3998
+          Opens: 0
+          ScheduleDate: "Aug 24, 2017"
+          TimeZone: "IST"
+        - Clicks: 0
+          EmailName: "ISSUE Campaign Copy Copy"
+          ID: "12210437"
+          MailSent: 3998
+          Opens: 0
+          ScheduleDate: "Aug 24, 2017"
+          TimeZone: "IST"
         description: ""
+        items:
+          $ref: "#/definitions/Data629"
       Status:
         type: "string"
         example: "1"
         description: ""
-    title: "Response126"
-    example:
-      ListName: "Unopened Report : Oct 06 2017 Email 1"
-      ReportTypeText: "UNOPENS"
-      Status: "1"
+    example: "{\"Count\":51,\"Data\":[{\"Clicks\":0,\"EmailName\":\"Test Pooja\",\"\
+      ID\":\"12263198\",\"MailSent\":8,\"Opens\":0,\"ScheduleDate\":\"Oct 06, 2017\"\
+      ,\"TimeZone\":\"IST\"},{\"Clicks\":0,\"EmailName\":\"Aug 21 2017 Email 1\",\"\
+      ID\":\"12194338\",\"MailSent\":5,\"Opens\":0,\"ScheduleDate\":\"Aug 24, 2017\"\
+      ,\"TimeZone\":\"IST\"},{\"Clicks\":0,\"EmailName\":\"Aug 24 2017 Email\",\"\
+      ID\":\"12211505\",\"MailSent\":11,\"Opens\":0,\"ScheduleDate\":\"Aug 24, 2017\"\
+      ,\"TimeZone\":\"IST\"},{\"Clicks\":0,\"EmailName\":\"ISSUE Campaign Copy Copy\
+      \ Copy\",\"ID\":\"12210851\",\"MailSent\":3998,\"Opens\":0,\"ScheduleDate\"\
+      :\"Aug 24, 2017\",\"TimeZone\":\"IST\"},{\"Clicks\":0,\"EmailName\":\"ISSUE\
+      \ Campaign Copy Copy\",\"ID\":\"12210437\",\"MailSent\":3998,\"Opens\":0,\"\
+      ScheduleDate\":\"Aug 24, 2017\",\"TimeZone\":\"IST\"}],\"Status\":\"1\"}"
