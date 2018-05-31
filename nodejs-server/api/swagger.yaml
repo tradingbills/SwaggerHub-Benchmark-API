@@ -44,8 +44,6 @@ paths:
         <tr><td>ListName</td><td>string</td><td>List Name</td></tr>\r\n</tbody>\r\n\
         </table>"
       operationId: "ContactExportToListGet"
-      consumes:
-      - "application/json"
       produces:
       - "application/json"
       parameters:
@@ -125,15 +123,14 @@ definitions:
     - "Response"
     properties:
       Response:
-        $ref: "#/definitions/Response126"
+        $ref: "#/definitions/GetExportList_Response"
     title: "Get Export List"
     example:
       Response:
         ListName: "Unopened Report : Oct 06 2017 Email 1"
         ReportTypeText: "UNOPENS"
         Status: "1"
-  Response126:
-    type: "object"
+  GetExportList_Response:
     required:
     - "ListName"
     - "ReportTypeText"
@@ -151,8 +148,5 @@ definitions:
         type: "string"
         example: "1"
         description: ""
-    title: "Response126"
-    example:
-      ListName: "Unopened Report : Oct 06 2017 Email 1"
-      ReportTypeText: "UNOPENS"
-      Status: "1"
+    example: "{\"ListName\":\"Unopened Report : Oct 06 2017 Email 1\",\"ReportTypeText\"\
+      :\"UNOPENS\",\"Status\":\"1\"}"
