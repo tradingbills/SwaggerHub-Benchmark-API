@@ -44,6 +44,8 @@ paths:
         <tr><td>ListName</td><td>string</td><td>List Name</td></tr>\r\n</tbody>\r\n\
         </table>"
       operationId: "ContactExportToListGet"
+      consumes:
+      - "application/json"
       produces:
       - "application/json"
       parameters:
