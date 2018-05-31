@@ -16,46 +16,163 @@ consumes:
 produces:
 - "application/json"
 paths:
-  /Engagement/CampaignList:
+  /Contact/ContactDetails:
     get:
       tags:
-      - "Engagement"
-      summary: "Get a Campaign List of Engagement"
-      description: "<h4>Get a Campaign List of Engagement</h4>\n<b>Query string parameters\
-        \ :</b>\n<table>\n  <thead>\n    <tr>\n      <th>Parameter</th>\n      <th>Required</th>\n\
-        \      <th>Type</th>\n      <th>Description</th>\n    </tr>\n  </thead>\n\
-        \  <tbody>\n    <tr>\n      <td>PageNumber</td>\n      <td>Optional</td>\n\
-        \      <td>string</td>\n      <td>Page Number</td>\n    </tr>\n    <tr>\n\
-        \      <td>PageSize</td>\n      <td>Optional</td>\n      <td>string</td>\n\
-        \      <td>Number of rows on the page</td>\n    </tr>\n    <tr>\n      <td>OrderBy</td>\n\
-        \      <td>Optional</td>\n      <td>string</td>\n      <td>Order By Column</td>\n\
-        \    </tr>\n    <tr>\n      <td>Filter</td>\n      <td>Optional</td>\n   \
-        \   <td>string</td>\n      <td>Filter by name</td>\n    </tr>\n    <tr>\n\
-        \      <td>SortOrder</td>\n      <td>Optional</td>\n      <td>string</td>\n\
-        \      <td>ASC or DESC</td>\n    </tr>\n  </tbody>\n</table>\n\n<b>Response\
-        \ body parameters :</b>\n<table>\n  <thead>\n    <tr>\n      <th>Parameter</th>\n\
-        \      <th>Type</th>\n      <th>Description</th>\n    </tr>\n  </thead>\n\
-        \  <tbody>\n    <tr>\n      <td>Count</td>\n      <td>int</td>\n      <td>Total\
-        \ number</td>\n    </tr>\n    <tr>\n      <td>Status</td>\n      <td>string</td>\n\
-        \      <td>1 = Successful, -1 Error</td>\n    </tr>\n    <tr>\n      <td>Data</td>\n\
-        \      <td><a href=\"http://www.benchmarkemail.com/models.htm#EngagementCampaignData\"\
-        \ > CampaignData</a></td>\n      <td>Array of Campaign list returned.</td>\n\
-        \    </tr>\n  </tbody>\n</table>"
-      operationId: "EngagementCampaignListGet"
+      - "/Contacts - Details"
+      summary: "Search Contacts"
+      description: "<h4>Search Contacts</h4>\r\n<h4>Query String parameters</h4>\r\
+        \n<table>\r\n<thead>\r\n<tr>\r\n<th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>\r\
+        \n</thead>\r\n<tbody>\r\n<tr><td>SearchFilter</td><td>optional</td><td>string\
+        \ </td><td>Search Filter</td></tr>\r\n<tr><td>Search</td><td>required</td><td>string\
+        \ </td><td>Email Address you want to search</td></tr>\r\n</tbody>\r\n</table>\r\
+        \n\r\n<h4>Response body parameters</h4>\r\n<table>\r\n<thead>\r\n<tr>\r\n\
+        <th>Key</th><th>Type</th><th>Description</th></tr>\r\n</thead>\r\n<tbody>\r\
+        \n<tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>\r\
+        \n<tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactSearchRecord\"\
+        >ContactSearchRecord</a></td><td>Data</td></tr>\r\n<tr><td>Count</td><td>int</td><td>Total\
+        \ count</td></tr>\r\n</tbody>\r\n</table>"
+      operationId: "ContactContactDetailsGet"
       produces:
       - "application/json"
       parameters:
-      - name: "PageNumber"
+      - name: "SearchFilter"
         in: "query"
+        description: "EQ equals OR EB starts with"
+        required: true
+        type: "string"
+      - name: "Search"
+        in: "query"
+        description: "email address to search for"
+        required: true
+        type: "string"
+      - name: "AuthToken"
+        in: "header"
         description: ""
         required: true
         type: "string"
-      - name: "PageSize"
-        in: "query"
-        description: ""
+      - name: "Content-Type"
+        in: "header"
+        description: "application/json"
         required: true
         type: "string"
-      - name: "OrderBy"
+      responses:
+        200:
+          description: ""
+          schema:
+            $ref: "#/definitions/SearchContacts"
+          examples:
+            application/json:
+              Response:
+                Count: 4
+                Data:
+                - ContactMasterID: "15112393"
+                  Email: "test02@cybermaxsolutions.com"
+                  FirstName: "Test2"
+                  ID: "1950474841"
+                  IsMasterUnsubScribe: 0
+                  LastName: "Test2"
+                  ListName: "Benchmark Tech Support Test List"
+                - ContactMasterID: "15242968"
+                  Email: "test02@cybermaxsolutions.com"
+                  FirstName: ""
+                  ID: "2039133647"
+                  IsMasterUnsubScribe: 0
+                  LastName: ""
+                  ListName: "Targeted EMailing List Modified"
+                - ContactMasterID: "15257848"
+                  Email: "test02@cybermaxsolutions.com"
+                  FirstName: ""
+                  ID: "2039912369"
+                  IsMasterUnsubScribe: 0
+                  LastName: ""
+                  ListName: "Test Source List"
+                - ContactMasterID: "15257899"
+                  Email: "test02@cybermaxsolutions.com"
+                  FirstName: ""
+                  ID: "2040815886"
+                  IsMasterUnsubScribe: 0
+                  LastName: ""
+                  ListName: "New Target List"
+                Status: "1"
+      security: []
+      x-unitTests:
+      - request:
+          method: "GET"
+          uri: "/Contact/ContactDetails?SearchFilter={{SearchFilter}}&Search={{Search}}"
+          headers:
+            AuthToken: "{{Authentication Token}}"
+            Content-Type: "application/json"
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: "RAW"
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            access-control-allow-origin: "*"
+            cache-control: "private"
+            content-type: "application/json; charset=utf-8"
+            date: "Tue, 17 Oct 2017 11:22:46 GMT"
+            server: "Microsoft-IIS/8.0"
+            transfer-encoding: "chunked"
+            x-aspnet-version: "4.0.30319"
+            x-powered-by: "ASP.NET"
+          body: "{\"Response\":{\"Count\":4,\"Data\":[{\"ContactMasterID\":\"15112393\"\
+            ,\"Email\":\"test02@cybermaxsolutions.com\",\"FirstName\":\"Test2\",\"\
+            ID\":\"1950474841\",\"IsMasterUnsubScribe\":0,\"LastName\":\"Test2\",\"\
+            ListName\":\"Benchmark Tech Support Test List\"},{\"ContactMasterID\"\
+            :\"15242968\",\"Email\":\"test02@cybermaxsolutions.com\",\"FirstName\"\
+            :\"\",\"ID\":\"2039133647\",\"IsMasterUnsubScribe\":0,\"LastName\":\"\"\
+            ,\"ListName\":\"Targeted EMailing List Modified\"},{\"ContactMasterID\"\
+            :\"15257848\",\"Email\":\"test02@cybermaxsolutions.com\",\"FirstName\"\
+            :\"\",\"ID\":\"2039912369\",\"IsMasterUnsubScribe\":0,\"LastName\":\"\"\
+            ,\"ListName\":\"Test Source List\"},{\"ContactMasterID\":\"15257899\"\
+            ,\"Email\":\"test02@cybermaxsolutions.com\",\"FirstName\":\"\",\"ID\"\
+            :\"2040815886\",\"IsMasterUnsubScribe\":0,\"LastName\":\"\",\"ListName\"\
+            :\"New Target List\"}],\"Status\":\"1\"}}"
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: "Search Contacts"
+        x-testDescription: "<h4>Search Contacts</h4>\r\n<h4>Query String parameters</h4>\r\
+          \n<table>\r\n<thead>\r\n<tr>\r\n<th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>\r\
+          \n</thead>\r\n<tbody>\r\n<tr><td>SearchFilter</td><td>optional</td><td>string\
+          \ </td><td>Search Filter</td></tr>\r\n<tr><td>Search</td><td>required</td><td>string\
+          \ </td><td>Email Address you want to search</td></tr>\r\n</tbody>\r\n</table>\r\
+          \n\r\n<h4>Response body parameters</h4>\r\n<table>\r\n<thead>\r\n<tr>\r\n\
+          <th>Key</th><th>Type</th><th>Description</th></tr>\r\n</thead>\r\n<tbody>\r\
+          \n<tr><td>Status</td><td>string</td><td>1 if successful, -1 if error</td></tr>\r\
+          \n<tr><td>Data</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ContactSearchRecord\"\
+          >ContactSearchRecord</a></td><td>Data</td></tr>\r\n<tr><td>Count</td><td>int</td><td>Total\
+          \ count</td></tr>\r\n</tbody>\r\n</table>"
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+      x-swagger-router-controller: "ContactsDetails"
+    delete:
+      tags:
+      - "/Contacts - Details"
+      summary: "Delete the selected contacts from current lists"
+      description: "<h4>Delete the selected contacts from current lists </h4>\r\n\
+        <h4>Request body  parameters</h4>\r\n<table>\r\n<thead>\r\n<tr>\r\n<th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>\r\
+        \n</thead>\r\n<tbody>\r\n<tr><td>Search</td><td>required</td><td>string</td><td>Search\
+        \ value like email address</td></tr>\r\n<tr><td>Filter</td><td>required</td><td>string</td><td>Filter\
+        \ value</td></tr>\r\n</tbody>\r\n</table>\r\n\r\n<h4>Body Parameters (To be\
+        \ passed as a JSON string)</h4>\r\n<table>\r\n<thead>\r\n<tr>\r\n<th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>\r\
+        \n</thead>\r\n<tbody>\r\n<tr><td>{{ListID}}</td><td>optional</td><td>string</td><td>ID\
+        \ of the list</td></tr>\r\n<tr><td>{{ContactID}}</td><td>optional</td><td>string</td><td>ID\
+        \ of the contact</td></tr>\r\n</tbody>\r\n</table>\r\n\r\n<h4>Response body\
+        \ parameters</h4>\r\n<table>\r\n<thead>\r\n<tr>\r\n<th>Key</th><th>Type</th><th>Description</th></tr>\r\
+        \n</thead>\r\n<tbody>\r\n<tr><td>Status</td><td>string</td><td>1 if successful,\
+        \ -1 if error</td></tr>\r\n<tr><td>Errors</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\"\
+        >ErrorData</a></td><td>Error Data</td></tr>\r\n</tbody>\r\n</table>"
+      operationId: "ContactContactDetailsDelete"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Search"
         in: "query"
         description: ""
         required: true
@@ -65,11 +182,12 @@ paths:
         description: ""
         required: true
         type: "string"
-      - name: "SortOrder"
-        in: "query"
+      - in: "body"
+        name: "Body"
         description: ""
         required: true
-        type: "string"
+        schema:
+          $ref: "#/definitions/DeleteTheSelectedContactsFromCurrentListsrequest"
       - name: "AuthToken"
         in: "header"
         description: ""
@@ -84,56 +202,21 @@ paths:
         200:
           description: ""
           schema:
-            $ref: "#/definitions/GetACampaignListOfEngagement"
+            $ref: "#/definitions/DeleteTheSelectedContactsFromCurrentLists"
           examples:
             application/json:
               Response:
-                Count: 51
-                Data:
-                - Clicks: 0
-                  EmailName: "Test Pooja"
-                  ID: "12263198"
-                  MailSent: 8
-                  Opens: 0
-                  ScheduleDate: "Oct 06, 2017"
-                  TimeZone: "IST"
-                - Clicks: 0
-                  EmailName: "Aug 21 2017 Email 1"
-                  ID: "12194338"
-                  MailSent: 5
-                  Opens: 0
-                  ScheduleDate: "Aug 24, 2017"
-                  TimeZone: "IST"
-                - Clicks: 0
-                  EmailName: "Aug 24 2017 Email"
-                  ID: "12211505"
-                  MailSent: 11
-                  Opens: 0
-                  ScheduleDate: "Aug 24, 2017"
-                  TimeZone: "IST"
-                - Clicks: 0
-                  EmailName: "ISSUE Campaign Copy Copy Copy"
-                  ID: "12210851"
-                  MailSent: 3998
-                  Opens: 0
-                  ScheduleDate: "Aug 24, 2017"
-                  TimeZone: "IST"
-                - Clicks: 0
-                  EmailName: "ISSUE Campaign Copy Copy"
-                  ID: "12210437"
-                  MailSent: 3998
-                  Opens: 0
-                  ScheduleDate: "Aug 24, 2017"
-                  TimeZone: "IST"
+                Error: []
                 Status: "1"
       security: []
       x-unitTests:
       - request:
-          method: "GET"
-          uri: "/Engagement/CampaignList?PageNumber={{PageNumber}}&PageSize={{PageSize}}&OrderBy={{OrderBy}}&Filter={{Filter}}&SortOrder={{SortOrder}}"
+          method: "DELETE"
+          uri: "/Contact/ContactDetails?Search={{Search}}&Filter={{Filter}}"
           headers:
-            AuthToken: "{{Authentication Token}}"
             Content-Type: "application/json"
+            AuthToken: "{{Authentication Token}}"
+          body: "{\"ListID\":\"{{ListID}}\",\"ContactID\":\"{{ContactID}}\"}"
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: "RAW"
@@ -144,146 +227,78 @@ paths:
             access-control-allow-origin: "*"
             cache-control: "private"
             content-type: "application/json; charset=utf-8"
-            date: "Mon, 23 Oct 2017 05:38:33 GMT"
+            date: "Tue, 17 Oct 2017 10:27:15 GMT"
             server: "Microsoft-IIS/8.0"
             transfer-encoding: "chunked"
             x-aspnet-version: "4.0.30319"
             x-powered-by: "ASP.NET"
-          body: "{\"Response\":{\"Count\":51,\"Data\":[{\"Clicks\":0,\"EmailName\"\
-            :\"Test Pooja\",\"ID\":\"12263198\",\"MailSent\":8,\"Opens\":0,\"ScheduleDate\"\
-            :\"Oct 06, 2017\",\"TimeZone\":\"IST\"},{\"Clicks\":0,\"EmailName\":\"\
-            Aug 21 2017 Email 1\",\"ID\":\"12194338\",\"MailSent\":5,\"Opens\":0,\"\
-            ScheduleDate\":\"Aug 24, 2017\",\"TimeZone\":\"IST\"},{\"Clicks\":0,\"\
-            EmailName\":\"Aug 24 2017 Email\",\"ID\":\"12211505\",\"MailSent\":11,\"\
-            Opens\":0,\"ScheduleDate\":\"Aug 24, 2017\",\"TimeZone\":\"IST\"},{\"\
-            Clicks\":0,\"EmailName\":\"ISSUE Campaign Copy Copy Copy\",\"ID\":\"12210851\"\
-            ,\"MailSent\":3998,\"Opens\":0,\"ScheduleDate\":\"Aug 24, 2017\",\"TimeZone\"\
-            :\"IST\"},{\"Clicks\":0,\"EmailName\":\"ISSUE Campaign Copy Copy\",\"\
-            ID\":\"12210437\",\"MailSent\":3998,\"Opens\":0,\"ScheduleDate\":\"Aug\
-            \ 24, 2017\",\"TimeZone\":\"IST\"}],\"Status\":\"1\"}}"
+          body: "{\"Response\":{\"Error\":[],\"Status\":\"1\"}}"
         x-testShouldPass: true
         x-testEnabled: true
-        x-testName: "Get a Campaign List of Engagement"
-        x-testDescription: "<h4>Get a Campaign List of Engagement</h4>\n<b>Query string\
-          \ parameters :</b>\n<table>\n  <thead>\n    <tr>\n      <th>Parameter</th>\n\
-          \      <th>Required</th>\n      <th>Type</th>\n      <th>Description</th>\n\
-          \    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>PageNumber</td>\n\
-          \      <td>Optional</td>\n      <td>string</td>\n      <td>Page Number</td>\n\
-          \    </tr>\n    <tr>\n      <td>PageSize</td>\n      <td>Optional</td>\n\
-          \      <td>string</td>\n      <td>Number of rows on the page</td>\n    </tr>\n\
-          \    <tr>\n      <td>OrderBy</td>\n      <td>Optional</td>\n      <td>string</td>\n\
-          \      <td>Order By Column</td>\n    </tr>\n    <tr>\n      <td>Filter</td>\n\
-          \      <td>Optional</td>\n      <td>string</td>\n      <td>Filter by name</td>\n\
-          \    </tr>\n    <tr>\n      <td>SortOrder</td>\n      <td>Optional</td>\n\
-          \      <td>string</td>\n      <td>ASC or DESC</td>\n    </tr>\n  </tbody>\n\
-          </table>\n\n<b>Response body parameters :</b>\n<table>\n  <thead>\n    <tr>\n\
-          \      <th>Parameter</th>\n      <th>Type</th>\n      <th>Description</th>\n\
-          \    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Count</td>\n    \
-          \  <td>int</td>\n      <td>Total number</td>\n    </tr>\n    <tr>\n    \
-          \  <td>Status</td>\n      <td>string</td>\n      <td>1 = Successful, -1\
-          \ Error</td>\n    </tr>\n    <tr>\n      <td>Data</td>\n      <td><a href=\"\
-          http://www.benchmarkemail.com/models.htm#EngagementCampaignData\" > CampaignData</a></td>\n\
-          \      <td>Array of Campaign list returned.</td>\n    </tr>\n  </tbody>\n\
-          </table>"
+        x-testName: "Delete the selected contacts from current lists"
+        x-testDescription: "<h4>Delete the selected contacts from current lists </h4>\r\
+          \n<h4>Request body  parameters</h4>\r\n<table>\r\n<thead>\r\n<tr>\r\n<th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>\r\
+          \n</thead>\r\n<tbody>\r\n<tr><td>Search</td><td>required</td><td>string</td><td>Search\
+          \ value like email address</td></tr>\r\n<tr><td>Filter</td><td>required</td><td>string</td><td>Filter\
+          \ value</td></tr>\r\n</tbody>\r\n</table>\r\n\r\n<h4>Body Parameters (To\
+          \ be passed as a JSON string)</h4>\r\n<table>\r\n<thead>\r\n<tr>\r\n<th>Key</th><th>Required</th><th>Type</th><th>Description</th></tr>\r\
+          \n</thead>\r\n<tbody>\r\n<tr><td>{{ListID}}</td><td>optional</td><td>string</td><td>ID\
+          \ of the list</td></tr>\r\n<tr><td>{{ContactID}}</td><td>optional</td><td>string</td><td>ID\
+          \ of the contact</td></tr>\r\n</tbody>\r\n</table>\r\n\r\n<h4>Response body\
+          \ parameters</h4>\r\n<table>\r\n<thead>\r\n<tr>\r\n<th>Key</th><th>Type</th><th>Description</th></tr>\r\
+          \n</thead>\r\n<tbody>\r\n<tr><td>Status</td><td>string</td><td>1 if successful,\
+          \ -1 if error</td></tr>\r\n<tr><td>Errors</td><td><a href=\"http://www.benchmarkemail.com/models.htm#ErrorData\"\
+          >ErrorData</a></td><td>Error Data</td></tr>\r\n</tbody>\r\n</table>"
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-      x-swagger-router-controller: "Engagement"
+      x-swagger-router-controller: "ContactsDetails"
 definitions:
-  GetACampaignListOfEngagement:
+  SearchContacts:
     type: "object"
     required:
     - "Response"
     properties:
       Response:
-        $ref: "#/definitions/GetACampaignListOfEngagement_Response"
-    title: "Get a Campaign List of Engagement"
+        $ref: "#/definitions/Response166"
+    title: "Search Contacts"
     example:
       Response:
-        Count: 51
+        Count: 4
         Data:
-        - Clicks: 0
-          EmailName: "Test Pooja"
-          ID: "12263198"
-          MailSent: 8
-          Opens: 0
-          ScheduleDate: "Oct 06, 2017"
-          TimeZone: "IST"
-        - Clicks: 0
-          EmailName: "Aug 21 2017 Email 1"
-          ID: "12194338"
-          MailSent: 5
-          Opens: 0
-          ScheduleDate: "Aug 24, 2017"
-          TimeZone: "IST"
-        - Clicks: 0
-          EmailName: "Aug 24 2017 Email"
-          ID: "12211505"
-          MailSent: 11
-          Opens: 0
-          ScheduleDate: "Aug 24, 2017"
-          TimeZone: "IST"
-        - Clicks: 0
-          EmailName: "ISSUE Campaign Copy Copy Copy"
-          ID: "12210851"
-          MailSent: 3998
-          Opens: 0
-          ScheduleDate: "Aug 24, 2017"
-          TimeZone: "IST"
-        - Clicks: 0
-          EmailName: "ISSUE Campaign Copy Copy"
-          ID: "12210437"
-          MailSent: 3998
-          Opens: 0
-          ScheduleDate: "Aug 24, 2017"
-          TimeZone: "IST"
+        - ContactMasterID: "15112393"
+          Email: "test02@cybermaxsolutions.com"
+          FirstName: "Test2"
+          ID: "1950474841"
+          IsMasterUnsubScribe: 0
+          LastName: "Test2"
+          ListName: "Benchmark Tech Support Test List"
+        - ContactMasterID: "15242968"
+          Email: "test02@cybermaxsolutions.com"
+          FirstName: ""
+          ID: "2039133647"
+          IsMasterUnsubScribe: 0
+          LastName: ""
+          ListName: "Targeted EMailing List Modified"
+        - ContactMasterID: "15257848"
+          Email: "test02@cybermaxsolutions.com"
+          FirstName: ""
+          ID: "2039912369"
+          IsMasterUnsubScribe: 0
+          LastName: ""
+          ListName: "Test Source List"
+        - ContactMasterID: "15257899"
+          Email: "test02@cybermaxsolutions.com"
+          FirstName: ""
+          ID: "2040815886"
+          IsMasterUnsubScribe: 0
+          LastName: ""
+          ListName: "New Target List"
         Status: "1"
-  GetACampaignListOfEngagement_Response_Data:
-    required:
-    - "Clicks"
-    - "EmailName"
-    - "ID"
-    - "MailSent"
-    - "Opens"
-    - "ScheduleDate"
-    - "TimeZone"
-    properties:
-      Clicks:
-        type: "integer"
-        format: "int32"
-        example: 0
-        description: ""
-      EmailName:
-        type: "string"
-        example: "Test Pooja"
-        description: ""
-      ID:
-        type: "string"
-        example: "12263198"
-        description: ""
-      MailSent:
-        type: "integer"
-        format: "int32"
-        example: 8
-        description: ""
-      Opens:
-        type: "integer"
-        format: "int32"
-        example: 0
-        description: ""
-      ScheduleDate:
-        type: "string"
-        example: "Oct 06, 2017"
-        description: ""
-      TimeZone:
-        type: "string"
-        example: "IST"
-        description: ""
-    example: "{\"Clicks\":0,\"EmailName\":\"Test Pooja\",\"ID\":\"12263198\",\"MailSent\"\
-      :8,\"Opens\":0,\"ScheduleDate\":\"Oct 06, 2017\",\"TimeZone\":\"IST\"}"
-  GetACampaignListOfEngagement_Response:
+  Response166:
+    type: "object"
     required:
     - "Count"
     - "Data"
@@ -292,61 +307,175 @@ definitions:
       Count:
         type: "integer"
         format: "int32"
-        example: 51
+        example: 4
         description: ""
       Data:
         type: "array"
         example:
-        - Clicks: 0
-          EmailName: "Test Pooja"
-          ID: "12263198"
-          MailSent: 8
-          Opens: 0
-          ScheduleDate: "Oct 06, 2017"
-          TimeZone: "IST"
-        - Clicks: 0
-          EmailName: "Aug 21 2017 Email 1"
-          ID: "12194338"
-          MailSent: 5
-          Opens: 0
-          ScheduleDate: "Aug 24, 2017"
-          TimeZone: "IST"
-        - Clicks: 0
-          EmailName: "Aug 24 2017 Email"
-          ID: "12211505"
-          MailSent: 11
-          Opens: 0
-          ScheduleDate: "Aug 24, 2017"
-          TimeZone: "IST"
-        - Clicks: 0
-          EmailName: "ISSUE Campaign Copy Copy Copy"
-          ID: "12210851"
-          MailSent: 3998
-          Opens: 0
-          ScheduleDate: "Aug 24, 2017"
-          TimeZone: "IST"
-        - Clicks: 0
-          EmailName: "ISSUE Campaign Copy Copy"
-          ID: "12210437"
-          MailSent: 3998
-          Opens: 0
-          ScheduleDate: "Aug 24, 2017"
-          TimeZone: "IST"
+        - ContactMasterID: "15112393"
+          Email: "test02@cybermaxsolutions.com"
+          FirstName: "Test2"
+          ID: "1950474841"
+          IsMasterUnsubScribe: 0
+          LastName: "Test2"
+          ListName: "Benchmark Tech Support Test List"
+        - ContactMasterID: "15242968"
+          Email: "test02@cybermaxsolutions.com"
+          FirstName: ""
+          ID: "2039133647"
+          IsMasterUnsubScribe: 0
+          LastName: ""
+          ListName: "Targeted EMailing List Modified"
+        - ContactMasterID: "15257848"
+          Email: "test02@cybermaxsolutions.com"
+          FirstName: ""
+          ID: "2039912369"
+          IsMasterUnsubScribe: 0
+          LastName: ""
+          ListName: "Test Source List"
+        - ContactMasterID: "15257899"
+          Email: "test02@cybermaxsolutions.com"
+          FirstName: ""
+          ID: "2040815886"
+          IsMasterUnsubScribe: 0
+          LastName: ""
+          ListName: "New Target List"
         description: ""
         items:
-          $ref: "#/definitions/GetACampaignListOfEngagement_Response_Data"
+          $ref: "#/definitions/Data167"
       Status:
         type: "string"
         example: "1"
         description: ""
-    example: "{\"Count\":51,\"Data\":[{\"Clicks\":0,\"EmailName\":\"Test Pooja\",\"\
-      ID\":\"12263198\",\"MailSent\":8,\"Opens\":0,\"ScheduleDate\":\"Oct 06, 2017\"\
-      ,\"TimeZone\":\"IST\"},{\"Clicks\":0,\"EmailName\":\"Aug 21 2017 Email 1\",\"\
-      ID\":\"12194338\",\"MailSent\":5,\"Opens\":0,\"ScheduleDate\":\"Aug 24, 2017\"\
-      ,\"TimeZone\":\"IST\"},{\"Clicks\":0,\"EmailName\":\"Aug 24 2017 Email\",\"\
-      ID\":\"12211505\",\"MailSent\":11,\"Opens\":0,\"ScheduleDate\":\"Aug 24, 2017\"\
-      ,\"TimeZone\":\"IST\"},{\"Clicks\":0,\"EmailName\":\"ISSUE Campaign Copy Copy\
-      \ Copy\",\"ID\":\"12210851\",\"MailSent\":3998,\"Opens\":0,\"ScheduleDate\"\
-      :\"Aug 24, 2017\",\"TimeZone\":\"IST\"},{\"Clicks\":0,\"EmailName\":\"ISSUE\
-      \ Campaign Copy Copy\",\"ID\":\"12210437\",\"MailSent\":3998,\"Opens\":0,\"\
-      ScheduleDate\":\"Aug 24, 2017\",\"TimeZone\":\"IST\"}],\"Status\":\"1\"}"
+    title: "Response166"
+    example:
+      Count: 4
+      Data:
+      - ContactMasterID: "15112393"
+        Email: "test02@cybermaxsolutions.com"
+        FirstName: "Test2"
+        ID: "1950474841"
+        IsMasterUnsubScribe: 0
+        LastName: "Test2"
+        ListName: "Benchmark Tech Support Test List"
+      - ContactMasterID: "15242968"
+        Email: "test02@cybermaxsolutions.com"
+        FirstName: ""
+        ID: "2039133647"
+        IsMasterUnsubScribe: 0
+        LastName: ""
+        ListName: "Targeted EMailing List Modified"
+      - ContactMasterID: "15257848"
+        Email: "test02@cybermaxsolutions.com"
+        FirstName: ""
+        ID: "2039912369"
+        IsMasterUnsubScribe: 0
+        LastName: ""
+        ListName: "Test Source List"
+      - ContactMasterID: "15257899"
+        Email: "test02@cybermaxsolutions.com"
+        FirstName: ""
+        ID: "2040815886"
+        IsMasterUnsubScribe: 0
+        LastName: ""
+        ListName: "New Target List"
+      Status: "1"
+  Data167:
+    type: "object"
+    required:
+    - "ContactMasterID"
+    - "Email"
+    - "FirstName"
+    - "ID"
+    - "IsMasterUnsubScribe"
+    - "LastName"
+    - "ListName"
+    properties:
+      ContactMasterID:
+        type: "string"
+        example: "15112393"
+        description: ""
+      Email:
+        type: "string"
+        example: "test02@cybermaxsolutions.com"
+        description: ""
+      FirstName:
+        type: "string"
+        example: "Test2"
+        description: ""
+      ID:
+        type: "string"
+        example: "1950474841"
+        description: ""
+      IsMasterUnsubScribe:
+        type: "integer"
+        format: "int32"
+        example: 0
+        description: ""
+      LastName:
+        type: "string"
+        example: "Test2"
+        description: ""
+      ListName:
+        type: "string"
+        example: "Benchmark Tech Support Test List"
+        description: ""
+    title: "Data167"
+    example:
+      ContactMasterID: "15112393"
+      Email: "test02@cybermaxsolutions.com"
+      FirstName: "Test2"
+      ID: "1950474841"
+      IsMasterUnsubScribe: 0
+      LastName: "Test2"
+      ListName: "Benchmark Tech Support Test List"
+  DeleteTheSelectedContactsFromCurrentListsrequest:
+    type: "object"
+    required:
+    - "ContactID"
+    - "ListID"
+    properties:
+      ListID:
+        type: "string"
+        example: "{{ListID}}"
+        description: ""
+      ContactID:
+        type: "string"
+        example: "{{ContactID}}"
+        description: ""
+    title: "Delete the selected contacts from current listsRequest"
+    example:
+      ListID: "{{ListID}}"
+      ContactID: "{{ContactID}}"
+  DeleteTheSelectedContactsFromCurrentLists:
+    type: "object"
+    required:
+    - "Response"
+    properties:
+      Response:
+        $ref: "#/definitions/Response144"
+    title: "Delete the selected contacts from current lists"
+    example:
+      Response:
+        Error: []
+        Status: "1"
+  Response144:
+    type: "object"
+    required:
+    - "Error"
+    - "Status"
+    properties:
+      Error:
+        type: "array"
+        example: []
+        description: ""
+        items:
+          type: "string"
+      Status:
+        type: "string"
+        example: "1"
+        description: ""
+    title: "Response144"
+    example:
+      Error: []
+      Status: "1"
