@@ -240,6 +240,49 @@ definitions:
           ScheduleDate: "Aug 24, 2017"
           TimeZone: "IST"
         Status: "1"
+  GetACampaignListOfEngagement_Response_Data:
+    required:
+    - "Clicks"
+    - "EmailName"
+    - "ID"
+    - "MailSent"
+    - "Opens"
+    - "ScheduleDate"
+    - "TimeZone"
+    properties:
+      Clicks:
+        type: "integer"
+        format: "int32"
+        example: 0
+        description: ""
+      EmailName:
+        type: "string"
+        example: "Test Pooja"
+        description: ""
+      ID:
+        type: "string"
+        example: "12263198"
+        description: ""
+      MailSent:
+        type: "integer"
+        format: "int32"
+        example: 8
+        description: ""
+      Opens:
+        type: "integer"
+        format: "int32"
+        example: 0
+        description: ""
+      ScheduleDate:
+        type: "string"
+        example: "Oct 06, 2017"
+        description: ""
+      TimeZone:
+        type: "string"
+        example: "IST"
+        description: ""
+    example: "{\"Clicks\":0,\"EmailName\":\"Test Pooja\",\"ID\":\"12263198\",\"MailSent\"\
+      :8,\"Opens\":0,\"ScheduleDate\":\"Oct 06, 2017\",\"TimeZone\":\"IST\"}"
   GetACampaignListOfEngagement_Response:
     required:
     - "Count"
@@ -291,7 +334,7 @@ definitions:
           TimeZone: "IST"
         description: ""
         items:
-          $ref: "#/definitions/Data629"
+          $ref: "#/definitions/GetACampaignListOfEngagement_Response_Data"
       Status:
         type: "string"
         example: "1"
